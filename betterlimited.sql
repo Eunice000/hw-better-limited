@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 24, 2022 at 02:16 PM
+-- Generation Time: May 26, 2022 at 11:57 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `customer` (
-  `CustomerID` int(11) NOT NULL,
+  `CustomerID` int(5) NOT NULL,
   `Name` varchar(20) NOT NULL,
   `Address` varchar(50) NOT NULL,
   `Tel` int(8) NOT NULL
@@ -41,9 +41,9 @@ CREATE TABLE `customer` (
 --
 
 CREATE TABLE `deliverynote` (
-  `DeliveryID` int(11) NOT NULL,
-  `SalesOrderID` int(11) NOT NULL,
-  `CustomerID` int(11) NOT NULL,
+  `DeliveryID` int(5) NOT NULL,
+  `SalesOrderID` int(5) NOT NULL,
+  `CustomerID` int(5) NOT NULL,
   `DeliveryDate` date NOT NULL,
   `DeliveryTime` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -55,9 +55,9 @@ CREATE TABLE `deliverynote` (
 --
 
 CREATE TABLE `goodreturnnote` (
-  `ReturnNoteID` int(11) NOT NULL,
-  `SalesOrderID` int(11) NOT NULL,
-  `SupplierID` int(11) NOT NULL
+  `ReturnNoteID` int(5) NOT NULL,
+  `SalesOrderID` int(5) NOT NULL,
+  `SupplierID` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -67,8 +67,8 @@ CREATE TABLE `goodreturnnote` (
 --
 
 CREATE TABLE `goodreturnnote_item` (
-  `ReturnNoteID` int(11) NOT NULL,
-  `ItemID` int(11) NOT NULL,
+  `ReturnNoteID` int(5) NOT NULL,
+  `ItemID` int(5) NOT NULL,
   `Qty` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -79,11 +79,11 @@ CREATE TABLE `goodreturnnote_item` (
 --
 
 CREATE TABLE `goodsreceivednote` (
-  `ReceivedID` int(11) NOT NULL,
-  `PurchaseOrderID` int(11) NOT NULL,
-  `SupplierID` int(11) NOT NULL,
-  `InboundDate` int(11) NOT NULL,
-  `InboundTime` int(11) NOT NULL
+  `ReceivedID` int(5) NOT NULL,
+  `PurchaseOrderID` int(5) NOT NULL,
+  `SupplierID` int(5) NOT NULL,
+  `InboundDate` date NOT NULL,
+  `InboundTime` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -93,9 +93,9 @@ CREATE TABLE `goodsreceivednote` (
 --
 
 CREATE TABLE `installationorder` (
-  `InstallationID` int(11) NOT NULL,
-  `SalesOrderID` int(11) NOT NULL,
-  `CustomerID` int(11) NOT NULL,
+  `InstallationID` int(5) NOT NULL,
+  `SalesOrderID` int(5) NOT NULL,
+  `CustomerID` int(5) NOT NULL,
   `InstallationDate` date NOT NULL,
   `InstallationTime` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -107,15 +107,15 @@ CREATE TABLE `installationorder` (
 --
 
 CREATE TABLE `item` (
-  `ItemID` int(11) NOT NULL,
+  `ItemID` int(5) NOT NULL,
   `ItemCat` varchar(20) NOT NULL,
   `ItemName` varchar(20) NOT NULL,
   `ItemDesc` varchar(50) NOT NULL,
   `SalePrice` int(11) NOT NULL,
-  `SupplierID` int(11) NOT NULL,
+  `SupplierID` int(5) NOT NULL,
   `SupplierPirce` int(20) NOT NULL,
   `WarrantyMonth` int(11) NOT NULL,
-  `RequestItemReorderRequestID` int(11) NOT NULL
+  `RequestItemReorderRequestID` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -125,9 +125,9 @@ CREATE TABLE `item` (
 --
 
 CREATE TABLE `purchaseorder` (
-  `PurchaseOrderID` int(11) NOT NULL,
-  `SupplierID` int(11) NOT NULL,
-  `Price` int(11) NOT NULL
+  `PurchaseOrderID` int(5) NOT NULL,
+  `SupplierID` int(5) NOT NULL,
+  `Price` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -137,10 +137,10 @@ CREATE TABLE `purchaseorder` (
 --
 
 CREATE TABLE `purchaseorder_item` (
-  `PurchaseOrderID` int(11) NOT NULL,
-  `ItemID` int(11) NOT NULL,
+  `PurchaseOrderID` int(5) NOT NULL,
+  `ItemID` int(5) NOT NULL,
   `Qty` int(11) NOT NULL,
-  `SupplierID` int(11) NOT NULL
+  `SupplierID` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -150,11 +150,11 @@ CREATE TABLE `purchaseorder_item` (
 --
 
 CREATE TABLE `reorderrequest` (
-  `ReorderRequestID` int(11) NOT NULL,
-  `StaffID` int(11) NOT NULL,
+  `ReorderRequestID` int(5) NOT NULL,
+  `StaffID` int(5) NOT NULL,
   `RequestDate` date NOT NULL,
   `RequestTime` time NOT NULL,
-  `PurchaseOrderPurchaseOrderID` int(11) NOT NULL
+  `PurchaseOrderPurchaseOrderID` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -164,8 +164,8 @@ CREATE TABLE `reorderrequest` (
 --
 
 CREATE TABLE `reorderrequest_item` (
-  `ItemID` int(11) NOT NULL,
-  `ReorderRequestID` int(11) NOT NULL,
+  `ItemID` int(5) NOT NULL,
+  `ReorderRequestID` int(5) NOT NULL,
   `Qty` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -176,14 +176,14 @@ CREATE TABLE `reorderrequest_item` (
 --
 
 CREATE TABLE `salesorder` (
-  `SalesOrderID` int(11) NOT NULL,
-  `StoreID` int(11) NOT NULL,
-  `StaffID` int(11) NOT NULL,
+  `SalesOrderID` int(5) NOT NULL,
+  `StoreID` int(5) NOT NULL,
+  `StaffID` int(5) NOT NULL,
   `PaidAmt` int(20) NOT NULL,
   `Date` date NOT NULL,
   `Time` time NOT NULL,
   `ExpDate` date NOT NULL,
-  `CustomerID` int(11) NOT NULL
+  `CustomerID` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -193,8 +193,8 @@ CREATE TABLE `salesorder` (
 --
 
 CREATE TABLE `salesorder_item` (
-  `OrderID` int(11) NOT NULL,
-  `ItemID` int(11) NOT NULL,
+  `OrderID` int(5) NOT NULL,
+  `ItemID` int(5) NOT NULL,
   `SalePrice` int(11) NOT NULL,
   `Qty` int(11) NOT NULL,
   `WarrantyMouth` int(11) DEFAULT NULL,
@@ -208,9 +208,9 @@ CREATE TABLE `salesorder_item` (
 --
 
 CREATE TABLE `salesreceipt` (
-  `ReceiptID` int(11) NOT NULL,
-  `SalesOrderID` int(11) NOT NULL,
-  `CustomerID` int(11) NOT NULL,
+  `ReceiptID` int(5) NOT NULL,
+  `SalesOrderID` int(5) NOT NULL,
+  `CustomerID` int(5) NOT NULL,
   `Qty` int(11) NOT NULL,
   `Price` int(11) NOT NULL,
   `PaymentType` varchar(20) NOT NULL
@@ -223,9 +223,9 @@ CREATE TABLE `salesreceipt` (
 --
 
 CREATE TABLE `staff` (
-  `StaffID` int(11) NOT NULL,
+  `StaffID` int(5) NOT NULL,
   `StaffName` varchar(20) NOT NULL,
-  `Gender` varchar(1) NOT NULL,
+  `Gender` char(1) NOT NULL,
   `DateOfBirth` date NOT NULL,
   `Tel` int(8) NOT NULL,
   `Email` varchar(50) NOT NULL,
@@ -248,10 +248,10 @@ INSERT INTO `staff` (`StaffID`, `StaffName`, `Gender`, `DateOfBirth`, `Tel`, `Em
 --
 
 CREATE TABLE `store` (
-  `StoreID` int(11) NOT NULL,
+  `StoreID` int(5) NOT NULL,
   `Address` varchar(50) NOT NULL,
   `Tel` int(8) NOT NULL,
-  `StaffID` int(11) NOT NULL
+  `StaffID` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -261,7 +261,7 @@ CREATE TABLE `store` (
 --
 
 CREATE TABLE `supplier` (
-  `SupplierID` int(11) NOT NULL,
+  `SupplierID` int(5) NOT NULL,
   `SupplierName` varchar(20) NOT NULL,
   `Address` varchar(50) NOT NULL,
   `Tel` int(8) NOT NULL
@@ -274,8 +274,8 @@ CREATE TABLE `supplier` (
 --
 
 CREATE TABLE `useraccount` (
-  `UserAccountID` int(11) NOT NULL,
-  `StaffID` int(11) NOT NULL,
+  `UserAccountID` int(5) NOT NULL,
+  `StaffID` int(5) NOT NULL,
   `UserName` varchar(20) NOT NULL,
   `Password` varchar(20) NOT NULL,
   `Email` varchar(50) NOT NULL,
@@ -288,7 +288,10 @@ CREATE TABLE `useraccount` (
 --
 
 INSERT INTO `useraccount` (`UserAccountID`, `StaffID`, `UserName`, `Password`, `Email`, `CreateDateTime`, `LastLoginDateTime`) VALUES
-(10001, 10001, 'admin', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-24 20:04:05', NULL);
+(10001, 10001, 'admin', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-24 20:04:05', NULL),
+(10008, 10001, 'admin2', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-27 04:59:15', NULL),
+(10011, 10001, 'admin2', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-27 05:52:37', NULL),
+(10012, 10001, 'admin3', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-27 05:55:06', NULL);
 
 --
 -- Indexes for dumped tables
@@ -387,6 +390,7 @@ ALTER TABLE `salesorder`
 -- Indexes for table `salesorder_item`
 --
 ALTER TABLE `salesorder_item`
+  ADD PRIMARY KEY (`OrderID`),
   ADD KEY `FKSalesOrder929714` (`OrderID`),
   ADD KEY `FKSalesOrder804327` (`ItemID`);
 
@@ -432,79 +436,79 @@ ALTER TABLE `useraccount`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `CustomerID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `CustomerID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `deliverynote`
 --
 ALTER TABLE `deliverynote`
-  MODIFY `DeliveryID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `DeliveryID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `goodreturnnote`
 --
 ALTER TABLE `goodreturnnote`
-  MODIFY `ReturnNoteID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ReturnNoteID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `installationorder`
 --
 ALTER TABLE `installationorder`
-  MODIFY `InstallationID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `InstallationID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `item`
 --
 ALTER TABLE `item`
-  MODIFY `ItemID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ItemID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `purchaseorder`
 --
 ALTER TABLE `purchaseorder`
-  MODIFY `PurchaseOrderID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `PurchaseOrderID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `reorderrequest`
 --
 ALTER TABLE `reorderrequest`
-  MODIFY `ReorderRequestID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ReorderRequestID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `salesorder`
 --
 ALTER TABLE `salesorder`
-  MODIFY `SalesOrderID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `SalesOrderID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `salesreceipt`
 --
 ALTER TABLE `salesreceipt`
-  MODIFY `ReceiptID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ReceiptID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `StaffID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10002;
+  MODIFY `StaffID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10002;
 
 --
 -- AUTO_INCREMENT for table `store`
 --
 ALTER TABLE `store`
-  MODIFY `StoreID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `StoreID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `supplier`
 --
 ALTER TABLE `supplier`
-  MODIFY `SupplierID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `SupplierID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `useraccount`
 --
 ALTER TABLE `useraccount`
-  MODIFY `UserAccountID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10002;
+  MODIFY `UserAccountID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10013;
 
 --
 -- Constraints for dumped tables
