@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2022 at 11:57 PM
+-- Generation Time: May 27, 2022 at 08:53 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -239,7 +239,50 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`StaffID`, `StaffName`, `Gender`, `DateOfBirth`, `Tel`, `Email`, `Position`, `Depart`, `Salary`) VALUES
-(10001, 'admin', 'M', '2022-01-01', 24368333, 'betterlimited10001@gmail.com', 'admin', 'admin', NULL);
+(10001, 'admin', 'M', '1980-04-06', 24368333, 'betterlimited10001@gmail.com', 'Admin', 'Admin', NULL),
+(10002, 'Better Limited', 'M', '1984-07-02', 24368334, 'betterlimited999@betterlimited.com', 'Admin', 'Admin', NULL),
+(10003, 'Ryan Biddle', 'M', '1972-06-04', 24368332, 'ryanbiddle@betterlimited.com', 'CEO', 'CEO', NULL),
+(10004, 'Rocky Hahn', 'M', '1969-10-19', 24365628, 'rockyhahn@betterlimited.com', 'Sales Manager', 'Sales', 57520),
+(10005, 'Pierre Holquin', 'M', '1976-02-16', 24368472, 'pierreholquin@betterlimited.com', 'Sales Manager', 'Sales', 55200),
+(10006, 'Phyllis Kinnison', 'F', '1978-05-25', 24365428, 'phylliskinnison@betterlimited.com', 'Inventory Manager', 'Inventory', 49230),
+(10007, 'Carolyn Colon', 'F', '1981-10-26', 24369962, 'carolyncolon@betterlimited.com', 'Inventory Manager', 'Inventory', 48270),
+(10008, 'Robert Fulkerson', 'M', '1968-10-30', 24368235, 'robertfulkerson@betterlimited.com', 'Purchase Manager', 'Purchase', 53230),
+(10009, 'Rebecca Allen', 'F', '1980-08-16', 24363547, 'rebeccaallen@betterlimited.com', 'Purchase Manager', 'Purchase', 51980),
+(10010, 'Robert Robinson', 'M', '1972-09-14', 24362748, 'robertrobinson@betterlimited.com', 'Accounting Manager', 'Accounting', 47850),
+(10011, 'Jesse Young', 'M', '1965-07-10', 24368272, 'jesseyoung@betterlimited.com', 'Accounting Manager', 'Accounting', 49860),
+(10012, 'Carlos Read', 'M', '1975-05-06', 24367282, 'carlosread@betterlimited.com', 'Technical Support Of', 'Admin', 38520),
+(10013, 'Carolyn White', 'F', '1977-04-28', 24369729, 'carolynwhite@betterlimited.com', 'Technical Support Of', 'Admin', 35950),
+(10014, 'Ruth Brown', 'F', '1979-10-01', 24369210, 'ruthbrown@betterlimited.com', 'Sales Representative', 'Sales', 28450),
+(10015, 'Jennifer Stock', 'F', '1985-08-02', 24362478, 'jenniferstock@betterlimited.com', 'Sales Representative', 'Sales', 26870),
+(10016, 'Peter Sheets', 'M', '1989-04-19', 24369372, 'petersheets@betterlimited.com', 'Sales Representative', 'Sales', 25990),
+(10017, 'Anne Raymond', 'F', '1992-09-29', 24362357, 'anneraymond@betterlimited.com', 'Inventory Clerk', 'Inventory', 22840),
+(10018, 'Erin Bain', 'M', '1984-08-12', 24362829, 'erinbain@betterlimited.com', 'Inventory Clerk', 'Inventory', 26910),
+(10019, 'Lane Suggs', 'M', '1997-11-04', 24366218, 'lanesuggs@betterlimited.com', 'Goods Inwards Clerk', 'Inventory', 19850),
+(10020, 'John Mauro', 'M', '1987-02-23', 24365910, 'johnmauro@betterlimited.com', 'Goods Inwards Clerk', 'Inventory', 21590),
+(10021, 'David Love', 'M', '1992-07-25', 24369829, 'davidlove@betterlimited.com', 'Delivery Workman', 'Inventory', 24850),
+(10022, 'Robert Thompson', 'M', '1992-09-20', 24369981, 'robertthompson@betterlimited.com', 'Delivery Workman', 'Inventory', 26590),
+(10023, 'Jane Campbell', 'F', '1990-05-28', 24368719, 'janecampbell@betterlimited.com', 'Purchase Officer', 'Purchase', 24720),
+(10024, 'Ervin Dobson', 'M', '1985-05-20', 24369820, 'ervindobson@betterlimited.com', 'Accounting Clerk', 'Accounting', 27200),
+(10025, 'Pierre Holquin', 'M', '1976-02-16', 24368472, 'pierreholquin@betterlimited.com', 'Sales Manager', 'Sales', 55200),
+(10026, 'Phyllis Kinnison', 'F', '1978-05-25', 24365428, 'phylliskinnison@betterlimited.com', 'Inventory Manager', 'Inventory', 49230),
+(10027, 'Carolyn Colon', 'F', '1981-10-26', 24369962, 'carolyncolon@betterlimited.com', 'Inventory Manager', 'Inventory', 48270),
+(10028, 'Robert Fulkerson', 'M', '1968-10-30', 24368235, 'robertfulkerson@betterlimited.com', 'Purchase Manager', 'Purchase', 53230),
+(10029, 'Rebecca Allen', 'F', '1980-08-16', 24363547, 'rebeccaallen@betterlimited.com', 'Purchase Manager', 'Purchase', 51980),
+(10030, 'Robert Robinson', 'M', '1972-09-14', 24362748, 'robertrobinson@betterlimited.com', 'Accounting Manager', 'Accounting', 47850),
+(10031, 'Jesse Young', 'M', '1965-07-10', 24368272, 'jesseyoung@betterlimited.com', 'Accounting Manager', 'Accounting', 49860),
+(10032, 'Carlos Read', 'M', '1975-05-06', 24367282, 'carlosread@betterlimited.com', 'Technical Support Of', 'Admin', 38520),
+(10033, 'Carolyn White', 'F', '1977-04-28', 24369729, 'carolynwhite@betterlimited.com', 'Technical Support Of', 'Admin', 35950),
+(10034, 'Ruth Brown', 'F', '1979-10-01', 24369210, 'ruthbrown@betterlimited.com', 'Sales Representative', 'Sales', 28450),
+(10035, 'Jennifer Stock', 'F', '1985-08-02', 24362478, 'jenniferstock', 'Sales Representative', 'Sales', 26870),
+(10036, 'Peter Sheets', 'M', '1989-04-19', 24369372, 'petersheets@betterlimited.com', 'Sales Representative', 'Sales', 25990),
+(10037, 'Anne Raymond', 'F', '1992-09-29', 24362357, 'anneraymond@betterlimited.com', 'Inventory Clerk', 'Inventory', 22840),
+(10038, 'Erin Bain', 'M', '1984-08-12', 24362829, 'erinbain@betterlimited.com', 'Inventory Clerk', 'Inventory', 26910),
+(10039, 'Lane Suggs', 'M', '1997-11-04', 24366218, 'lanesuggs@betterlimited.com', 'Goods Inwards Clerk', 'Inventory', 19850),
+(10040, 'John Mauro', 'M', '1987-02-23', 24365910, 'johnmauro@betterlimited.com', 'Goods Inwards Clerk', 'Inventory', 21590),
+(10041, 'David Love', 'M', '1992-07-25', 24369829, 'davidlove@betterlimited.com', 'Delivery Workman', 'Inventory', 24850),
+(10042, 'Robert Thompson', 'M', '1992-09-20', 24369981, 'robertthompson@betterlimited.com', 'Delivery Workman', 'Inventory', 26590),
+(10043, 'Jane Campbell', 'F', '1990-05-28', 24368719, 'janecampbell@betterlimited.com', 'Purchase Officer', 'Purchase', 24720),
+(10044, 'Ervin Dobson', 'M', '1985-05-20', 24369820, 'ervindobson@betterlimited.com', 'Accounting Clerk', 'Accounting', 27200);
 
 -- --------------------------------------------------------
 
@@ -288,7 +331,7 @@ CREATE TABLE `useraccount` (
 --
 
 INSERT INTO `useraccount` (`UserAccountID`, `StaffID`, `UserName`, `Password`, `Email`, `CreateDateTime`, `LastLoginDateTime`) VALUES
-(10001, 10001, 'admin', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-24 20:04:05', NULL),
+(10001, 10001, 'admin', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-24 20:04:05', '2022-05-28 02:50:10'),
 (10008, 10001, 'admin2', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-27 04:59:15', NULL),
 (10011, 10001, 'admin2', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-27 05:52:37', NULL),
 (10012, 10001, 'admin3', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-27 05:55:06', NULL);
@@ -451,6 +494,12 @@ ALTER TABLE `goodreturnnote`
   MODIFY `ReturnNoteID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `goodsreceivednote`
+--
+ALTER TABLE `goodsreceivednote`
+  MODIFY `ReceivedID` int(5) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `installationorder`
 --
 ALTER TABLE `installationorder`
@@ -490,7 +539,7 @@ ALTER TABLE `salesreceipt`
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `StaffID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10002;
+  MODIFY `StaffID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10045;
 
 --
 -- AUTO_INCREMENT for table `store`
