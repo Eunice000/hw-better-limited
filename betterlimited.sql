@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 27, 2022 at 08:53 PM
+-- Generation Time: May 28, 2022 at 12:29 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -331,10 +331,12 @@ CREATE TABLE `useraccount` (
 --
 
 INSERT INTO `useraccount` (`UserAccountID`, `StaffID`, `UserName`, `Password`, `Email`, `CreateDateTime`, `LastLoginDateTime`) VALUES
-(10001, 10001, 'admin', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-24 20:04:05', '2022-05-28 02:50:10'),
+(10001, 10001, 'admin', 'qwer12345', 'betterlimited10001@gmail.com', '2022-05-24 20:04:05', '2022-05-28 05:01:23'),
 (10008, 10001, 'admin2', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-27 04:59:15', NULL),
 (10011, 10001, 'admin2', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-27 05:52:37', NULL),
-(10012, 10001, 'admin3', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-27 05:55:06', NULL);
+(10012, 10001, 'admin3', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-27 05:55:06', NULL),
+(10014, 10002, 'betterlimited', 'qwer1234', 'betterlimited999@betterlimited.com', '2022-05-28 05:03:40', '2022-05-28 05:04:10'),
+(10015, 10002, 'betterlimmited2', 'qwer1234', 'betterlimited999@betterlimited.com', '2022-05-28 05:16:18', NULL);
 
 --
 -- Indexes for dumped tables
@@ -557,7 +559,7 @@ ALTER TABLE `supplier`
 -- AUTO_INCREMENT for table `useraccount`
 --
 ALTER TABLE `useraccount`
-  MODIFY `UserAccountID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10013;
+  MODIFY `UserAccountID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10019;
 
 --
 -- Constraints for dumped tables
