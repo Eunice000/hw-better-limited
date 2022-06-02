@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="test_btdbModelStoreContainer" CdmEntityContainer="DBEntities">
+    <EntitySetMapping Name="items">
+      <EntityTypeMapping TypeName="test_btdbModel.item">
+        <MappingFragment StoreEntitySet="item">
+          <ScalarProperty Name="itemId" ColumnName="itemId" />
+          <ScalarProperty Name="itemName" ColumnName="itemName" />
+          <ScalarProperty Name="itemDescr" ColumnName="itemDescr" />
+          <ScalarProperty Name="itemImg" ColumnName="itemImg" />
+          <ScalarProperty Name="itemPrice" ColumnName="itemPrice" />
+          <ScalarProperty Name="itemCat" ColumnName="itemCat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="salesorders">
+      <EntityTypeMapping TypeName="test_btdbModel.salesorder">
+        <MappingFragment StoreEntitySet="salesorder">
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+          <ScalarProperty Name="salesOrderId" ColumnName="salesOrderId" />
+          <ScalarProperty Name="paidAmt" ColumnName="paidAmt" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="salesorder_item">
+      <EntityTypeMapping TypeName="test_btdbModel.salesorder_item">
+        <MappingFragment StoreEntitySet="salesorder_item">
+          <ScalarProperty Name="salesOrderId" ColumnName="salesOrderId" />
+          <ScalarProperty Name="itemId" ColumnName="itemId" />
+          <ScalarProperty Name="salePrice" ColumnName="salePrice" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stocklevels">
+      <EntityTypeMapping TypeName="test_btdbModel.stocklevel">
+        <MappingFragment StoreEntitySet="stocklevel">
+          <ScalarProperty Name="storeId" ColumnName="storeId" />
+          <ScalarProperty Name="itemId" ColumnName="itemId" />
+          <ScalarProperty Name="qty" ColumnName="qty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stores">
+      <EntityTypeMapping TypeName="test_btdbModel.store">
+        <MappingFragment StoreEntitySet="store">
+          <ScalarProperty Name="storeId" ColumnName="storeId" />
+          <ScalarProperty Name="storeAddress" ColumnName="storeAddress" />
+          <ScalarProperty Name="storeTel" ColumnName="storeTel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
