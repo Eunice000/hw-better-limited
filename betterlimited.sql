@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 28, 2022 at 03:53 PM
+-- Generation Time: Jun 03, 2022 at 11:05 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -34,6 +34,13 @@ CREATE TABLE `customer` (
   `Tel` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`CustomerID`, `Name`, `Address`, `Tel`) VALUES
+(1, 'paper', 'aAdasgyduask@gmail.com', 23132321);
+
 -- --------------------------------------------------------
 
 --
@@ -45,7 +52,8 @@ CREATE TABLE `deliverynote` (
   `SalesOrderID` int(5) NOT NULL,
   `CustomerID` int(5) NOT NULL,
   `DeliveryDate` date NOT NULL,
-  `DeliveryTime` time NOT NULL
+  `DeliveryTime` time NOT NULL,
+  `DeliveryStatus` enum('pending','In-transit','delivered') NOT NULL DEFAULT 'pending'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -97,7 +105,21 @@ CREATE TABLE `installationorder` (
   `SalesOrderID` int(5) NOT NULL,
   `CustomerID` int(5) NOT NULL,
   `InstallationDate` date NOT NULL,
-  `InstallationTime` time NOT NULL
+  `InstallationTime` time NOT NULL,
+  `InstallationStatus` enum('pending','installed') NOT NULL DEFAULT 'pending'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `inventorystocklevel`
+--
+
+CREATE TABLE `inventorystocklevel` (
+  `inventoryStockID` int(5) NOT NULL,
+  `itemID` int(5) NOT NULL,
+  `itemName` varchar(10) NOT NULL,
+  `Quantity` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -111,12 +133,21 @@ CREATE TABLE `item` (
   `ItemCat` varchar(20) NOT NULL,
   `ItemName` varchar(20) NOT NULL,
   `ItemDesc` varchar(50) NOT NULL,
+  `ItemImg` mediumblob DEFAULT NULL,
   `SalePrice` int(11) NOT NULL,
   `SupplierID` int(5) NOT NULL,
   `SupplierPirce` int(20) NOT NULL,
-  `WarrantyMonth` int(11) NOT NULL,
-  `RequestItemReorderRequestID` int(5) NOT NULL
+  `WarrantyMonth` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `item`
+--
+
+INSERT INTO `item` (`ItemID`, `ItemCat`, `ItemName`, `ItemDesc`, `ItemImg`, `SalePrice`, `SupplierID`, `SupplierPirce`, `WarrantyMonth`) VALUES
+(1, 'T', 'phone', 'asssbj', NULL, 1000, 2, 122, 12),
+(2, 'w', 'TV', 'sdf', NULL, 10001, 2, 1222, 12),
+(3, 'phone', 'Iphone7', '128GB', NULL, 7000, 1, 2321, 12);
 
 -- --------------------------------------------------------
 
@@ -169,6 +200,92 @@ CREATE TABLE `reorderrequest_item` (
   `Qty` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `reorderrequest_item`
+--
+
+INSERT INTO `reorderrequest_item` (`ItemID`, `ReorderRequestID`, `Qty`) VALUES
+(2, 30, 12);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `restockrequest`
+--
+
+CREATE TABLE `restockrequest` (
+  `RestockRequestID` int(5) NOT NULL,
+  `StaffID` int(5) NOT NULL,
+  `RequestDate` date NOT NULL,
+  `RequestTime` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `restockrequest`
+--
+
+INSERT INTO `restockrequest` (`RestockRequestID`, `StaffID`, `RequestDate`, `RequestTime`) VALUES
+(27, 10032, '2022-06-15', '02:45:59'),
+(28, 10002, '2022-06-04', '02:05:25'),
+(29, 10002, '2022-06-04', '02:05:47'),
+(30, 10002, '2022-06-04', '02:06:05'),
+(31, 10002, '2022-06-04', '02:59:18'),
+(32, 10002, '2022-06-04', '03:02:29'),
+(33, 10002, '2022-06-04', '03:10:53'),
+(34, 10002, '2022-06-04', '03:12:15'),
+(35, 10002, '2022-06-04', '03:12:38'),
+(36, 10002, '2022-06-04', '03:19:38'),
+(37, 10002, '2022-06-04', '03:19:43'),
+(38, 10002, '2022-06-04', '03:24:30');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `restockrequest_item`
+--
+
+CREATE TABLE `restockrequest_item` (
+  `RestockRequestID` int(5) NOT NULL,
+  `itemID` int(5) NOT NULL,
+  `Quantity` int(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `restockrequest_item`
+--
+
+INSERT INTO `restockrequest_item` (`RestockRequestID`, `itemID`, `Quantity`) VALUES
+(29, 1, 30),
+(30, 2, 123),
+(32, 2, 231),
+(34, 1, 1),
+(34, 2, 1),
+(34, 3, 1),
+(35, 1, 4),
+(35, 2, 3),
+(35, 3, 6),
+(36, 1, 1),
+(36, 2, 1),
+(36, 3, 1),
+(37, 1, 1),
+(37, 2, 1),
+(37, 3, 1),
+(38, 3, 10);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `retailstocklevel`
+--
+
+CREATE TABLE `retailstocklevel` (
+  `retailStockID` int(5) NOT NULL,
+  `itemID` int(5) NOT NULL,
+  `itemName` varchar(20) NOT NULL,
+  `storeName` varchar(10) NOT NULL,
+  `Quantity` int(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 -- --------------------------------------------------------
 
 --
@@ -179,11 +296,12 @@ CREATE TABLE `salesorder` (
   `SalesOrderID` int(5) NOT NULL,
   `StoreID` int(5) NOT NULL,
   `StaffID` int(5) NOT NULL,
+  `PaymentStatus` enum('ordered','settled') DEFAULT NULL,
   `PaidAmt` int(20) NOT NULL,
   `Date` date NOT NULL,
   `Time` time NOT NULL,
   `ExpDate` date NOT NULL,
-  `CustomerID` int(5) NOT NULL
+  `CustomerID` int(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -193,7 +311,7 @@ CREATE TABLE `salesorder` (
 --
 
 CREATE TABLE `salesorder_item` (
-  `OrderID` int(5) NOT NULL,
+  `SalesOrderID` int(5) NOT NULL,
   `ItemID` int(5) NOT NULL,
   `SalePrice` int(11) NOT NULL,
   `Qty` int(11) NOT NULL,
@@ -297,6 +415,14 @@ CREATE TABLE `store` (
   `StaffID` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `store`
+--
+
+INSERT INTO `store` (`StoreID`, `Address`, `Tel`, `StaffID`) VALUES
+(1, 'store1@gmail.com', 12341234, 10037),
+(2, 'store2@gmail.com', 32312123, 10021);
+
 -- --------------------------------------------------------
 
 --
@@ -309,6 +435,14 @@ CREATE TABLE `supplier` (
   `Address` varchar(50) NOT NULL,
   `Tel` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `supplier`
+--
+
+INSERT INTO `supplier` (`SupplierID`, `SupplierName`, `Address`, `Tel`) VALUES
+(1, 'abc', 'addd', 12345678),
+(2, 'aa', 'sdff', 23456789);
 
 -- --------------------------------------------------------
 
@@ -331,7 +465,7 @@ CREATE TABLE `useraccount` (
 --
 
 INSERT INTO `useraccount` (`UserAccountID`, `StaffID`, `UserName`, `Password`, `Email`, `CreateDateTime`, `LastLoginDateTime`) VALUES
-(10001, 10001, 'admin', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-24 20:04:05', '2022-05-28 21:52:14'),
+(10001, 10001, 'admin', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-24 20:04:05', '2022-06-04 03:54:56'),
 (10008, 10001, 'admin2', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-27 04:59:15', NULL),
 (10011, 10001, 'admin2', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-27 05:52:37', NULL),
 (10012, 10001, 'admin3', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-27 05:55:06', NULL),
@@ -423,6 +557,20 @@ ALTER TABLE `reorderrequest_item`
   ADD KEY `FKReorderReq254158` (`ReorderRequestID`);
 
 --
+-- Indexes for table `restockrequest`
+--
+ALTER TABLE `restockrequest`
+  ADD PRIMARY KEY (`RestockRequestID`),
+  ADD KEY `StaffID` (`StaffID`);
+
+--
+-- Indexes for table `restockrequest_item`
+--
+ALTER TABLE `restockrequest_item`
+  ADD PRIMARY KEY (`RestockRequestID`,`itemID`),
+  ADD KEY `itemID` (`itemID`);
+
+--
 -- Indexes for table `salesorder`
 --
 ALTER TABLE `salesorder`
@@ -435,8 +583,8 @@ ALTER TABLE `salesorder`
 -- Indexes for table `salesorder_item`
 --
 ALTER TABLE `salesorder_item`
-  ADD PRIMARY KEY (`OrderID`),
-  ADD KEY `FKSalesOrder929714` (`OrderID`),
+  ADD PRIMARY KEY (`SalesOrderID`),
+  ADD KEY `FKSalesOrder929714` (`SalesOrderID`),
   ADD KEY `FKSalesOrder804327` (`ItemID`);
 
 --
@@ -481,7 +629,7 @@ ALTER TABLE `useraccount`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `CustomerID` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `CustomerID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `deliverynote`
@@ -511,7 +659,7 @@ ALTER TABLE `installationorder`
 -- AUTO_INCREMENT for table `item`
 --
 ALTER TABLE `item`
-  MODIFY `ItemID` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `ItemID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `purchaseorder`
@@ -524,6 +672,12 @@ ALTER TABLE `purchaseorder`
 --
 ALTER TABLE `reorderrequest`
   MODIFY `ReorderRequestID` int(5) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `restockrequest`
+--
+ALTER TABLE `restockrequest`
+  MODIFY `RestockRequestID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `salesorder`
@@ -547,13 +701,13 @@ ALTER TABLE `staff`
 -- AUTO_INCREMENT for table `store`
 --
 ALTER TABLE `store`
-  MODIFY `StoreID` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `StoreID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `supplier`
 --
 ALTER TABLE `supplier`
-  MODIFY `SupplierID` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `SupplierID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `useraccount`
@@ -629,8 +783,21 @@ ALTER TABLE `reorderrequest`
 -- Constraints for table `reorderrequest_item`
 --
 ALTER TABLE `reorderrequest_item`
-  ADD CONSTRAINT `FKReorderReq254158` FOREIGN KEY (`ReorderRequestID`) REFERENCES `reorderrequest` (`ReorderRequestID`),
+  ADD CONSTRAINT `FKReorderReq254158` FOREIGN KEY (`ReorderRequestID`) REFERENCES `restockrequest` (`RestockRequestID`),
   ADD CONSTRAINT `FKReorderReq782151` FOREIGN KEY (`ItemID`) REFERENCES `item` (`ItemID`);
+
+--
+-- Constraints for table `restockrequest`
+--
+ALTER TABLE `restockrequest`
+  ADD CONSTRAINT `restockrequest_ibfk_1` FOREIGN KEY (`StaffID`) REFERENCES `staff` (`StaffID`);
+
+--
+-- Constraints for table `restockrequest_item`
+--
+ALTER TABLE `restockrequest_item`
+  ADD CONSTRAINT `restockrequest_item_ibfk_1` FOREIGN KEY (`itemID`) REFERENCES `item` (`ItemID`),
+  ADD CONSTRAINT `restockrequest_item_ibfk_2` FOREIGN KEY (`RestockRequestID`) REFERENCES `restockrequest` (`RestockRequestID`);
 
 --
 -- Constraints for table `salesorder`
@@ -645,7 +812,7 @@ ALTER TABLE `salesorder`
 --
 ALTER TABLE `salesorder_item`
   ADD CONSTRAINT `FKSalesOrder804327` FOREIGN KEY (`ItemID`) REFERENCES `item` (`ItemID`),
-  ADD CONSTRAINT `FKSalesOrder929714` FOREIGN KEY (`OrderID`) REFERENCES `salesorder` (`SalesOrderID`);
+  ADD CONSTRAINT `FKSalesOrder929714` FOREIGN KEY (`SalesOrderID`) REFERENCES `salesorder` (`SalesOrderID`);
 
 --
 -- Constraints for table `salesreceipt`
