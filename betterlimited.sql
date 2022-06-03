@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 03, 2022 at 11:05 PM
+-- Generation Time: Jun 04, 2022 at 12:22 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -33,13 +33,6 @@ CREATE TABLE `customer` (
   `Address` varchar(50) NOT NULL,
   `Tel` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `customer`
---
-
-INSERT INTO `customer` (`CustomerID`, `Name`, `Address`, `Tel`) VALUES
-(1, 'paper', 'aAdasgyduask@gmail.com', 23132321);
 
 -- --------------------------------------------------------
 
@@ -116,10 +109,10 @@ CREATE TABLE `installationorder` (
 --
 
 CREATE TABLE `inventorystocklevel` (
-  `inventoryStockID` int(5) NOT NULL,
   `itemID` int(5) NOT NULL,
   `itemName` varchar(10) NOT NULL,
-  `Quantity` int(3) NOT NULL
+  `Quantity` int(3) NOT NULL,
+  `LowLevelQty` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -145,9 +138,16 @@ CREATE TABLE `item` (
 --
 
 INSERT INTO `item` (`ItemID`, `ItemCat`, `ItemName`, `ItemDesc`, `ItemImg`, `SalePrice`, `SupplierID`, `SupplierPirce`, `WarrantyMonth`) VALUES
-(1, 'T', 'phone', 'asssbj', NULL, 1000, 2, 122, 12),
-(2, 'w', 'TV', 'sdf', NULL, 10001, 2, 1222, 12),
-(3, 'phone', 'Iphone7', '128GB', NULL, 7000, 1, 2321, 12);
+(10001, 'phone', 'Iphone7', '128GB', '', 7000, 10001, 6000, 12),
+(10002, 'phone', 'Iphone8', '128GB', NULL, 23113, 10001, 2321, 12),
+(10003, 'phone', 'Iphone211', '128GB', NULL, 7000, 10001, 3231, 12),
+(10004, 'phone', 'Iphone8', '256GB', NULL, 7120, 10001, 31231, 12),
+(10005, 'phone', 'Iphone9', '128GB', NULL, 72310, 10001, 312, 12),
+(10006, 'phone', 'Iphone10', '256GB', NULL, 7123, 10001, 62310, 12),
+(10007, 'phone', 'Iphone11', '128GB', NULL, 7231, 10001, 6130, 12),
+(10008, 'phone', 'Iphone12', '256GB', NULL, 72123, 10001, 6120, 12),
+(10009, 'phone', 'Iphone135', '128GB', NULL, 3212, 10001, 63120, 12),
+(10010, 'phone', 'Iphone51', '128GB', NULL, 73120, 10001, 62310, 12);
 
 -- --------------------------------------------------------
 
@@ -184,8 +184,7 @@ CREATE TABLE `reorderrequest` (
   `ReorderRequestID` int(5) NOT NULL,
   `StaffID` int(5) NOT NULL,
   `RequestDate` date NOT NULL,
-  `RequestTime` time NOT NULL,
-  `PurchaseOrderPurchaseOrderID` int(5) NOT NULL
+  `RequestTime` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -205,7 +204,7 @@ CREATE TABLE `reorderrequest_item` (
 --
 
 INSERT INTO `reorderrequest_item` (`ItemID`, `ReorderRequestID`, `Qty`) VALUES
-(2, 30, 12);
+(10002, 10030, 12);
 
 -- --------------------------------------------------------
 
@@ -225,18 +224,18 @@ CREATE TABLE `restockrequest` (
 --
 
 INSERT INTO `restockrequest` (`RestockRequestID`, `StaffID`, `RequestDate`, `RequestTime`) VALUES
-(27, 10032, '2022-06-15', '02:45:59'),
-(28, 10002, '2022-06-04', '02:05:25'),
-(29, 10002, '2022-06-04', '02:05:47'),
-(30, 10002, '2022-06-04', '02:06:05'),
-(31, 10002, '2022-06-04', '02:59:18'),
-(32, 10002, '2022-06-04', '03:02:29'),
-(33, 10002, '2022-06-04', '03:10:53'),
-(34, 10002, '2022-06-04', '03:12:15'),
-(35, 10002, '2022-06-04', '03:12:38'),
-(36, 10002, '2022-06-04', '03:19:38'),
-(37, 10002, '2022-06-04', '03:19:43'),
-(38, 10002, '2022-06-04', '03:24:30');
+(10027, 10032, '2022-06-15', '02:45:59'),
+(10028, 10002, '2022-06-04', '02:05:25'),
+(10029, 10002, '2022-06-04', '02:05:47'),
+(10030, 10002, '2022-06-04', '02:06:05'),
+(10031, 10002, '2022-06-04', '02:59:18'),
+(10032, 10002, '2022-06-04', '03:02:29'),
+(10033, 10002, '2022-06-04', '03:10:53'),
+(10034, 10002, '2022-06-04', '03:12:15'),
+(10035, 10002, '2022-06-04', '03:12:38'),
+(10036, 10002, '2022-06-04', '03:19:38'),
+(10037, 10002, '2022-06-04', '03:19:43'),
+(10038, 10002, '2022-06-04', '03:24:30');
 
 -- --------------------------------------------------------
 
@@ -255,22 +254,22 @@ CREATE TABLE `restockrequest_item` (
 --
 
 INSERT INTO `restockrequest_item` (`RestockRequestID`, `itemID`, `Quantity`) VALUES
-(29, 1, 30),
-(30, 2, 123),
-(32, 2, 231),
-(34, 1, 1),
-(34, 2, 1),
-(34, 3, 1),
-(35, 1, 4),
-(35, 2, 3),
-(35, 3, 6),
-(36, 1, 1),
-(36, 2, 1),
-(36, 3, 1),
-(37, 1, 1),
-(37, 2, 1),
-(37, 3, 1),
-(38, 3, 10);
+(10029, 10001, 30),
+(10030, 10002, 123),
+(10032, 10002, 231),
+(10034, 10001, 1),
+(10034, 10002, 1),
+(10034, 10003, 1),
+(10035, 10001, 4),
+(10035, 10002, 3),
+(10035, 10003, 6),
+(10036, 10001, 1),
+(10036, 10002, 1),
+(10036, 10003, 1),
+(10037, 10001, 1),
+(10037, 10002, 1),
+(10037, 10003, 1),
+(10038, 10003, 10);
 
 -- --------------------------------------------------------
 
@@ -279,11 +278,11 @@ INSERT INTO `restockrequest_item` (`RestockRequestID`, `itemID`, `Quantity`) VAL
 --
 
 CREATE TABLE `retailstocklevel` (
-  `retailStockID` int(5) NOT NULL,
   `itemID` int(5) NOT NULL,
   `itemName` varchar(20) NOT NULL,
   `storeName` varchar(10) NOT NULL,
-  `Quantity` int(3) NOT NULL
+  `Quantity` int(3) NOT NULL,
+  `LowLevelQty` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -441,8 +440,8 @@ CREATE TABLE `supplier` (
 --
 
 INSERT INTO `supplier` (`SupplierID`, `SupplierName`, `Address`, `Tel`) VALUES
-(1, 'abc', 'addd', 12345678),
-(2, 'aa', 'sdff', 23456789);
+(10001, 'abc', 'addd', 12345678),
+(10002, 'aa', 'sdff', 23456789);
 
 -- --------------------------------------------------------
 
@@ -522,6 +521,12 @@ ALTER TABLE `installationorder`
   ADD KEY `FKInstallati141946` (`CustomerID`);
 
 --
+-- Indexes for table `inventorystocklevel`
+--
+ALTER TABLE `inventorystocklevel`
+  ADD PRIMARY KEY (`itemID`);
+
+--
 -- Indexes for table `item`
 --
 ALTER TABLE `item`
@@ -569,6 +574,12 @@ ALTER TABLE `restockrequest`
 ALTER TABLE `restockrequest_item`
   ADD PRIMARY KEY (`RestockRequestID`,`itemID`),
   ADD KEY `itemID` (`itemID`);
+
+--
+-- Indexes for table `retailstocklevel`
+--
+ALTER TABLE `retailstocklevel`
+  ADD PRIMARY KEY (`itemID`);
 
 --
 -- Indexes for table `salesorder`
@@ -659,7 +670,7 @@ ALTER TABLE `installationorder`
 -- AUTO_INCREMENT for table `item`
 --
 ALTER TABLE `item`
-  MODIFY `ItemID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ItemID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10011;
 
 --
 -- AUTO_INCREMENT for table `purchaseorder`
@@ -677,7 +688,7 @@ ALTER TABLE `reorderrequest`
 -- AUTO_INCREMENT for table `restockrequest`
 --
 ALTER TABLE `restockrequest`
-  MODIFY `RestockRequestID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `RestockRequestID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10039;
 
 --
 -- AUTO_INCREMENT for table `salesorder`
@@ -707,7 +718,7 @@ ALTER TABLE `store`
 -- AUTO_INCREMENT for table `supplier`
 --
 ALTER TABLE `supplier`
-  MODIFY `SupplierID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `SupplierID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10003;
 
 --
 -- AUTO_INCREMENT for table `useraccount`
@@ -755,6 +766,12 @@ ALTER TABLE `installationorder`
   ADD CONSTRAINT `FKInstallati300044` FOREIGN KEY (`SalesOrderID`) REFERENCES `salesorder` (`SalesOrderID`);
 
 --
+-- Constraints for table `inventorystocklevel`
+--
+ALTER TABLE `inventorystocklevel`
+  ADD CONSTRAINT `FK_itemID` FOREIGN KEY (`itemID`) REFERENCES `item` (`ItemID`);
+
+--
 -- Constraints for table `item`
 --
 ALTER TABLE `item`
@@ -798,6 +815,12 @@ ALTER TABLE `restockrequest`
 ALTER TABLE `restockrequest_item`
   ADD CONSTRAINT `restockrequest_item_ibfk_1` FOREIGN KEY (`itemID`) REFERENCES `item` (`ItemID`),
   ADD CONSTRAINT `restockrequest_item_ibfk_2` FOREIGN KEY (`RestockRequestID`) REFERENCES `restockrequest` (`RestockRequestID`);
+
+--
+-- Constraints for table `retailstocklevel`
+--
+ALTER TABLE `retailstocklevel`
+  ADD CONSTRAINT `FK_itemIDrs` FOREIGN KEY (`itemID`) REFERENCES `item` (`ItemID`);
 
 --
 -- Constraints for table `salesorder`
