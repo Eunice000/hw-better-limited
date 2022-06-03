@@ -42,13 +42,12 @@ namespace BetterLimited
             this.button_LogOut = new System.Windows.Forms.Button();
             this.button_Language = new System.Windows.Forms.Button();
             this.Lable_Munebar = new System.Windows.Forms.FlowLayoutPanel();
-            this.Label_UserID = new System.Windows.Forms.Label();
-            this.button_SalesPOS = new System.Windows.Forms.Button();
             this.button_AccountingDepart = new System.Windows.Forms.Button();
             this.flPanel_AccountDepart = new System.Windows.Forms.FlowLayoutPanel();
             this.button_PMM_Accounting = new System.Windows.Forms.Button();
             this.button_AAM_Accounting = new System.Windows.Forms.Button();
             this.button_ISMM_Account = new System.Windows.Forms.Button();
+            this.button_RIM_Account = new System.Windows.Forms.Button();
             this.button_PurchaseDepart = new System.Windows.Forms.Button();
             this.flPanel_PurchaseDepart = new System.Windows.Forms.FlowLayoutPanel();
             this.button_ISMM_Purchase = new System.Windows.Forms.Button();
@@ -72,7 +71,8 @@ namespace BetterLimited
             this.button_ISMM_Inventory = new System.Windows.Forms.Button();
             this.button_RSMM_Inventory = new System.Windows.Forms.Button();
             this.button_RIM_Inventory = new System.Windows.Forms.Button();
-            this.button_RIM_Account = new System.Windows.Forms.Button();
+            this.Label_UserID = new System.Windows.Forms.Label();
+            this.button_SalesPOS = new System.Windows.Forms.Button();
             this.flowLayoutPanel_Technical_AAM = new System.Windows.Forms.FlowLayoutPanel();
             this.button_Technical_AAM_AnalysisReport = new System.Windows.Forms.Button();
             this.flowLayoutPanel_Technical_DIM = new System.Windows.Forms.FlowLayoutPanel();
@@ -312,28 +312,6 @@ namespace BetterLimited
             this.Lable_Munebar.TabIndex = 12;
             this.Lable_Munebar.WrapContents = false;
             // 
-            // Label_UserID
-            // 
-            this.Label_UserID.AutoSize = true;
-            this.Label_UserID.BackColor = System.Drawing.SystemColors.Highlight;
-            this.Label_UserID.Font = new System.Drawing.Font("Microsoft JhengHei", 15F);
-            this.Label_UserID.Location = new System.Drawing.Point(12, 220);
-            this.Label_UserID.Name = "Label_UserID";
-            this.Label_UserID.Size = new System.Drawing.Size(105, 31);
-            this.Label_UserID.TabIndex = 21;
-            this.Label_UserID.Text = "StaffID :";
-            // 
-            // button_SalesPOS
-            // 
-            this.button_SalesPOS.AutoSize = true;
-            this.button_SalesPOS.Location = new System.Drawing.Point(3, 2);
-            this.button_SalesPOS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_SalesPOS.Name = "button_SalesPOS";
-            this.button_SalesPOS.Size = new System.Drawing.Size(231, 38);
-            this.button_SalesPOS.TabIndex = 20;
-            this.button_SalesPOS.Text = "POS";
-            this.button_SalesPOS.UseVisualStyleBackColor = true;
-            // 
             // button_AccountingDepart
             // 
             this.button_AccountingDepart.BackColor = System.Drawing.Color.DarkOrange;
@@ -403,6 +381,20 @@ namespace BetterLimited
             this.button_ISMM_Account.Text = "Inventory Storck Mangement Module";
             this.button_ISMM_Account.UseVisualStyleBackColor = false;
             this.button_ISMM_Account.Click += new System.EventHandler(this.button_ISMM_Account_Click);
+            // 
+            // button_RIM_Account
+            // 
+            this.button_RIM_Account.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button_RIM_Account.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_RIM_Account.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_RIM_Account.Location = new System.Drawing.Point(3, 104);
+            this.button_RIM_Account.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_RIM_Account.Name = "button_RIM_Account";
+            this.button_RIM_Account.Size = new System.Drawing.Size(295, 30);
+            this.button_RIM_Account.TabIndex = 42;
+            this.button_RIM_Account.Text = "Return Items Module";
+            this.button_RIM_Account.UseVisualStyleBackColor = false;
+            this.button_RIM_Account.Click += new System.EventHandler(this.button_RIM_Account_Click);
             // 
             // button_PurchaseDepart
             // 
@@ -725,19 +717,27 @@ namespace BetterLimited
             this.button_RIM_Inventory.UseVisualStyleBackColor = false;
             this.button_RIM_Inventory.Click += new System.EventHandler(this.button_RIM_Inventory_Click);
             // 
-            // button_RIM_Account
+            // Label_UserID
             // 
-            this.button_RIM_Account.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.button_RIM_Account.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_RIM_Account.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_RIM_Account.Location = new System.Drawing.Point(3, 104);
-            this.button_RIM_Account.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_RIM_Account.Name = "button_RIM_Account";
-            this.button_RIM_Account.Size = new System.Drawing.Size(295, 30);
-            this.button_RIM_Account.TabIndex = 42;
-            this.button_RIM_Account.Text = "Return Items Module";
-            this.button_RIM_Account.UseVisualStyleBackColor = false;
-            this.button_RIM_Account.Click += new System.EventHandler(this.button_RIM_Account_Click);
+            this.Label_UserID.AutoSize = true;
+            this.Label_UserID.BackColor = System.Drawing.SystemColors.Highlight;
+            this.Label_UserID.Font = new System.Drawing.Font("Microsoft JhengHei", 15F);
+            this.Label_UserID.Location = new System.Drawing.Point(12, 220);
+            this.Label_UserID.Name = "Label_UserID";
+            this.Label_UserID.Size = new System.Drawing.Size(105, 31);
+            this.Label_UserID.TabIndex = 21;
+            this.Label_UserID.Text = "StaffID :";
+            // 
+            // button_SalesPOS
+            // 
+            this.button_SalesPOS.AutoSize = true;
+            this.button_SalesPOS.Location = new System.Drawing.Point(3, 2);
+            this.button_SalesPOS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_SalesPOS.Name = "button_SalesPOS";
+            this.button_SalesPOS.Size = new System.Drawing.Size(231, 38);
+            this.button_SalesPOS.TabIndex = 20;
+            this.button_SalesPOS.Text = "POS";
+            this.button_SalesPOS.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel_Technical_AAM
             // 
@@ -1456,6 +1456,7 @@ namespace BetterLimited
             this.button_Sales_PMM_SalesItemList.TabIndex = 22;
             this.button_Sales_PMM_SalesItemList.Text = "Item List";
             this.button_Sales_PMM_SalesItemList.UseVisualStyleBackColor = false;
+            this.button_Sales_PMM_SalesItemList.Click += new System.EventHandler(this.button_Sales_PMM_SalesItemList_Click);
             // 
             // button_Sales_PMM_UpdateRequest
             // 
@@ -1597,8 +1598,10 @@ namespace BetterLimited
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1668, 1061);
-            this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.flowLayoutPanel_Sales_POS);
+            this.Controls.Add(this.flowLayoutPanel_Sales_AAM);
+            this.Controls.Add(this.flowLayoutPanel_Sales_PMM);
+            this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.flowLayoutPanel_Technical_AAM);
             this.Controls.Add(this.flowLayoutPanel_Technical_DIM);
             this.Controls.Add(this.flowLayoutPanel_Inventory_DIM);
@@ -1613,9 +1616,7 @@ namespace BetterLimited
             this.Controls.Add(this.flowLayoutPanel_Account_PMM);
             this.Controls.Add(this.flowLayoutPanel_Account_AAM);
             this.Controls.Add(this.flowLayoutPanel_Account_RIM);
-            this.Controls.Add(this.flowLayoutPanel_Sales_AAM);
             this.Controls.Add(this.flowLayoutPanel_Sales_RIM);
-            this.Controls.Add(this.flowLayoutPanel_Sales_PMM);
             this.Controls.Add(this.flowLayoutPanel_Sales_RSMM);
             this.Controls.Add(this.Label_UserID);
             this.Controls.Add(this.Bar_2);

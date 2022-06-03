@@ -72,3 +72,4 @@ C:\Users\a6349\OneDrive\桌面\GitHub\hw-better-limited\RSM\RSM\obj\Debug\RSM.cs
 C:\Users\a6349\OneDrive\桌面\GitHub\hw-better-limited\RSM\RSM\obj\Debug\RSM.csproj.CopyComplete
 C:\Users\a6349\OneDrive\桌面\GitHub\hw-better-limited\RSM\RSM\obj\Debug\RSM.exe
 C:\Users\a6349\OneDrive\桌面\GitHub\hw-better-limited\RSM\RSM\obj\Debug\RSM.pdb
+C:\Users\a6349\OneDrive\桌面\GitHub\hw-better-limited\RSM\RSM\obj\Debug\RSM.RestockRequestForm_v2.resources
