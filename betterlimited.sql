@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 04, 2022 at 12:22 AM
+-- Generation Time: Jun 04, 2022 at 02:57 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -34,13 +34,20 @@ CREATE TABLE `customer` (
   `Tel` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`CustomerID`, `Name`, `Address`, `Tel`) VALUES
+(10001, 'ABC', 'HK', 23984221);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `deliverynote`
+-- Table structure for table `deliveryorder`
 --
 
-CREATE TABLE `deliverynote` (
+CREATE TABLE `deliveryorder` (
   `DeliveryID` int(5) NOT NULL,
   `SalesOrderID` int(5) NOT NULL,
   `CustomerID` int(5) NOT NULL,
@@ -48,6 +55,13 @@ CREATE TABLE `deliverynote` (
   `DeliveryTime` time NOT NULL,
   `DeliveryStatus` enum('pending','In-transit','delivered') NOT NULL DEFAULT 'pending'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `deliveryorder`
+--
+
+INSERT INTO `deliveryorder` (`DeliveryID`, `SalesOrderID`, `CustomerID`, `DeliveryDate`, `DeliveryTime`, `DeliveryStatus`) VALUES
+(10001, 10001, 10001, '2022-06-04', '07:03:00', 'pending');
 
 -- --------------------------------------------------------
 
@@ -99,8 +113,15 @@ CREATE TABLE `installationorder` (
   `CustomerID` int(5) NOT NULL,
   `InstallationDate` date NOT NULL,
   `InstallationTime` time NOT NULL,
-  `InstallationStatus` enum('pending','installed') NOT NULL DEFAULT 'pending'
+  `InstallationStatus` enum('pending','installed') DEFAULT 'pending'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `installationorder`
+--
+
+INSERT INTO `installationorder` (`InstallationID`, `SalesOrderID`, `CustomerID`, `InstallationDate`, `InstallationTime`, `InstallationStatus`) VALUES
+(10001, 10001, 10001, '2022-06-04', '08:35:00', 'installed');
 
 -- --------------------------------------------------------
 
@@ -299,9 +320,16 @@ CREATE TABLE `salesorder` (
   `PaidAmt` int(20) NOT NULL,
   `Date` date NOT NULL,
   `Time` time NOT NULL,
-  `ExpDate` date NOT NULL,
+  `ExpDate` date DEFAULT NULL,
   `CustomerID` int(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `salesorder`
+--
+
+INSERT INTO `salesorder` (`SalesOrderID`, `StoreID`, `StaffID`, `PaymentStatus`, `PaidAmt`, `Date`, `Time`, `ExpDate`, `CustomerID`) VALUES
+(10001, 1, 10001, 'ordered', 100, '2022-06-04', '07:03:00', NULL, 10001);
 
 -- --------------------------------------------------------
 
@@ -464,12 +492,12 @@ CREATE TABLE `useraccount` (
 --
 
 INSERT INTO `useraccount` (`UserAccountID`, `StaffID`, `UserName`, `Password`, `Email`, `CreateDateTime`, `LastLoginDateTime`) VALUES
-(10001, 10001, 'admin', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-24 20:04:05', '2022-06-04 03:54:56'),
+(10001, 10001, 'admin', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-24 20:04:05', '2022-06-04 08:49:12'),
 (10008, 10001, 'admin2', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-27 04:59:15', NULL),
 (10011, 10001, 'admin2', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-27 05:52:37', NULL),
 (10012, 10001, 'admin3', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-27 05:55:06', NULL),
 (10014, 10002, 'betterlimited', 'qwer1234', 'betterlimited999@betterlimited.com', '2022-05-28 05:03:40', '2022-05-28 05:04:10'),
-(10015, 10002, 'betterlimmited2', 'qwer1234', 'betterlimited999@betterlimited.com', '2022-05-28 05:16:18', NULL);
+(10015, 10002, 'betterlimmited2', 'qwer1234', 'betterlimited999@betterlimited.com', '2022-05-28 05:16:18', '2022-06-04 06:27:20');
 
 --
 -- Indexes for dumped tables
@@ -482,9 +510,9 @@ ALTER TABLE `customer`
   ADD PRIMARY KEY (`CustomerID`);
 
 --
--- Indexes for table `deliverynote`
+-- Indexes for table `deliveryorder`
 --
-ALTER TABLE `deliverynote`
+ALTER TABLE `deliveryorder`
   ADD PRIMARY KEY (`DeliveryID`),
   ADD KEY `FKDeliveryNo488459` (`CustomerID`),
   ADD KEY `FKDeliveryNo330361` (`SalesOrderID`);
@@ -640,13 +668,13 @@ ALTER TABLE `useraccount`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `CustomerID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `CustomerID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10002;
 
 --
--- AUTO_INCREMENT for table `deliverynote`
+-- AUTO_INCREMENT for table `deliveryorder`
 --
-ALTER TABLE `deliverynote`
-  MODIFY `DeliveryID` int(5) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `deliveryorder`
+  MODIFY `DeliveryID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10002;
 
 --
 -- AUTO_INCREMENT for table `goodreturnnote`
@@ -664,7 +692,7 @@ ALTER TABLE `goodsreceivednote`
 -- AUTO_INCREMENT for table `installationorder`
 --
 ALTER TABLE `installationorder`
-  MODIFY `InstallationID` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `InstallationID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10002;
 
 --
 -- AUTO_INCREMENT for table `item`
@@ -694,7 +722,7 @@ ALTER TABLE `restockrequest`
 -- AUTO_INCREMENT for table `salesorder`
 --
 ALTER TABLE `salesorder`
-  MODIFY `SalesOrderID` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `SalesOrderID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10002;
 
 --
 -- AUTO_INCREMENT for table `salesreceipt`
@@ -731,9 +759,9 @@ ALTER TABLE `useraccount`
 --
 
 --
--- Constraints for table `deliverynote`
+-- Constraints for table `deliveryorder`
 --
-ALTER TABLE `deliverynote`
+ALTER TABLE `deliveryorder`
   ADD CONSTRAINT `FKDeliveryNo330361` FOREIGN KEY (`SalesOrderID`) REFERENCES `salesorder` (`SalesOrderID`),
   ADD CONSTRAINT `FKDeliveryNo488459` FOREIGN KEY (`CustomerID`) REFERENCES `customer` (`CustomerID`);
 
