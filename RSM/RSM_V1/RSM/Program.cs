@@ -16,7 +16,7 @@ namespace RSM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ItemList());
+            Application.Run(new RestockRequestForm_v2());
         }
     }
 }

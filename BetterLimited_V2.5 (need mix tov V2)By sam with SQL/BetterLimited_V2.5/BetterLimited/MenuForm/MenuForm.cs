@@ -94,7 +94,7 @@ namespace BetterLimited
             this.mainpanel.Controls.Add(f);
             this.mainpanel.Tag = f;
             f.Show();
-
+            label_Test.Text = "HelloWorld";
 
         }
 
@@ -376,6 +376,11 @@ namespace BetterLimited
             LoginForm menuform = new LoginForm();
             this.Hide();
             menuform.Show();
+        }
+
+        private void button_Sales_PMM_SalesItemList_Click(object sender, EventArgs e)
+        {
+            loadform(new SalesOrder());
         }
 
 

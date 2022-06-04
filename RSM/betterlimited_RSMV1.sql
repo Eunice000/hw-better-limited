@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 04, 2022 at 12:22 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
+-- 主機： 127.0.0.1
+-- 產生時間： 2022-06-03 22:04:29
+-- 伺服器版本： 10.4.24-MariaDB
+-- PHP 版本： 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `betterlimited`
+-- 資料庫： `betterlimited`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customer`
+-- 資料表結構 `customer`
 --
 
 CREATE TABLE `customer` (
@@ -37,7 +37,7 @@ CREATE TABLE `customer` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `deliverynote`
+-- 資料表結構 `deliverynote`
 --
 
 CREATE TABLE `deliverynote` (
@@ -45,14 +45,13 @@ CREATE TABLE `deliverynote` (
   `SalesOrderID` int(5) NOT NULL,
   `CustomerID` int(5) NOT NULL,
   `DeliveryDate` date NOT NULL,
-  `DeliveryTime` time NOT NULL,
-  `DeliveryStatus` enum('pending','In-transit','delivered') NOT NULL DEFAULT 'pending'
+  `DeliveryTime` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `goodreturnnote`
+-- 資料表結構 `goodreturnnote`
 --
 
 CREATE TABLE `goodreturnnote` (
@@ -64,7 +63,7 @@ CREATE TABLE `goodreturnnote` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `goodreturnnote_item`
+-- 資料表結構 `goodreturnnote_item`
 --
 
 CREATE TABLE `goodreturnnote_item` (
@@ -76,7 +75,7 @@ CREATE TABLE `goodreturnnote_item` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `goodsreceivednote`
+-- 資料表結構 `goodsreceivednote`
 --
 
 CREATE TABLE `goodsreceivednote` (
@@ -90,7 +89,7 @@ CREATE TABLE `goodsreceivednote` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `installationorder`
+-- 資料表結構 `installationorder`
 --
 
 CREATE TABLE `installationorder` (
@@ -98,27 +97,26 @@ CREATE TABLE `installationorder` (
   `SalesOrderID` int(5) NOT NULL,
   `CustomerID` int(5) NOT NULL,
   `InstallationDate` date NOT NULL,
-  `InstallationTime` time NOT NULL,
-  `InstallationStatus` enum('pending','installed') NOT NULL DEFAULT 'pending'
+  `InstallationTime` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `inventorystocklevel`
+-- 資料表結構 `inventorystocklevel`
 --
 
 CREATE TABLE `inventorystocklevel` (
+  `inventoryStockID` int(5) NOT NULL,
   `itemID` int(5) NOT NULL,
   `itemName` varchar(10) NOT NULL,
-  `Quantity` int(3) NOT NULL,
-  `LowLevelQty` int(3) NOT NULL
+  `Quantity` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `item`
+-- 資料表結構 `item`
 --
 
 CREATE TABLE `item` (
@@ -126,7 +124,6 @@ CREATE TABLE `item` (
   `ItemCat` varchar(20) NOT NULL,
   `ItemName` varchar(20) NOT NULL,
   `ItemDesc` varchar(50) NOT NULL,
-  `ItemImg` mediumblob DEFAULT NULL,
   `SalePrice` int(11) NOT NULL,
   `SupplierID` int(5) NOT NULL,
   `SupplierPirce` int(20) NOT NULL,
@@ -134,25 +131,18 @@ CREATE TABLE `item` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `item`
+-- 傾印資料表的資料 `item`
 --
 
-INSERT INTO `item` (`ItemID`, `ItemCat`, `ItemName`, `ItemDesc`, `ItemImg`, `SalePrice`, `SupplierID`, `SupplierPirce`, `WarrantyMonth`) VALUES
-(10001, 'phone', 'Iphone7', '128GB', '', 7000, 10001, 6000, 12),
-(10002, 'phone', 'Iphone8', '128GB', NULL, 23113, 10001, 2321, 12),
-(10003, 'phone', 'Iphone211', '128GB', NULL, 7000, 10001, 3231, 12),
-(10004, 'phone', 'Iphone8', '256GB', NULL, 7120, 10001, 31231, 12),
-(10005, 'phone', 'Iphone9', '128GB', NULL, 72310, 10001, 312, 12),
-(10006, 'phone', 'Iphone10', '256GB', NULL, 7123, 10001, 62310, 12),
-(10007, 'phone', 'Iphone11', '128GB', NULL, 7231, 10001, 6130, 12),
-(10008, 'phone', 'Iphone12', '256GB', NULL, 72123, 10001, 6120, 12),
-(10009, 'phone', 'Iphone135', '128GB', NULL, 3212, 10001, 63120, 12),
-(10010, 'phone', 'Iphone51', '128GB', NULL, 73120, 10001, 62310, 12);
+INSERT INTO `item` (`ItemID`, `ItemCat`, `ItemName`, `ItemDesc`, `SalePrice`, `SupplierID`, `SupplierPirce`, `WarrantyMonth`) VALUES
+(1, 'T', 'phone', 'asssbj', 1000, 2, 122, 12),
+(2, 'w', 'TV', 'sdf', 10001, 2, 1222, 12),
+(3, 'phone', 'Iphone7', '128GB', 7000, 1, 2321, 12);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `purchaseorder`
+-- 資料表結構 `purchaseorder`
 --
 
 CREATE TABLE `purchaseorder` (
@@ -164,7 +154,7 @@ CREATE TABLE `purchaseorder` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `purchaseorder_item`
+-- 資料表結構 `purchaseorder_item`
 --
 
 CREATE TABLE `purchaseorder_item` (
@@ -177,20 +167,21 @@ CREATE TABLE `purchaseorder_item` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reorderrequest`
+-- 資料表結構 `reorderrequest`
 --
 
 CREATE TABLE `reorderrequest` (
   `ReorderRequestID` int(5) NOT NULL,
   `StaffID` int(5) NOT NULL,
   `RequestDate` date NOT NULL,
-  `RequestTime` time NOT NULL
+  `RequestTime` time NOT NULL,
+  `PurchaseOrderPurchaseOrderID` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reorderrequest_item`
+-- 資料表結構 `reorderrequest_item`
 --
 
 CREATE TABLE `reorderrequest_item` (
@@ -200,16 +191,16 @@ CREATE TABLE `reorderrequest_item` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `reorderrequest_item`
+-- 傾印資料表的資料 `reorderrequest_item`
 --
 
 INSERT INTO `reorderrequest_item` (`ItemID`, `ReorderRequestID`, `Qty`) VALUES
-(10002, 10030, 12);
+(2, 30, 12);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `restockrequest`
+-- 資料表結構 `restockrequest`
 --
 
 CREATE TABLE `restockrequest` (
@@ -220,27 +211,27 @@ CREATE TABLE `restockrequest` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `restockrequest`
+-- 傾印資料表的資料 `restockrequest`
 --
 
 INSERT INTO `restockrequest` (`RestockRequestID`, `StaffID`, `RequestDate`, `RequestTime`) VALUES
-(10027, 10032, '2022-06-15', '02:45:59'),
-(10028, 10002, '2022-06-04', '02:05:25'),
-(10029, 10002, '2022-06-04', '02:05:47'),
-(10030, 10002, '2022-06-04', '02:06:05'),
-(10031, 10002, '2022-06-04', '02:59:18'),
-(10032, 10002, '2022-06-04', '03:02:29'),
-(10033, 10002, '2022-06-04', '03:10:53'),
-(10034, 10002, '2022-06-04', '03:12:15'),
-(10035, 10002, '2022-06-04', '03:12:38'),
-(10036, 10002, '2022-06-04', '03:19:38'),
-(10037, 10002, '2022-06-04', '03:19:43'),
-(10038, 10002, '2022-06-04', '03:24:30');
+(27, 10032, '2022-06-15', '02:45:59'),
+(28, 10002, '2022-06-04', '02:05:25'),
+(29, 10002, '2022-06-04', '02:05:47'),
+(30, 10002, '2022-06-04', '02:06:05'),
+(31, 10002, '2022-06-04', '02:59:18'),
+(32, 10002, '2022-06-04', '03:02:29'),
+(33, 10002, '2022-06-04', '03:10:53'),
+(34, 10002, '2022-06-04', '03:12:15'),
+(35, 10002, '2022-06-04', '03:12:38'),
+(36, 10002, '2022-06-04', '03:19:38'),
+(37, 10002, '2022-06-04', '03:19:43'),
+(38, 10002, '2022-06-04', '03:24:30');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `restockrequest_item`
+-- 資料表結構 `restockrequest_item`
 --
 
 CREATE TABLE `restockrequest_item` (
@@ -250,67 +241,66 @@ CREATE TABLE `restockrequest_item` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `restockrequest_item`
+-- 傾印資料表的資料 `restockrequest_item`
 --
 
 INSERT INTO `restockrequest_item` (`RestockRequestID`, `itemID`, `Quantity`) VALUES
-(10029, 10001, 30),
-(10030, 10002, 123),
-(10032, 10002, 231),
-(10034, 10001, 1),
-(10034, 10002, 1),
-(10034, 10003, 1),
-(10035, 10001, 4),
-(10035, 10002, 3),
-(10035, 10003, 6),
-(10036, 10001, 1),
-(10036, 10002, 1),
-(10036, 10003, 1),
-(10037, 10001, 1),
-(10037, 10002, 1),
-(10037, 10003, 1),
-(10038, 10003, 10);
+(29, 1, 30),
+(30, 2, 123),
+(32, 2, 231),
+(34, 1, 1),
+(34, 2, 1),
+(34, 3, 1),
+(35, 1, 4),
+(35, 2, 3),
+(35, 3, 6),
+(36, 1, 1),
+(36, 2, 1),
+(36, 3, 1),
+(37, 1, 1),
+(37, 2, 1),
+(37, 3, 1),
+(38, 3, 10);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `retailstocklevel`
+-- 資料表結構 `retailstocklevel`
 --
 
 CREATE TABLE `retailstocklevel` (
+  `retailStockID` int(5) NOT NULL,
   `itemID` int(5) NOT NULL,
   `itemName` varchar(20) NOT NULL,
   `storeName` varchar(10) NOT NULL,
-  `Quantity` int(3) NOT NULL,
-  `LowLevelQty` int(3) NOT NULL
+  `Quantity` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `salesorder`
+-- 資料表結構 `salesorder`
 --
 
 CREATE TABLE `salesorder` (
   `SalesOrderID` int(5) NOT NULL,
   `StoreID` int(5) NOT NULL,
   `StaffID` int(5) NOT NULL,
-  `PaymentStatus` enum('ordered','settled') DEFAULT NULL,
   `PaidAmt` int(20) NOT NULL,
   `Date` date NOT NULL,
   `Time` time NOT NULL,
   `ExpDate` date NOT NULL,
-  `CustomerID` int(5) DEFAULT NULL
+  `CustomerID` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `salesorder_item`
+-- 資料表結構 `salesorder_item`
 --
 
 CREATE TABLE `salesorder_item` (
-  `SalesOrderID` int(5) NOT NULL,
+  `OrderID` int(5) NOT NULL,
   `ItemID` int(5) NOT NULL,
   `SalePrice` int(11) NOT NULL,
   `Qty` int(11) NOT NULL,
@@ -321,7 +311,7 @@ CREATE TABLE `salesorder_item` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `salesreceipt`
+-- 資料表結構 `salesreceipt`
 --
 
 CREATE TABLE `salesreceipt` (
@@ -336,7 +326,7 @@ CREATE TABLE `salesreceipt` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `staff`
+-- 資料表結構 `staff`
 --
 
 CREATE TABLE `staff` (
@@ -352,7 +342,7 @@ CREATE TABLE `staff` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `staff`
+-- 傾印資料表的資料 `staff`
 --
 
 INSERT INTO `staff` (`StaffID`, `StaffName`, `Gender`, `DateOfBirth`, `Tel`, `Email`, `Position`, `Depart`, `Salary`) VALUES
@@ -404,7 +394,7 @@ INSERT INTO `staff` (`StaffID`, `StaffName`, `Gender`, `DateOfBirth`, `Tel`, `Em
 -- --------------------------------------------------------
 
 --
--- Table structure for table `store`
+-- 資料表結構 `store`
 --
 
 CREATE TABLE `store` (
@@ -414,18 +404,10 @@ CREATE TABLE `store` (
   `StaffID` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `store`
---
-
-INSERT INTO `store` (`StoreID`, `Address`, `Tel`, `StaffID`) VALUES
-(1, 'store1@gmail.com', 12341234, 10037),
-(2, 'store2@gmail.com', 32312123, 10021);
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `supplier`
+-- 資料表結構 `supplier`
 --
 
 CREATE TABLE `supplier` (
@@ -436,17 +418,17 @@ CREATE TABLE `supplier` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `supplier`
+-- 傾印資料表的資料 `supplier`
 --
 
 INSERT INTO `supplier` (`SupplierID`, `SupplierName`, `Address`, `Tel`) VALUES
-(10001, 'abc', 'addd', 12345678),
-(10002, 'aa', 'sdff', 23456789);
+(1, 'abc', 'addd', 12345678),
+(2, 'aa', 'sdff', 23456789);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `useraccount`
+-- 資料表結構 `useraccount`
 --
 
 CREATE TABLE `useraccount` (
@@ -460,7 +442,7 @@ CREATE TABLE `useraccount` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `useraccount`
+-- 傾印資料表的資料 `useraccount`
 --
 
 INSERT INTO `useraccount` (`UserAccountID`, `StaffID`, `UserName`, `Password`, `Email`, `CreateDateTime`, `LastLoginDateTime`) VALUES
@@ -472,17 +454,17 @@ INSERT INTO `useraccount` (`UserAccountID`, `StaffID`, `UserName`, `Password`, `
 (10015, 10002, 'betterlimmited2', 'qwer1234', 'betterlimited999@betterlimited.com', '2022-05-28 05:16:18', NULL);
 
 --
--- Indexes for dumped tables
+-- 已傾印資料表的索引
 --
 
 --
--- Indexes for table `customer`
+-- 資料表索引 `customer`
 --
 ALTER TABLE `customer`
   ADD PRIMARY KEY (`CustomerID`);
 
 --
--- Indexes for table `deliverynote`
+-- 資料表索引 `deliverynote`
 --
 ALTER TABLE `deliverynote`
   ADD PRIMARY KEY (`DeliveryID`),
@@ -490,7 +472,7 @@ ALTER TABLE `deliverynote`
   ADD KEY `FKDeliveryNo330361` (`SalesOrderID`);
 
 --
--- Indexes for table `goodreturnnote`
+-- 資料表索引 `goodreturnnote`
 --
 ALTER TABLE `goodreturnnote`
   ADD PRIMARY KEY (`ReturnNoteID`),
@@ -498,14 +480,14 @@ ALTER TABLE `goodreturnnote`
   ADD KEY `FKGoodReturn63513` (`SalesOrderID`);
 
 --
--- Indexes for table `goodreturnnote_item`
+-- 資料表索引 `goodreturnnote_item`
 --
 ALTER TABLE `goodreturnnote_item`
   ADD PRIMARY KEY (`ReturnNoteID`,`ItemID`),
   ADD KEY `FKGoodReturn748003` (`ItemID`);
 
 --
--- Indexes for table `goodsreceivednote`
+-- 資料表索引 `goodsreceivednote`
 --
 ALTER TABLE `goodsreceivednote`
   ADD PRIMARY KEY (`ReceivedID`,`PurchaseOrderID`),
@@ -513,7 +495,7 @@ ALTER TABLE `goodsreceivednote`
   ADD KEY `FKGoodsRecei913086` (`SupplierID`);
 
 --
--- Indexes for table `installationorder`
+-- 資料表索引 `installationorder`
 --
 ALTER TABLE `installationorder`
   ADD PRIMARY KEY (`InstallationID`),
@@ -521,68 +503,56 @@ ALTER TABLE `installationorder`
   ADD KEY `FKInstallati141946` (`CustomerID`);
 
 --
--- Indexes for table `inventorystocklevel`
---
-ALTER TABLE `inventorystocklevel`
-  ADD PRIMARY KEY (`itemID`);
-
---
--- Indexes for table `item`
+-- 資料表索引 `item`
 --
 ALTER TABLE `item`
   ADD PRIMARY KEY (`ItemID`),
   ADD KEY `FKItem506810` (`SupplierID`);
 
 --
--- Indexes for table `purchaseorder`
+-- 資料表索引 `purchaseorder`
 --
 ALTER TABLE `purchaseorder`
   ADD PRIMARY KEY (`PurchaseOrderID`),
   ADD KEY `FKPurchaseOr510102` (`SupplierID`);
 
 --
--- Indexes for table `purchaseorder_item`
+-- 資料表索引 `purchaseorder_item`
 --
 ALTER TABLE `purchaseorder_item`
   ADD PRIMARY KEY (`PurchaseOrderID`,`ItemID`),
   ADD KEY `FKPurchaseOr100230` (`ItemID`);
 
 --
--- Indexes for table `reorderrequest`
+-- 資料表索引 `reorderrequest`
 --
 ALTER TABLE `reorderrequest`
   ADD PRIMARY KEY (`ReorderRequestID`),
   ADD KEY `FKReorderReq909591` (`StaffID`);
 
 --
--- Indexes for table `reorderrequest_item`
+-- 資料表索引 `reorderrequest_item`
 --
 ALTER TABLE `reorderrequest_item`
   ADD PRIMARY KEY (`ItemID`,`ReorderRequestID`),
   ADD KEY `FKReorderReq254158` (`ReorderRequestID`);
 
 --
--- Indexes for table `restockrequest`
+-- 資料表索引 `restockrequest`
 --
 ALTER TABLE `restockrequest`
   ADD PRIMARY KEY (`RestockRequestID`),
   ADD KEY `StaffID` (`StaffID`);
 
 --
--- Indexes for table `restockrequest_item`
+-- 資料表索引 `restockrequest_item`
 --
 ALTER TABLE `restockrequest_item`
   ADD PRIMARY KEY (`RestockRequestID`,`itemID`),
   ADD KEY `itemID` (`itemID`);
 
 --
--- Indexes for table `retailstocklevel`
---
-ALTER TABLE `retailstocklevel`
-  ADD PRIMARY KEY (`itemID`);
-
---
--- Indexes for table `salesorder`
+-- 資料表索引 `salesorder`
 --
 ALTER TABLE `salesorder`
   ADD PRIMARY KEY (`SalesOrderID`),
@@ -591,15 +561,15 @@ ALTER TABLE `salesorder`
   ADD KEY `FKSalesOrder426975` (`StaffID`);
 
 --
--- Indexes for table `salesorder_item`
+-- 資料表索引 `salesorder_item`
 --
 ALTER TABLE `salesorder_item`
-  ADD PRIMARY KEY (`SalesOrderID`),
-  ADD KEY `FKSalesOrder929714` (`SalesOrderID`),
+  ADD PRIMARY KEY (`OrderID`),
+  ADD KEY `FKSalesOrder929714` (`OrderID`),
   ADD KEY `FKSalesOrder804327` (`ItemID`);
 
 --
--- Indexes for table `salesreceipt`
+-- 資料表索引 `salesreceipt`
 --
 ALTER TABLE `salesreceipt`
   ADD PRIMARY KEY (`ReceiptID`),
@@ -607,223 +577,211 @@ ALTER TABLE `salesreceipt`
   ADD KEY `FKSalesRecei494615` (`CustomerID`);
 
 --
--- Indexes for table `staff`
+-- 資料表索引 `staff`
 --
 ALTER TABLE `staff`
   ADD PRIMARY KEY (`StaffID`);
 
 --
--- Indexes for table `store`
+-- 資料表索引 `store`
 --
 ALTER TABLE `store`
   ADD PRIMARY KEY (`StoreID`),
   ADD KEY `FKStore384954` (`StaffID`);
 
 --
--- Indexes for table `supplier`
+-- 資料表索引 `supplier`
 --
 ALTER TABLE `supplier`
   ADD PRIMARY KEY (`SupplierID`);
 
 --
--- Indexes for table `useraccount`
+-- 資料表索引 `useraccount`
 --
 ALTER TABLE `useraccount`
   ADD PRIMARY KEY (`UserAccountID`),
   ADD KEY `FKUserAccoun919948` (`StaffID`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- 在傾印的資料表使用自動遞增(AUTO_INCREMENT)
 --
 
 --
--- AUTO_INCREMENT for table `customer`
+-- 使用資料表自動遞增(AUTO_INCREMENT) `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `CustomerID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `CustomerID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `deliverynote`
+-- 使用資料表自動遞增(AUTO_INCREMENT) `deliverynote`
 --
 ALTER TABLE `deliverynote`
   MODIFY `DeliveryID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `goodreturnnote`
+-- 使用資料表自動遞增(AUTO_INCREMENT) `goodreturnnote`
 --
 ALTER TABLE `goodreturnnote`
   MODIFY `ReturnNoteID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `goodsreceivednote`
+-- 使用資料表自動遞增(AUTO_INCREMENT) `goodsreceivednote`
 --
 ALTER TABLE `goodsreceivednote`
   MODIFY `ReceivedID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `installationorder`
+-- 使用資料表自動遞增(AUTO_INCREMENT) `installationorder`
 --
 ALTER TABLE `installationorder`
   MODIFY `InstallationID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `item`
+-- 使用資料表自動遞增(AUTO_INCREMENT) `item`
 --
 ALTER TABLE `item`
-  MODIFY `ItemID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10011;
+  MODIFY `ItemID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `purchaseorder`
+-- 使用資料表自動遞增(AUTO_INCREMENT) `purchaseorder`
 --
 ALTER TABLE `purchaseorder`
   MODIFY `PurchaseOrderID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `reorderrequest`
+-- 使用資料表自動遞增(AUTO_INCREMENT) `reorderrequest`
 --
 ALTER TABLE `reorderrequest`
   MODIFY `ReorderRequestID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `restockrequest`
+-- 使用資料表自動遞增(AUTO_INCREMENT) `restockrequest`
 --
 ALTER TABLE `restockrequest`
-  MODIFY `RestockRequestID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10039;
+  MODIFY `RestockRequestID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
--- AUTO_INCREMENT for table `salesorder`
+-- 使用資料表自動遞增(AUTO_INCREMENT) `salesorder`
 --
 ALTER TABLE `salesorder`
   MODIFY `SalesOrderID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `salesreceipt`
+-- 使用資料表自動遞增(AUTO_INCREMENT) `salesreceipt`
 --
 ALTER TABLE `salesreceipt`
   MODIFY `ReceiptID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `staff`
+-- 使用資料表自動遞增(AUTO_INCREMENT) `staff`
 --
 ALTER TABLE `staff`
   MODIFY `StaffID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10045;
 
 --
--- AUTO_INCREMENT for table `store`
+-- 使用資料表自動遞增(AUTO_INCREMENT) `store`
 --
 ALTER TABLE `store`
-  MODIFY `StoreID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `StoreID` int(5) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `supplier`
+-- 使用資料表自動遞增(AUTO_INCREMENT) `supplier`
 --
 ALTER TABLE `supplier`
-  MODIFY `SupplierID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10003;
+  MODIFY `SupplierID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `useraccount`
+-- 使用資料表自動遞增(AUTO_INCREMENT) `useraccount`
 --
 ALTER TABLE `useraccount`
   MODIFY `UserAccountID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10019;
 
 --
--- Constraints for dumped tables
+-- 已傾印資料表的限制式
 --
 
 --
--- Constraints for table `deliverynote`
+-- 資料表的限制式 `deliverynote`
 --
 ALTER TABLE `deliverynote`
   ADD CONSTRAINT `FKDeliveryNo330361` FOREIGN KEY (`SalesOrderID`) REFERENCES `salesorder` (`SalesOrderID`),
   ADD CONSTRAINT `FKDeliveryNo488459` FOREIGN KEY (`CustomerID`) REFERENCES `customer` (`CustomerID`);
 
 --
--- Constraints for table `goodreturnnote`
+-- 資料表的限制式 `goodreturnnote`
 --
 ALTER TABLE `goodreturnnote`
   ADD CONSTRAINT `FKGoodReturn385517` FOREIGN KEY (`SupplierID`) REFERENCES `supplier` (`SupplierID`),
   ADD CONSTRAINT `FKGoodReturn63513` FOREIGN KEY (`SalesOrderID`) REFERENCES `salesorder` (`SalesOrderID`);
 
 --
--- Constraints for table `goodreturnnote_item`
+-- 資料表的限制式 `goodreturnnote_item`
 --
 ALTER TABLE `goodreturnnote_item`
   ADD CONSTRAINT `FKGoodReturn395895` FOREIGN KEY (`ReturnNoteID`) REFERENCES `goodreturnnote` (`ReturnNoteID`),
   ADD CONSTRAINT `FKGoodReturn748003` FOREIGN KEY (`ItemID`) REFERENCES `item` (`ItemID`);
 
 --
--- Constraints for table `goodsreceivednote`
+-- 資料表的限制式 `goodsreceivednote`
 --
 ALTER TABLE `goodsreceivednote`
   ADD CONSTRAINT `FKGoodsRecei36177` FOREIGN KEY (`PurchaseOrderID`) REFERENCES `purchaseorder` (`PurchaseOrderID`),
   ADD CONSTRAINT `FKGoodsRecei913086` FOREIGN KEY (`SupplierID`) REFERENCES `supplier` (`SupplierID`);
 
 --
--- Constraints for table `installationorder`
+-- 資料表的限制式 `installationorder`
 --
 ALTER TABLE `installationorder`
   ADD CONSTRAINT `FKInstallati141946` FOREIGN KEY (`CustomerID`) REFERENCES `customer` (`CustomerID`),
   ADD CONSTRAINT `FKInstallati300044` FOREIGN KEY (`SalesOrderID`) REFERENCES `salesorder` (`SalesOrderID`);
 
 --
--- Constraints for table `inventorystocklevel`
---
-ALTER TABLE `inventorystocklevel`
-  ADD CONSTRAINT `FK_itemID` FOREIGN KEY (`itemID`) REFERENCES `item` (`ItemID`);
-
---
--- Constraints for table `item`
+-- 資料表的限制式 `item`
 --
 ALTER TABLE `item`
   ADD CONSTRAINT `FKItem506810` FOREIGN KEY (`SupplierID`) REFERENCES `supplier` (`SupplierID`);
 
 --
--- Constraints for table `purchaseorder`
+-- 資料表的限制式 `purchaseorder`
 --
 ALTER TABLE `purchaseorder`
   ADD CONSTRAINT `FKPurchaseOr510102` FOREIGN KEY (`SupplierID`) REFERENCES `supplier` (`SupplierID`);
 
 --
--- Constraints for table `purchaseorder_item`
+-- 資料表的限制式 `purchaseorder_item`
 --
 ALTER TABLE `purchaseorder_item`
   ADD CONSTRAINT `FKPurchaseOr100230` FOREIGN KEY (`ItemID`) REFERENCES `item` (`ItemID`),
   ADD CONSTRAINT `FKPurchaseOr444232` FOREIGN KEY (`PurchaseOrderID`) REFERENCES `purchaseorder` (`PurchaseOrderID`);
 
 --
--- Constraints for table `reorderrequest`
+-- 資料表的限制式 `reorderrequest`
 --
 ALTER TABLE `reorderrequest`
   ADD CONSTRAINT `FKReorderReq909591` FOREIGN KEY (`StaffID`) REFERENCES `staff` (`StaffID`);
 
 --
--- Constraints for table `reorderrequest_item`
+-- 資料表的限制式 `reorderrequest_item`
 --
 ALTER TABLE `reorderrequest_item`
   ADD CONSTRAINT `FKReorderReq254158` FOREIGN KEY (`ReorderRequestID`) REFERENCES `restockrequest` (`RestockRequestID`),
   ADD CONSTRAINT `FKReorderReq782151` FOREIGN KEY (`ItemID`) REFERENCES `item` (`ItemID`);
 
 --
--- Constraints for table `restockrequest`
+-- 資料表的限制式 `restockrequest`
 --
 ALTER TABLE `restockrequest`
   ADD CONSTRAINT `restockrequest_ibfk_1` FOREIGN KEY (`StaffID`) REFERENCES `staff` (`StaffID`);
 
 --
--- Constraints for table `restockrequest_item`
+-- 資料表的限制式 `restockrequest_item`
 --
 ALTER TABLE `restockrequest_item`
   ADD CONSTRAINT `restockrequest_item_ibfk_1` FOREIGN KEY (`itemID`) REFERENCES `item` (`ItemID`),
   ADD CONSTRAINT `restockrequest_item_ibfk_2` FOREIGN KEY (`RestockRequestID`) REFERENCES `restockrequest` (`RestockRequestID`);
 
 --
--- Constraints for table `retailstocklevel`
---
-ALTER TABLE `retailstocklevel`
-  ADD CONSTRAINT `FK_itemIDrs` FOREIGN KEY (`itemID`) REFERENCES `item` (`ItemID`);
-
---
--- Constraints for table `salesorder`
+-- 資料表的限制式 `salesorder`
 --
 ALTER TABLE `salesorder`
   ADD CONSTRAINT `FKSalesOrder426975` FOREIGN KEY (`StaffID`) REFERENCES `staff` (`StaffID`),
@@ -831,27 +789,27 @@ ALTER TABLE `salesorder`
   ADD CONSTRAINT `FKSalesOrder841473` FOREIGN KEY (`StoreID`) REFERENCES `store` (`StoreID`);
 
 --
--- Constraints for table `salesorder_item`
+-- 資料表的限制式 `salesorder_item`
 --
 ALTER TABLE `salesorder_item`
   ADD CONSTRAINT `FKSalesOrder804327` FOREIGN KEY (`ItemID`) REFERENCES `item` (`ItemID`),
-  ADD CONSTRAINT `FKSalesOrder929714` FOREIGN KEY (`SalesOrderID`) REFERENCES `salesorder` (`SalesOrderID`);
+  ADD CONSTRAINT `FKSalesOrder929714` FOREIGN KEY (`OrderID`) REFERENCES `salesorder` (`SalesOrderID`);
 
 --
--- Constraints for table `salesreceipt`
+-- 資料表的限制式 `salesreceipt`
 --
 ALTER TABLE `salesreceipt`
   ADD CONSTRAINT `FKSalesRecei494615` FOREIGN KEY (`CustomerID`) REFERENCES `customer` (`CustomerID`),
   ADD CONSTRAINT `FKSalesRecei652713` FOREIGN KEY (`SalesOrderID`) REFERENCES `salesorder` (`SalesOrderID`);
 
 --
--- Constraints for table `store`
+-- 資料表的限制式 `store`
 --
 ALTER TABLE `store`
   ADD CONSTRAINT `FKStore384954` FOREIGN KEY (`StaffID`) REFERENCES `staff` (`StaffID`);
 
 --
--- Constraints for table `useraccount`
+-- 資料表的限制式 `useraccount`
 --
 ALTER TABLE `useraccount`
   ADD CONSTRAINT `FKUserAccoun919948` FOREIGN KEY (`StaffID`) REFERENCES `staff` (`StaffID`);
