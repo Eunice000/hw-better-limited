@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 04, 2022 at 02:57 AM
+-- Generation Time: Jun 04, 2022 at 11:52 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `customer` (
   `CustomerID` int(5) NOT NULL,
   `Name` varchar(20) NOT NULL,
-  `Address` varchar(50) NOT NULL,
+  `Address` varchar(50) DEFAULT NULL,
   `Tel` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -61,7 +61,7 @@ CREATE TABLE `deliveryorder` (
 --
 
 INSERT INTO `deliveryorder` (`DeliveryID`, `SalesOrderID`, `CustomerID`, `DeliveryDate`, `DeliveryTime`, `DeliveryStatus`) VALUES
-(10001, 10001, 10001, '2022-06-04', '07:03:00', 'pending');
+(10001, 10001, 10001, '2022-06-04', '07:03:00', 'In-transit');
 
 -- --------------------------------------------------------
 
@@ -136,6 +136,16 @@ CREATE TABLE `inventorystocklevel` (
   `LowLevelQty` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `inventorystocklevel`
+--
+
+INSERT INTO `inventorystocklevel` (`itemID`, `itemName`, `Quantity`, `LowLevelQty`) VALUES
+(10001, 'Iphone7', 20, 5),
+(10002, 'Iphone8', 20, 5),
+(10005, 'Iphone9', 7, 5),
+(10008, 'Iphone12', 3, 5);
+
 -- --------------------------------------------------------
 
 --
@@ -150,7 +160,7 @@ CREATE TABLE `item` (
   `ItemImg` mediumblob DEFAULT NULL,
   `SalePrice` int(11) NOT NULL,
   `SupplierID` int(5) NOT NULL,
-  `SupplierPirce` int(20) NOT NULL,
+  `SupplierPrice` int(20) NOT NULL,
   `WarrantyMonth` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -158,7 +168,7 @@ CREATE TABLE `item` (
 -- Dumping data for table `item`
 --
 
-INSERT INTO `item` (`ItemID`, `ItemCat`, `ItemName`, `ItemDesc`, `ItemImg`, `SalePrice`, `SupplierID`, `SupplierPirce`, `WarrantyMonth`) VALUES
+INSERT INTO `item` (`ItemID`, `ItemCat`, `ItemName`, `ItemDesc`, `ItemImg`, `SalePrice`, `SupplierID`, `SupplierPrice`, `WarrantyMonth`) VALUES
 (10001, 'phone', 'Iphone7', '128GB', '', 7000, 10001, 6000, 12),
 (10002, 'phone', 'Iphone8', '128GB', NULL, 23113, 10001, 2321, 12),
 (10003, 'phone', 'Iphone211', '128GB', NULL, 7000, 10001, 3231, 12),
@@ -492,12 +502,12 @@ CREATE TABLE `useraccount` (
 --
 
 INSERT INTO `useraccount` (`UserAccountID`, `StaffID`, `UserName`, `Password`, `Email`, `CreateDateTime`, `LastLoginDateTime`) VALUES
-(10001, 10001, 'admin', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-24 20:04:05', '2022-06-04 08:49:12'),
-(10008, 10001, 'admin2', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-27 04:59:15', NULL),
-(10011, 10001, 'admin2', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-27 05:52:37', NULL),
-(10012, 10001, 'admin3', 'qwer1234', 'betterlimited10001@gmail.com', '2022-05-27 05:55:06', NULL),
-(10014, 10002, 'betterlimited', 'qwer1234', 'betterlimited999@betterlimited.com', '2022-05-28 05:03:40', '2022-05-28 05:04:10'),
-(10015, 10002, 'betterlimmited2', 'qwer1234', 'betterlimited999@betterlimited.com', '2022-05-28 05:16:18', '2022-06-04 06:27:20');
+(10001, 10001, 'admin', 'Qwer1234!', 'betterlimited10001@gmail.com', '2022-05-24 20:04:05', '2022-06-04 20:56:52'),
+(10008, 10001, 'admin2', 'Qwer1234!', 'betterlimited10001@gmail.com', '2022-05-27 04:59:15', NULL),
+(10011, 10001, 'admin2', 'Qwer1234!', 'betterlimited10001@gmail.com', '2022-05-27 05:52:37', NULL),
+(10012, 10001, 'admin3', 'Qwer1234!', 'betterlimited10001@gmail.com', '2022-05-27 05:55:06', NULL),
+(10014, 10002, 'betterlimited', 'Qwer1234!', 'betterlimited999@betterlimited.com', '2022-05-28 05:03:40', '2022-05-28 05:04:10'),
+(10015, 10002, 'betterlimmited2', 'Qwer1234!', 'betterlimited999@betterlimited.com', '2022-05-28 05:16:18', '2022-06-04 06:27:20');
 
 --
 -- Indexes for dumped tables
@@ -752,7 +762,7 @@ ALTER TABLE `supplier`
 -- AUTO_INCREMENT for table `useraccount`
 --
 ALTER TABLE `useraccount`
-  MODIFY `UserAccountID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10019;
+  MODIFY `UserAccountID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10020;
 
 --
 -- Constraints for dumped tables
