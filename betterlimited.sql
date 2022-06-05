@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 04, 2022 at 11:52 PM
+-- Generation Time: Jun 05, 2022 at 03:29 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -121,7 +121,7 @@ CREATE TABLE `installationorder` (
 --
 
 INSERT INTO `installationorder` (`InstallationID`, `SalesOrderID`, `CustomerID`, `InstallationDate`, `InstallationTime`, `InstallationStatus`) VALUES
-(10001, 10001, 10001, '2022-06-04', '08:35:00', 'installed');
+(10001, 10001, 10001, '2022-06-04', '08:35:00', 'pending');
 
 -- --------------------------------------------------------
 
@@ -218,6 +218,47 @@ CREATE TABLE `reorderrequest` (
   `RequestTime` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `reorderrequest`
+--
+
+INSERT INTO `reorderrequest` (`ReorderRequestID`, `StaffID`, `RequestDate`, `RequestTime`) VALUES
+(10002, 10003, '2022-06-05', '08:01:41'),
+(10003, 10003, '2022-06-05', '08:05:16'),
+(10004, 10003, '2022-06-05', '08:08:40'),
+(10005, 10003, '2022-06-05', '08:12:39'),
+(10006, 10003, '2022-06-05', '08:12:56'),
+(10007, 10003, '2022-06-05', '08:33:11'),
+(10008, 10003, '2022-06-05', '08:33:22'),
+(10009, 10003, '2022-06-05', '08:35:44'),
+(10010, 10003, '2022-06-05', '08:37:27'),
+(10011, 10003, '2022-06-05', '08:45:32'),
+(10012, 10003, '2022-06-05', '08:48:35'),
+(10013, 10003, '2022-06-05', '08:51:57'),
+(10014, 10003, '2022-06-05', '08:52:14'),
+(10015, 10003, '2022-06-05', '08:53:18'),
+(10016, 10003, '2022-06-05', '08:53:54'),
+(10017, 10003, '2022-06-05', '08:54:24'),
+(10018, 10003, '2022-06-05', '08:55:53'),
+(10019, 10003, '2022-06-05', '08:56:42'),
+(10020, 10003, '2022-06-05', '08:58:37'),
+(10021, 10003, '2022-06-05', '08:59:15'),
+(10022, 10003, '2022-06-05', '09:00:34'),
+(10023, 10003, '2022-06-05', '09:00:39'),
+(10024, 10003, '2022-06-05', '09:01:58'),
+(10025, 10003, '2022-06-05', '09:02:41'),
+(10026, 10003, '2022-06-05', '09:12:55'),
+(10027, 10003, '2022-06-05', '09:13:47'),
+(10028, 10003, '2022-06-05', '09:17:12'),
+(10029, 10003, '2022-06-05', '09:18:23'),
+(10030, 10003, '2022-06-05', '09:19:47'),
+(10031, 10003, '2022-06-05', '09:20:36'),
+(10032, 10003, '2022-06-05', '09:22:14'),
+(10033, 10003, '2022-06-05', '09:24:29'),
+(10034, 10003, '2022-06-05', '09:26:22'),
+(10035, 10003, '2022-06-05', '09:26:52'),
+(10036, 10003, '2022-06-05', '09:26:56');
+
 -- --------------------------------------------------------
 
 --
@@ -235,7 +276,41 @@ CREATE TABLE `reorderrequest_item` (
 --
 
 INSERT INTO `reorderrequest_item` (`ItemID`, `ReorderRequestID`, `Qty`) VALUES
-(10002, 10030, 12);
+(10002, 10002, 5),
+(10005, 10003, 3),
+(10005, 10004, 5),
+(10002, 10005, 6),
+(10002, 10006, 7),
+(10001, 10007, 5),
+(10002, 10008, 10),
+(10008, 10009, 5),
+(10002, 10010, 3),
+(10002, 10011, 3),
+(10001, 10012, 2),
+(10002, 10013, 5),
+(10005, 10014, 3),
+(10002, 10015, 1),
+(10001, 10016, 1),
+(10001, 10017, 2),
+(10001, 10018, 5),
+(10001, 10019, 2),
+(10002, 10020, 4),
+(10002, 10021, 4),
+(10002, 10022, 1),
+(10002, 10023, 5),
+(10002, 10024, 3),
+(10001, 10025, 3),
+(10002, 10026, 3),
+(10002, 10027, 3),
+(10005, 10028, 3),
+(10005, 10029, 3),
+(10001, 10030, 3),
+(10001, 10031, 3),
+(10001, 10032, 3),
+(10001, 10033, 3),
+(10001, 10034, 3),
+(10002, 10035, 1),
+(10002, 10036, 2);
 
 -- --------------------------------------------------------
 
@@ -590,14 +665,13 @@ ALTER TABLE `purchaseorder_item`
 --
 ALTER TABLE `reorderrequest`
   ADD PRIMARY KEY (`ReorderRequestID`),
-  ADD KEY `FKReorderReq909591` (`StaffID`);
+  ADD KEY `FK_StaffID` (`StaffID`);
 
 --
 -- Indexes for table `reorderrequest_item`
 --
 ALTER TABLE `reorderrequest_item`
-  ADD PRIMARY KEY (`ItemID`,`ReorderRequestID`),
-  ADD KEY `FKReorderReq254158` (`ReorderRequestID`);
+  ADD PRIMARY KEY (`ReorderRequestID`);
 
 --
 -- Indexes for table `restockrequest`
@@ -720,7 +794,7 @@ ALTER TABLE `purchaseorder`
 -- AUTO_INCREMENT for table `reorderrequest`
 --
 ALTER TABLE `reorderrequest`
-  MODIFY `ReorderRequestID` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `ReorderRequestID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10037;
 
 --
 -- AUTO_INCREMENT for table `restockrequest`
@@ -832,14 +906,13 @@ ALTER TABLE `purchaseorder_item`
 -- Constraints for table `reorderrequest`
 --
 ALTER TABLE `reorderrequest`
-  ADD CONSTRAINT `FKReorderReq909591` FOREIGN KEY (`StaffID`) REFERENCES `staff` (`StaffID`);
+  ADD CONSTRAINT `FK_StaffID` FOREIGN KEY (`StaffID`) REFERENCES `staff` (`StaffID`);
 
 --
 -- Constraints for table `reorderrequest_item`
 --
 ALTER TABLE `reorderrequest_item`
-  ADD CONSTRAINT `FKReorderReq254158` FOREIGN KEY (`ReorderRequestID`) REFERENCES `restockrequest` (`RestockRequestID`),
-  ADD CONSTRAINT `FKReorderReq782151` FOREIGN KEY (`ItemID`) REFERENCES `item` (`ItemID`);
+  ADD CONSTRAINT `FK_ReOrderRequestID` FOREIGN KEY (`ReorderRequestID`) REFERENCES `reorderrequest` (`ReorderRequestID`);
 
 --
 -- Constraints for table `restockrequest`
