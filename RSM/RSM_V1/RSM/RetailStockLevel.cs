@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RSM
+namespace BetterLimited
 {
     public partial class RetailStockLevel : Form
     {
         public RetailStockLevel()
         {
             InitializeComponent();
+        }
+
+        private void RetailStockLevel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_clear_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

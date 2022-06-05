@@ -1,5 +1,5 @@
 ﻿
-namespace RSM
+namespace BetterLimited
 {
     partial class RetailStockLevel
     {
@@ -103,6 +103,7 @@ namespace RSM
             this.button_clear.TabIndex = 10;
             this.button_clear.Text = "Clear";
             this.button_clear.UseVisualStyleBackColor = true;
+            this.button_clear.Click += new System.EventHandler(this.button_clear_Click);
             // 
             // button_Search
             // 
@@ -148,6 +149,7 @@ namespace RSM
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "RetailStockLevel";
             this.Text = "RetailRestockLevel";
+            this.Load += new System.EventHandler(this.RetailStockLevel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);

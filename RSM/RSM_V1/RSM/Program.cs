@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RSM
+namespace BetterLimited
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace RSM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RestockRequestForm_v2());
+            Application.Run(new ItemList());
         }
     }
 }
