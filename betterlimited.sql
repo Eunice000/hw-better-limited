@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 06, 2022 at 09:39 PM
+-- Generation Time: Jun 07, 2022 at 02:12 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -71,14 +71,13 @@ CREATE TABLE `deliveryorder` (
 --
 
 INSERT INTO `deliveryorder` (`DeliveryID`, `SalesOrderID`, `DeliveryDate`, `DeliveryTime`, `DeliveryStatus`) VALUES
-(10001, 10001, '2022-06-04', '07:03:00', 'In-transit'),
+(10001, 10001, '2022-06-04', '07:03:00', 'delivered'),
 (10004, 10001, '2022-06-14', '38:19:52', 'pending'),
 (10005, 10001, '2022-06-15', '05:14:29', 'pending'),
 (10006, 10001, '2022-06-29', '38:26:52', 'In-transit'),
 (10007, 10001, '2022-06-29', '38:26:52', 'In-transit'),
 (10008, 10001, '2022-06-29', '38:26:52', 'In-transit'),
-(10009, 10001, '2022-06-29', '38:26:52', 'In-transit'),
-(10010, 10001, '2022-06-29', '38:26:52', 'In-transit');
+(10009, 10001, '2022-06-29', '38:26:52', 'In-transit');
 
 -- --------------------------------------------------------
 
@@ -167,12 +166,9 @@ CREATE TABLE `installationorder` (
 
 INSERT INTO `installationorder` (`InstallationID`, `SalesOrderID`, `InstallationDate`, `InstallationTime`, `InstallationStatus`) VALUES
 (10001, 10001, '2022-06-04', '08:35:00', 'pending'),
-(10002, 10007, '2022-06-15', '00:15:01', 'installed'),
 (10003, 10006, '2022-06-15', '00:15:01', 'installed'),
 (10004, 10005, '2022-06-15', '00:15:01', 'installed'),
-(10005, 10004, '2022-06-15', '00:15:01', 'installed'),
-(10006, 10007, '2022-06-15', '00:15:01', 'installed'),
-(10007, 10007, '2022-06-15', '00:15:01', 'installed');
+(10005, 10004, '2022-06-15', '00:15:01', 'installed');
 
 -- --------------------------------------------------------
 
@@ -308,50 +304,65 @@ CREATE TABLE `reorderrequest` (
   `ReorderRequestID` int(5) NOT NULL,
   `StaffID` int(5) NOT NULL,
   `RequestDate` date NOT NULL,
-  `RequestTime` time NOT NULL
+  `RequestTime` time NOT NULL,
+  `RequestStatus` enum('Pending','Done') NOT NULL DEFAULT 'Pending'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `reorderrequest`
 --
 
-INSERT INTO `reorderrequest` (`ReorderRequestID`, `StaffID`, `RequestDate`, `RequestTime`) VALUES
-(10002, 10003, '2022-06-05', '08:01:41'),
-(10003, 10003, '2022-06-05', '08:05:16'),
-(10004, 10003, '2022-06-05', '08:08:40'),
-(10005, 10003, '2022-06-05', '08:12:39'),
-(10006, 10003, '2022-06-05', '08:12:56'),
-(10007, 10003, '2022-06-05', '08:33:11'),
-(10008, 10003, '2022-06-05', '08:33:22'),
-(10009, 10003, '2022-06-05', '08:35:44'),
-(10010, 10003, '2022-06-05', '08:37:27'),
-(10011, 10003, '2022-06-05', '08:45:32'),
-(10012, 10003, '2022-06-05', '08:48:35'),
-(10013, 10003, '2022-06-05', '08:51:57'),
-(10014, 10003, '2022-06-05', '08:52:14'),
-(10015, 10003, '2022-06-05', '08:53:18'),
-(10016, 10003, '2022-06-05', '08:53:54'),
-(10017, 10003, '2022-06-05', '08:54:24'),
-(10018, 10003, '2022-06-05', '08:55:53'),
-(10019, 10003, '2022-06-05', '08:56:42'),
-(10020, 10003, '2022-06-05', '08:58:37'),
-(10021, 10003, '2022-06-05', '08:59:15'),
-(10022, 10003, '2022-06-05', '09:00:34'),
-(10023, 10003, '2022-06-05', '09:00:39'),
-(10024, 10003, '2022-06-05', '09:01:58'),
-(10025, 10003, '2022-06-05', '09:02:41'),
-(10026, 10003, '2022-06-05', '09:12:55'),
-(10027, 10003, '2022-06-05', '09:13:47'),
-(10028, 10003, '2022-06-05', '09:17:12'),
-(10029, 10003, '2022-06-05', '09:18:23'),
-(10030, 10003, '2022-06-05', '09:19:47'),
-(10031, 10003, '2022-06-05', '09:20:36'),
-(10032, 10003, '2022-06-05', '09:22:14'),
-(10033, 10003, '2022-06-05', '09:24:29'),
-(10034, 10003, '2022-06-05', '09:26:22'),
-(10035, 10003, '2022-06-05', '09:26:52'),
-(10036, 10003, '2022-06-05', '09:26:56'),
-(10037, 10006, '2022-06-07', '02:07:49');
+INSERT INTO `reorderrequest` (`ReorderRequestID`, `StaffID`, `RequestDate`, `RequestTime`, `RequestStatus`) VALUES
+(10002, 10003, '2022-06-05', '08:01:41', 'Done'),
+(10003, 10003, '2022-06-05', '08:05:16', 'Pending'),
+(10004, 10003, '2022-06-05', '08:08:40', 'Pending'),
+(10005, 10003, '2022-06-05', '08:12:39', 'Pending'),
+(10006, 10003, '2022-06-05', '08:12:56', 'Pending'),
+(10007, 10003, '2022-06-05', '08:33:11', 'Pending'),
+(10008, 10003, '2022-06-05', '08:33:22', 'Pending'),
+(10009, 10003, '2022-06-05', '08:35:44', 'Pending'),
+(10010, 10003, '2022-06-05', '08:37:27', 'Pending'),
+(10011, 10003, '2022-06-05', '08:45:32', 'Pending'),
+(10012, 10003, '2022-06-05', '08:48:35', 'Pending'),
+(10013, 10003, '2022-06-05', '08:51:57', 'Pending'),
+(10014, 10003, '2022-06-05', '08:52:14', 'Pending'),
+(10015, 10003, '2022-06-05', '08:53:18', 'Pending'),
+(10016, 10003, '2022-06-05', '08:53:54', 'Pending'),
+(10017, 10003, '2022-06-05', '08:54:24', 'Pending'),
+(10018, 10003, '2022-06-05', '08:55:53', 'Pending'),
+(10019, 10003, '2022-06-05', '08:56:42', 'Pending'),
+(10020, 10003, '2022-06-05', '08:58:37', 'Pending'),
+(10021, 10003, '2022-06-05', '08:59:15', 'Pending'),
+(10022, 10003, '2022-06-05', '09:00:34', 'Pending'),
+(10023, 10003, '2022-06-05', '09:00:39', 'Pending'),
+(10024, 10003, '2022-06-05', '09:01:58', 'Pending'),
+(10025, 10003, '2022-06-05', '09:02:41', 'Pending'),
+(10026, 10003, '2022-06-05', '09:12:55', 'Pending'),
+(10027, 10003, '2022-06-05', '09:13:47', 'Pending'),
+(10028, 10003, '2022-06-05', '09:17:12', 'Pending'),
+(10029, 10003, '2022-06-05', '09:18:23', 'Pending'),
+(10030, 10003, '2022-06-05', '09:19:47', 'Pending'),
+(10031, 10003, '2022-06-05', '09:20:36', 'Pending'),
+(10032, 10003, '2022-06-05', '09:22:14', 'Pending'),
+(10033, 10003, '2022-06-05', '09:24:29', 'Pending'),
+(10034, 10003, '2022-06-05', '09:26:22', 'Pending'),
+(10035, 10003, '2022-06-05', '09:26:52', 'Pending'),
+(10036, 10003, '2022-06-05', '09:26:56', 'Pending'),
+(10037, 10006, '2022-06-07', '02:07:49', 'Pending'),
+(10038, 10006, '2022-06-07', '04:13:06', 'Pending'),
+(10039, 10006, '2022-06-07', '04:13:42', 'Pending'),
+(10040, 10006, '2022-06-07', '04:14:26', 'Pending'),
+(10041, 10006, '2022-06-07', '04:14:39', 'Pending'),
+(10042, 10006, '2022-06-07', '04:16:00', 'Pending'),
+(10043, 10006, '2022-06-07', '04:16:19', 'Pending'),
+(10044, 10006, '2022-06-07', '04:16:38', 'Pending'),
+(10045, 10006, '2022-06-07', '04:16:50', 'Pending'),
+(10046, 10006, '2022-06-07', '04:17:40', 'Pending'),
+(10047, 10006, '2022-06-07', '04:18:48', 'Pending'),
+(10048, 10006, '2022-06-07', '04:31:28', 'Pending'),
+(10049, 10006, '2022-06-07', '04:31:34', 'Pending'),
+(10050, 10001, '2022-06-07', '07:09:20', 'Pending'),
+(10051, 10022, '2022-06-07', '07:22:39', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -405,7 +416,27 @@ INSERT INTO `reorderrequest_item` (`ItemID`, `ReorderRequestID`, `Qty`) VALUES
 (10001, 10034, 3),
 (10002, 10035, 1),
 (10002, 10036, 2),
-(10004, 10037, 0);
+(10004, 10037, 0),
+(0, 10041, 0),
+(10007, 10043, 1),
+(10007, 10044, 3),
+(10007, 10045, 3),
+(10007, 10046, 3),
+(10005, 10046, 1),
+(10008, 10047, 2),
+(10004, 10047, 2),
+(10006, 10047, 2),
+(10007, 10047, 4),
+(10001, 10048, 2),
+(10006, 10049, 2),
+(10005, 10049, 1),
+(10008, 10050, 1),
+(10005, 10050, 1),
+(10006, 10050, 1),
+(10007, 10050, 3),
+(10018, 10051, 2),
+(10019, 10051, 4),
+(10008, 10051, 2);
 
 -- --------------------------------------------------------
 
@@ -435,7 +466,8 @@ INSERT INTO `restockrequest` (`RestockRequestID`, `StaffID`, `RequestDate`, `Req
 (10035, 10002, '2022-06-04', '03:12:38'),
 (10036, 10002, '2022-06-04', '03:19:38'),
 (10037, 10002, '2022-06-04', '03:19:43'),
-(10038, 10002, '2022-06-04', '03:24:30');
+(10038, 10002, '2022-06-04', '03:24:30'),
+(10039, 10004, '2022-06-07', '07:43:36');
 
 -- --------------------------------------------------------
 
@@ -464,7 +496,10 @@ INSERT INTO `restockrequest_item` (`RestockRequestID`, `itemID`, `Quantity`) VAL
 (10036, 10001, 1),
 (10036, 10002, 1),
 (10037, 10001, 1),
-(10037, 10002, 1);
+(10037, 10002, 1),
+(10039, 10005, 2),
+(10039, 10006, 1),
+(10039, 10007, 3);
 
 -- --------------------------------------------------------
 
@@ -503,13 +538,12 @@ CREATE TABLE `salesorder` (
 --
 
 INSERT INTO `salesorder` (`SalesOrderID`, `StoreID`, `StaffID`, `PaymentStatus`, `PaidAmt`, `Date`, `Time`, `ExpDate`, `CustomerID`) VALUES
-(10001, 1, 10001, 'ordered', 100, '2022-06-04', '07:03:00', NULL, 10001),
+(10001, 1, 10001, '', 100, '2022-06-04', '07:03:00', '2022-06-07', 10001),
 (10002, 1, 10013, 'settled', 1645, '2022-06-15', '21:00:01', '2022-06-15', 10004),
 (10003, 2, 10009, 'settled', 1645, '2022-08-15', '21:00:01', '2022-06-15', 10004),
 (10004, 2, 10009, 'settled', 1645, '2022-09-15', '22:00:01', '2022-07-15', 10004),
 (10005, 1, 10013, 'settled', 1645, '2022-01-15', '23:00:01', '2022-08-15', 10004),
-(10006, 2, 10014, 'settled', 1645, '2022-02-15', '24:00:01', '2022-09-15', 10004),
-(10007, 1, 10015, 'settled', 1645, '2022-03-15', '16:00:01', '2022-10-15', 10004);
+(10006, 2, 10014, 'settled', 1645, '2022-02-15', '24:00:01', '2022-09-15', 10004);
 
 -- --------------------------------------------------------
 
@@ -689,7 +723,7 @@ INSERT INTO `useraccount` (`UserAccountID`, `StaffID`, `UserName`, `Password`, `
 (10035, 10018, 'erinb', 'Qwer1234!', 'betterlimited10001@gmail.com', '2022-06-05 22:43:51', NULL),
 (10036, 10019, 'lanes', 'Qwer1234!', 'betterlimited10001@gmail.com', '2022-06-05 22:44:11', NULL),
 (10037, 10020, 'johnm', 'Qwer1234!', 'betterlimited10001@gmail.com', '2022-06-05 22:44:27', NULL),
-(10038, 10021, 'davidl', 'Qwer1234!', 'betterlimited10001@gmail.com', '2022-06-05 22:44:42', NULL),
+(10038, 10021, 'davidl', 'Qwer1234!', 'betterlimited10001@gmail.com', '2022-06-05 22:44:42', '2022-06-07 08:10:47'),
 (10039, 10022, 'robertt', 'Qwer1234!', 'betterlimited10001@gmail.com', '2022-06-05 22:44:58', NULL),
 (10040, 10024, 'Ervind', 'Qwer1234!', 'betterlimited10001@gmail.com', '2022-06-05 22:45:18', NULL);
 
@@ -789,24 +823,11 @@ ALTER TABLE `reorderrequest`
   ADD KEY `FK_StaffID` (`StaffID`);
 
 --
--- Indexes for table `reorderrequest_item`
---
-ALTER TABLE `reorderrequest_item`
-  ADD PRIMARY KEY (`ReorderRequestID`);
-
---
 -- Indexes for table `restockrequest`
 --
 ALTER TABLE `restockrequest`
   ADD PRIMARY KEY (`RestockRequestID`),
   ADD KEY `StaffID` (`StaffID`);
-
---
--- Indexes for table `restockrequest_item`
---
-ALTER TABLE `restockrequest_item`
-  ADD PRIMARY KEY (`RestockRequestID`,`itemID`),
-  ADD KEY `itemID` (`itemID`);
 
 --
 -- Indexes for table `retailstocklevel`
@@ -915,13 +936,13 @@ ALTER TABLE `purchaseorder`
 -- AUTO_INCREMENT for table `reorderrequest`
 --
 ALTER TABLE `reorderrequest`
-  MODIFY `ReorderRequestID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10038;
+  MODIFY `ReorderRequestID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10052;
 
 --
 -- AUTO_INCREMENT for table `restockrequest`
 --
 ALTER TABLE `restockrequest`
-  MODIFY `RestockRequestID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10039;
+  MODIFY `RestockRequestID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10040;
 
 --
 -- AUTO_INCREMENT for table `salesorder`
@@ -1001,7 +1022,7 @@ ALTER TABLE `goodsreceivednote`
 -- Constraints for table `installationorder`
 --
 ALTER TABLE `installationorder`
-  ADD CONSTRAINT `FKInstallati300044` FOREIGN KEY (`SalesOrderID`) REFERENCES `salesorder` (`SalesOrderID`);
+  ADD CONSTRAINT `FKInstallati300044` FOREIGN KEY (`SalesOrderID`) REFERENCES `salesorder` (`SalesOrderID`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `installationorder_item`
@@ -1042,12 +1063,6 @@ ALTER TABLE `reorderrequest`
   ADD CONSTRAINT `FK_StaffID` FOREIGN KEY (`StaffID`) REFERENCES `staff` (`StaffID`) ON DELETE CASCADE;
 
 --
--- Constraints for table `reorderrequest_item`
---
-ALTER TABLE `reorderrequest_item`
-  ADD CONSTRAINT `FK_ReOrderRequestID` FOREIGN KEY (`ReorderRequestID`) REFERENCES `reorderrequest` (`ReorderRequestID`) ON DELETE CASCADE;
-
---
 -- Constraints for table `restockrequest`
 --
 ALTER TABLE `restockrequest`
@@ -1057,8 +1072,7 @@ ALTER TABLE `restockrequest`
 -- Constraints for table `restockrequest_item`
 --
 ALTER TABLE `restockrequest_item`
-  ADD CONSTRAINT `restockrequest_item_ibfk_1` FOREIGN KEY (`itemID`) REFERENCES `item` (`ItemID`) ON DELETE CASCADE,
-  ADD CONSTRAINT `restockrequest_item_ibfk_2` FOREIGN KEY (`RestockRequestID`) REFERENCES `restockrequest` (`RestockRequestID`) ON DELETE CASCADE;
+  ADD CONSTRAINT `restockrequest_item_ibfk_1` FOREIGN KEY (`itemID`) REFERENCES `item` (`ItemID`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `retailstocklevel`
