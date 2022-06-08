@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2022 at 12:09 AM
+-- Generation Time: Jun 09, 2022 at 01:23 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -463,7 +463,10 @@ INSERT INTO `restockrequest` (`RestockRequestID`, `StaffID`, `RequestDate`, `Req
 (10036, 10002, '2022-06-04', '03:19:38', 1),
 (10037, 10002, '2022-06-04', '03:19:43', 1),
 (10038, 10002, '2022-06-04', '03:24:30', 1),
-(10039, 10004, '2022-06-07', '07:43:36', 1);
+(10039, 10004, '2022-06-07', '07:43:36', 1),
+(10044, 10001, '2022-06-09', '06:54:13', 1),
+(10045, 10001, '2022-06-09', '06:54:34', 2),
+(10046, 10001, '2022-06-09', '07:21:44', 2);
 
 -- --------------------------------------------------------
 
@@ -495,7 +498,16 @@ INSERT INTO `restockrequest_item` (`RestockRequestID`, `itemID`, `Quantity`) VAL
 (10037, 10002, 1),
 (10039, 10005, 2),
 (10039, 10006, 1),
-(10039, 10007, 3);
+(10039, 10007, 3),
+(10039, 10008, 1),
+(10039, 10001, 1),
+(10039, 10004, 1),
+(10039, 10004, 1),
+(10039, 10004, 1),
+(10039, 10005, 1),
+(10044, 10001, 1),
+(10045, 10001, 2),
+(10046, 10018, 1);
 
 -- --------------------------------------------------------
 
@@ -519,8 +531,8 @@ INSERT INTO `retailstocklevel` (`itemID`, `itemName`, `storeID`, `Quantity`, `Lo
 (10001, 'Iphone7', 1, 20, 5),
 (10001, 'Iphone7', 2, 20, 5),
 (10002, 'Iphone8', 2, 10, 5),
-(10004, 'Iphone8', 2, 0, 3),
-(10005, 'Iphone9', 1, 7, 3),
+(10004, 'Iphone8', 2, 0, 5),
+(10005, 'Iphone9', 1, 7, 5),
 (10005, 'Iphone9', 2, 10, 3),
 (10006, 'Iphone10', 2, 20, 5),
 (10007, 'Iphone11', 2, 8, 5),
@@ -961,7 +973,7 @@ ALTER TABLE `reorderrequest`
 -- AUTO_INCREMENT for table `restockrequest`
 --
 ALTER TABLE `restockrequest`
-  MODIFY `RestockRequestID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10040;
+  MODIFY `RestockRequestID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10047;
 
 --
 -- AUTO_INCREMENT for table `salesorder`
