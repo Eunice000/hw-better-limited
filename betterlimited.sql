@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2022 at 01:23 AM
+-- Generation Time: Jun 09, 2022 at 03:55 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -63,15 +63,16 @@ CREATE TABLE `deliveryorder` (
   `SalesOrderID` int(5) NOT NULL,
   `DeliveryDate` date NOT NULL,
   `DeliveryTime` time NOT NULL,
-  `DeliveryStatus` enum('pending','In-transit','delivered') NOT NULL DEFAULT 'pending'
+  `DeliveryStatus` enum('pending','In-transit','delivered') NOT NULL DEFAULT 'pending',
+  `WorkmanID` int(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `deliveryorder`
 --
 
-INSERT INTO `deliveryorder` (`DeliveryID`, `SalesOrderID`, `DeliveryDate`, `DeliveryTime`, `DeliveryStatus`) VALUES
-(10001, 10001, '2022-06-04', '14:03:00', 'In-transit');
+INSERT INTO `deliveryorder` (`DeliveryID`, `SalesOrderID`, `DeliveryDate`, `DeliveryTime`, `DeliveryStatus`, `WorkmanID`) VALUES
+(10001, 10001, '2022-06-04', '14:03:00', 'In-transit', NULL);
 
 -- --------------------------------------------------------
 
@@ -143,17 +144,18 @@ CREATE TABLE `installationorder` (
   `SalesOrderID` int(5) NOT NULL,
   `InstallationDate` date NOT NULL,
   `InstallationTime` time NOT NULL,
-  `InstallationStatus` enum('pending','installed') DEFAULT 'pending'
+  `InstallationStatus` enum('pending','installed') DEFAULT 'pending',
+  `WorkmanID` int(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `installationorder`
 --
 
-INSERT INTO `installationorder` (`InstallationID`, `SalesOrderID`, `InstallationDate`, `InstallationTime`, `InstallationStatus`) VALUES
-(10001, 10001, '2022-06-05', '16:03:00', 'pending'),
-(10003, 10006, '2022-06-15', '00:15:01', 'installed'),
-(10005, 10004, '2022-06-15', '00:15:01', 'installed');
+INSERT INTO `installationorder` (`InstallationID`, `SalesOrderID`, `InstallationDate`, `InstallationTime`, `InstallationStatus`, `WorkmanID`) VALUES
+(10001, 10001, '2022-06-05', '16:03:00', 'pending', NULL),
+(10003, 10006, '2022-06-15', '00:15:01', 'pending', NULL),
+(10005, 10004, '2022-06-15', '00:15:01', 'pending', NULL);
 
 -- --------------------------------------------------------
 
@@ -771,7 +773,8 @@ ALTER TABLE `customer`
 --
 ALTER TABLE `deliveryorder`
   ADD PRIMARY KEY (`DeliveryID`),
-  ADD KEY `FKDeliveryNo330361` (`SalesOrderID`);
+  ADD KEY `FKDeliveryNo330361` (`SalesOrderID`),
+  ADD KEY `FK_WorkmanID_1` (`WorkmanID`);
 
 --
 -- Indexes for table `deliveryorder_item`
@@ -808,7 +811,8 @@ ALTER TABLE `goodsreceivednote`
 --
 ALTER TABLE `installationorder`
   ADD PRIMARY KEY (`InstallationID`),
-  ADD KEY `FKInstallati300044` (`SalesOrderID`);
+  ADD KEY `FKInstallati300044` (`SalesOrderID`),
+  ADD KEY `FK_WorkmanID_2` (`WorkmanID`);
 
 --
 -- Indexes for table `installationorder_item`
@@ -1019,7 +1023,8 @@ ALTER TABLE `useraccount`
 -- Constraints for table `deliveryorder`
 --
 ALTER TABLE `deliveryorder`
-  ADD CONSTRAINT `FKDeliveryNo330361` FOREIGN KEY (`SalesOrderID`) REFERENCES `salesorder` (`SalesOrderID`) ON DELETE CASCADE;
+  ADD CONSTRAINT `FKDeliveryNo330361` FOREIGN KEY (`SalesOrderID`) REFERENCES `salesorder` (`SalesOrderID`) ON DELETE CASCADE,
+  ADD CONSTRAINT `FK_WorkmanID_1` FOREIGN KEY (`WorkmanID`) REFERENCES `staff` (`StaffID`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `deliveryorder_item`
@@ -1053,7 +1058,8 @@ ALTER TABLE `goodsreceivednote`
 -- Constraints for table `installationorder`
 --
 ALTER TABLE `installationorder`
-  ADD CONSTRAINT `FKInstallati300044` FOREIGN KEY (`SalesOrderID`) REFERENCES `salesorder` (`SalesOrderID`) ON DELETE CASCADE;
+  ADD CONSTRAINT `FKInstallati300044` FOREIGN KEY (`SalesOrderID`) REFERENCES `salesorder` (`SalesOrderID`) ON DELETE CASCADE,
+  ADD CONSTRAINT `FK_WorkmanID_2` FOREIGN KEY (`WorkmanID`) REFERENCES `staff` (`StaffID`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `installationorder_item`
