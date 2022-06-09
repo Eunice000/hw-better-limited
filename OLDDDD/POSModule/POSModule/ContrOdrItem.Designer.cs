@@ -38,11 +38,13 @@ namespace POSModule
             this.btnQtyReduction = new System.Windows.Forms.Button();
             this.btnQtyIncrement = new System.Windows.Forms.Button();
             this.lblDisQty = new System.Windows.Forms.Label();
+            this.pnlLine = new System.Windows.Forms.Panel();
             this.tlpOdrLst.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpOdrLst
             // 
+            this.tlpOdrLst.BackColor = System.Drawing.Color.Transparent;
             this.tlpOdrLst.ColumnCount = 7;
             this.tlpOdrLst.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpOdrLst.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -58,23 +60,22 @@ namespace POSModule
             this.tlpOdrLst.Controls.Add(this.btnQtyReduction, 2, 0);
             this.tlpOdrLst.Controls.Add(this.btnQtyIncrement, 4, 0);
             this.tlpOdrLst.Controls.Add(this.lblDisQty, 3, 0);
-            this.tlpOdrLst.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpOdrLst.Location = new System.Drawing.Point(0, 0);
             this.tlpOdrLst.Name = "tlpOdrLst";
             this.tlpOdrLst.RowCount = 1;
             this.tlpOdrLst.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpOdrLst.Size = new System.Drawing.Size(402, 34);
+            this.tlpOdrLst.Size = new System.Drawing.Size(400, 33);
             this.tlpOdrLst.TabIndex = 0;
             // 
             // lblOdrItemId
             // 
             this.lblOdrItemId.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblOdrItemId.AutoSize = true;
-            this.lblOdrItemId.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOdrItemId.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOdrItemId.ForeColor = System.Drawing.Color.Gray;
-            this.lblOdrItemId.Location = new System.Drawing.Point(12, 8);
+            this.lblOdrItemId.Location = new System.Drawing.Point(15, 10);
             this.lblOdrItemId.Name = "lblOdrItemId";
-            this.lblOdrItemId.Size = new System.Drawing.Size(35, 17);
+            this.lblOdrItemId.Size = new System.Drawing.Size(29, 13);
             this.lblOdrItemId.TabIndex = 0;
             this.lblOdrItemId.Text = "[ id ]";
             // 
@@ -82,10 +83,10 @@ namespace POSModule
             // 
             this.lblOdrItemName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblOdrItemName.AutoSize = true;
-            this.lblOdrItemName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOdrItemName.Location = new System.Drawing.Point(63, 8);
+            this.lblOdrItemName.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOdrItemName.Location = new System.Drawing.Point(63, 10);
             this.lblOdrItemName.Name = "lblOdrItemName";
-            this.lblOdrItemName.Size = new System.Drawing.Size(136, 17);
+            this.lblOdrItemName.Size = new System.Drawing.Size(134, 13);
             this.lblOdrItemName.TabIndex = 1;
             this.lblOdrItemName.Text = "[ itemName ]";
             // 
@@ -98,7 +99,7 @@ namespace POSModule
             this.btnDeleteOdrItem.FlatAppearance.BorderSize = 0;
             this.btnDeleteOdrItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnDeleteOdrItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteOdrItem.Location = new System.Drawing.Point(365, 7);
+            this.btnDeleteOdrItem.Location = new System.Drawing.Point(363, 6);
             this.btnDeleteOdrItem.Name = "btnDeleteOdrItem";
             this.btnDeleteOdrItem.Size = new System.Drawing.Size(20, 20);
             this.btnDeleteOdrItem.TabIndex = 6;
@@ -109,11 +110,11 @@ namespace POSModule
             // 
             this.lblOdrItemPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblOdrItemPrice.AutoSize = true;
-            this.lblOdrItemPrice.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOdrItemPrice.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOdrItemPrice.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblOdrItemPrice.Location = new System.Drawing.Point(305, 8);
+            this.lblOdrItemPrice.Location = new System.Drawing.Point(308, 10);
             this.lblOdrItemPrice.Name = "lblOdrItemPrice";
-            this.lblOdrItemPrice.Size = new System.Drawing.Size(53, 17);
+            this.lblOdrItemPrice.Size = new System.Drawing.Size(44, 13);
             this.lblOdrItemPrice.TabIndex = 7;
             this.lblOdrItemPrice.Text = "[ price ]";
             // 
@@ -124,7 +125,7 @@ namespace POSModule
             this.btnQtyReduction.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQtyReduction.FlatAppearance.BorderSize = 0;
             this.btnQtyReduction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQtyReduction.Location = new System.Drawing.Point(202, 5);
+            this.btnQtyReduction.Location = new System.Drawing.Point(200, 4);
             this.btnQtyReduction.Margin = new System.Windows.Forms.Padding(0);
             this.btnQtyReduction.Name = "btnQtyReduction";
             this.btnQtyReduction.Size = new System.Drawing.Size(30, 24);
@@ -140,7 +141,7 @@ namespace POSModule
             this.btnQtyIncrement.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQtyIncrement.FlatAppearance.BorderSize = 0;
             this.btnQtyIncrement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQtyIncrement.Location = new System.Drawing.Point(272, 5);
+            this.btnQtyIncrement.Location = new System.Drawing.Point(270, 4);
             this.btnQtyIncrement.Margin = new System.Windows.Forms.Padding(0);
             this.btnQtyIncrement.Name = "btnQtyIncrement";
             this.btnQtyIncrement.Size = new System.Drawing.Size(30, 24);
@@ -154,8 +155,8 @@ namespace POSModule
             this.lblDisQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDisQty.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblDisQty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblDisQty.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisQty.Location = new System.Drawing.Point(232, 5);
+            this.lblDisQty.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisQty.Location = new System.Drawing.Point(230, 4);
             this.lblDisQty.Margin = new System.Windows.Forms.Padding(0);
             this.lblDisQty.Name = "lblDisQty";
             this.lblDisQty.Size = new System.Drawing.Size(40, 24);
@@ -163,14 +164,24 @@ namespace POSModule
             this.lblDisQty.Text = "XX";
             this.lblDisQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pnlLine
+            // 
+            this.pnlLine.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlLine.Location = new System.Drawing.Point(5, 33);
+            this.pnlLine.Name = "pnlLine";
+            this.pnlLine.Size = new System.Drawing.Size(390, 1);
+            this.pnlLine.TabIndex = 1;
+            // 
             // ContrOdrItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.pnlLine);
             this.Controls.Add(this.tlpOdrLst);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "ContrOdrItem";
-            this.Size = new System.Drawing.Size(402, 34);
+            this.Size = new System.Drawing.Size(400, 34);
             this.tlpOdrLst.ResumeLayout(false);
             this.tlpOdrLst.PerformLayout();
             this.ResumeLayout(false);
@@ -187,5 +198,6 @@ namespace POSModule
         private System.Windows.Forms.Button btnQtyReduction;
         private System.Windows.Forms.Button btnQtyIncrement;
         private System.Windows.Forms.Label lblDisQty;
+        private System.Windows.Forms.Panel pnlLine;
     }
 }

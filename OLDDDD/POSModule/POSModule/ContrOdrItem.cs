@@ -25,7 +25,7 @@ namespace POSModule
         }
 
         private item itm;
-        private item Item
+        public item Item
         {
             get { return itm; }
 
@@ -34,19 +34,29 @@ namespace POSModule
                 itm = value;
                 odrItem = new salesorder_item();
 
-                odrItem.itemId = itm.itemId;
-                odrItem.salePrice = itm.itemPrice;
+                odrItem.ItemID = itm.ItemID;
+                odrItem.SalePrice = itm.SalePrice;
                     
-                lblOdrItemId.Text = "#" + itm.itemId.ToString();
-                lblOdrItemName.Text = itm.itemName;
-                lblOdrItemPrice.Text = "$" + itm.itemPrice.ToString();
+                lblOdrItemId.Text = "#" + itm.ItemID.ToString();
+                lblOdrItemName.Text = itm.ItemName;
+                lblOdrItemPrice.Text = itm.SalePrice.ToString("C0");
             }
         }
 
         public void UpdataData()
         {
             lblDisQty.Text = odrItem.Qty.ToString();
-            lblOdrItemPrice.Text = "$" + (odrItem.salePrice * odrItem.Qty).ToString();
+            lblOdrItemPrice.Text = (odrItem.SalePrice * odrItem.Qty).ToString("C0");
+        }
+
+        public bool CheckStockEmpty()
+        {
+            bool value;
+            using (dbEntities db = new dbEntities())
+            {
+                value = db.retailstocklevels.Where(i => i.itemID == this.odrItem.ItemID && i.Quantity == 0).Any();
+            }
+            return value;
         }
 
         private void btnDeleteOdrItem_Click(object sender, EventArgs e)

@@ -46,7 +46,7 @@ namespace POSModule
             this.lblDisItemID.AutoSize = true;
             this.lblDisItemID.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDisItemID.ForeColor = System.Drawing.Color.Gray;
-            this.lblDisItemID.Location = new System.Drawing.Point(0, 24);
+            this.lblDisItemID.Location = new System.Drawing.Point(0, 26);
             this.lblDisItemID.Margin = new System.Windows.Forms.Padding(0);
             this.lblDisItemID.Name = "lblDisItemID";
             this.lblDisItemID.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -59,12 +59,12 @@ namespace POSModule
             this.lblDisItemName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDisItemName.AutoSize = true;
-            this.lblDisItemName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisItemName.Location = new System.Drawing.Point(0, 7);
+            this.lblDisItemName.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisItemName.Location = new System.Drawing.Point(0, 10);
             this.lblDisItemName.Margin = new System.Windows.Forms.Padding(0);
             this.lblDisItemName.Name = "lblDisItemName";
             this.lblDisItemName.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.lblDisItemName.Size = new System.Drawing.Size(200, 17);
+            this.lblDisItemName.Size = new System.Drawing.Size(200, 16);
             this.lblDisItemName.TabIndex = 7;
             this.lblDisItemName.Text = "[ itemName ]";
             // 
@@ -75,7 +75,7 @@ namespace POSModule
             this.lblDisItemPrice.AutoSize = true;
             this.lblDisItemPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDisItemPrice.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblDisItemPrice.Location = new System.Drawing.Point(0, 44);
+            this.lblDisItemPrice.Location = new System.Drawing.Point(0, 46);
             this.lblDisItemPrice.Margin = new System.Windows.Forms.Padding(0);
             this.lblDisItemPrice.Name = "lblDisItemPrice";
             this.lblDisItemPrice.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -123,7 +123,7 @@ namespace POSModule
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 80);

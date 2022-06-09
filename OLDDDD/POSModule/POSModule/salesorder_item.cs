@@ -14,10 +14,12 @@ namespace POSModule
     
     public partial class salesorder_item
     {
-        public int salesOrderId { get; set; }
-        public int itemId { get; set; }
-        public decimal salePrice { get; set; }
+        public int SalesOrderID { get; set; }
+        public int ItemID { get; set; }
+        public int SalePrice { get; set; }
         public int Qty { get; set; }
+        public Nullable<int> WarrantyMouth { get; set; }
+        public string SerialNo { get; set; }
     
         public virtual item item { get; set; }
         public virtual salesorder salesorder { get; set; }

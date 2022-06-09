@@ -14,6 +14,7 @@ namespace POSModule
     public partial class ContrCrdItem : UserControl
     {
         private item itm;
+        private int qty;
         public event EventHandler<item> BtnAddToLstClicked;
 
         public ContrCrdItem(item _item)
@@ -30,10 +31,10 @@ namespace POSModule
             set
             {
                 itm = value;
-                picItem.BackgroundImage = ByteArrayToImage(itm.itemImg.ToArray());
-                lblDisItemID.Text = "#" + itm.itemId.ToString();
-                lblDisItemName.Text = itm.itemName;
-                lblDisItemPrice.Text = "$" + itm.itemPrice.ToString();
+                picItem.BackgroundImage = ByteArrayToImage(itm.ItemImg.ToArray());
+                lblDisItemID.Text = $"#{itm.ItemID}";
+                lblDisItemName.Text = itm.ItemName;
+                lblDisItemPrice.Text = itm.SalePrice.ToString("C0");
             }
         }
 
@@ -47,17 +48,21 @@ namespace POSModule
             }
         }
 
-        public void CheckStockQty(item _item) 
+        public void CheckStockQty(item _item)
         {
-            using (DBEntities db = new DBEntities())
+            using (dbEntities db = new dbEntities())
             {
-                if (db.stocklevels.Where(i => i.itemId == _item.itemId && i.qty == 0).Any())
+                if (db.retailstocklevels.Where(i => i.itemID == _item.ItemID && i.Quantity == 0).Any())
                 {
                     btnAddToLst.Text = "Out of Stock\n[Add to Pre-order]";
                     btnAddToLst.BackColor = Color.Brown;
-                    btnAddToLst.Click -= btnAddToLst_Click;
                 }
             }
+        }
+        public void UpdateCrd() 
+        {
+            btnAddToLst.Text = "Out of Stock\n[Add to Pre-order]";
+            btnAddToLst.BackColor = Color.Brown;
         }
 
         private void btnAddToLst_Click(object sender, EventArgs e)

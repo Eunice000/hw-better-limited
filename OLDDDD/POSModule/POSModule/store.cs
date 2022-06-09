@@ -16,13 +16,17 @@ namespace POSModule
     {
         public store()
         {
-            this.stocklevels = new HashSet<stocklevel>();
+            this.retailstocklevels = new HashSet<retailstocklevel>();
+            this.salesorders = new HashSet<salesorder>();
         }
     
-        public int storeId { get; set; }
-        public string storeAddress { get; set; }
-        public int storeTel { get; set; }
+        public int StoreID { get; set; }
+        public string Address { get; set; }
+        public int Tel { get; set; }
+        public int StaffID { get; set; }
     
-        public virtual ICollection<stocklevel> stocklevels { get; set; }
+        public virtual ICollection<retailstocklevel> retailstocklevels { get; set; }
+        public virtual ICollection<salesorder> salesorders { get; set; }
+        public virtual staff staff { get; set; }
     }
 }

@@ -16,18 +16,29 @@ namespace POSModule
     {
         public item()
         {
+            this.goodreturnnote_item = new HashSet<goodreturnnote_item>();
+            this.purchaseorder_item = new HashSet<purchaseorder_item>();
             this.salesorder_item = new HashSet<salesorder_item>();
-            this.stocklevels = new HashSet<stocklevel>();
+            this.restockrequest_item = new HashSet<restockrequest_item>();
         }
     
-        public int itemId { get; set; }
-        public string itemName { get; set; }
-        public string itemDescr { get; set; }
-        public byte[] itemImg { get; set; }
-        public decimal itemPrice { get; set; }
-        public string itemCat { get; set; }
+        public int ItemID { get; set; }
+        public string ItemCat { get; set; }
+        public string ItemName { get; set; }
+        public string ItemDesc { get; set; }
+        public byte[] ItemImg { get; set; }
+        public int SalePrice { get; set; }
+        public int SupplierID { get; set; }
+        public int SupplierPrice { get; set; }
+        public int WarrantyMonth { get; set; }
+        public string AllowDelivery { get; set; }
     
+        public virtual ICollection<goodreturnnote_item> goodreturnnote_item { get; set; }
+        public virtual inventorystocklevel inventorystocklevel { get; set; }
+        public virtual retailstocklevel retailstocklevel { get; set; }
+        public virtual supplier supplier { get; set; }
+        public virtual ICollection<purchaseorder_item> purchaseorder_item { get; set; }
         public virtual ICollection<salesorder_item> salesorder_item { get; set; }
-        public virtual ICollection<stocklevel> stocklevels { get; set; }
+        public virtual ICollection<restockrequest_item> restockrequest_item { get; set; }
     }
 }

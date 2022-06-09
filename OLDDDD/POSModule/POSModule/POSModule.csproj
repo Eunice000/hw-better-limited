@@ -54,6 +54,63 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContrReceiptItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContrReceiptItem.Designer.cs">
+      <DependentUpon>ContrReceiptItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customer.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="deliveryorder.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="frmDlvrNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDlvrNote.Designer.cs">
+      <DependentUpon>frmDlvrNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOdrReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOdrReceipt.Designer.cs">
+      <DependentUpon>frmOdrReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDlvrOdr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDlvrOdr.Designer.cs">
+      <DependentUpon>frmDlvrOdr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTestReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTestReceipt.Designer.cs">
+      <DependentUpon>frmTestReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOdrCust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOdrCust.Designer.cs">
+      <DependentUpon>frmOdrCust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="goodreturnnote.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="goodreturnnote_item.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="goodsreceivednote.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="installationorder.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="inventorystocklevel.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="item.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -75,9 +132,8 @@
     <Compile Include="POSModule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include=".Designer.cs">
+    <Compile Include="POSModule.Designer.cs">
       <DependentUpon>POSModule.cs</DependentUpon>
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,18 +149,69 @@
     <Compile Include="ContrOdrItem.Designer.cs">
       <DependentUpon>ContrOdrItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="purchaseorder.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="purchaseorder_item.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="reorderrequest.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="reorderrequest_item.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="restockrequest.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="restockrequest_item.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="retailstocklevel.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="salesorder.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="salesorder_item.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="stocklevel.cs">
+    <Compile Include="staff.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="store.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="supplier.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="useraccount.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContrDlvrItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContrDlvrItem.Designer.cs">
+      <DependentUpon>ContrDlvrItem.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ContrReceiptItem.resx">
+      <DependentUpon>ContrReceiptItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDlvrNote.resx">
+      <DependentUpon>frmDlvrNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOdrReceipt.resx">
+      <DependentUpon>frmOdrReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDlvrOdr.resx">
+      <DependentUpon>frmDlvrOdr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTestReceipt.resx">
+      <DependentUpon>frmTestReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOdrCust.resx">
+      <DependentUpon>frmOdrCust.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="POSModule.resx">
       <DependentUpon>POSModule.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ContrOdrItem.resx">
       <DependentUpon>ContrOdrItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContrDlvrItem.resx">
+      <DependentUpon>ContrDlvrItem.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
