@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9e035ce7f94f47c8a4c052d0f66eaf07" Name="Diagram1">
+        <EntityTypeShape EntityType="betterlimitedModel.customer" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="betterlimitedModel.deliverynote" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="betterlimitedModel.goodreturnnote" Width="1.5" PointX="5.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="betterlimitedModel.goodreturnnote_item" Width="1.5" PointX="10.5" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="betterlimitedModel.goodsreceivednote" Width="1.5" PointX="8.25" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="betterlimitedModel.installationorder" Width="1.5" PointX="6" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="betterlimitedModel.item" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="betterlimitedModel.purchaseorder" Width="1.5" PointX="6" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="betterlimitedModel.purchaseorder_item" Width="1.5" PointX="11.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="betterlimitedModel.reorderrequest" Width="1.5" PointX="6" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="betterlimitedModel.reorderrequest_item" Width="1.5" PointX="8.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="betterlimitedModel.salesorder" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="betterlimitedModel.salesreceipt" Width="1.5" PointX="8.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="betterlimitedModel.staff" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="betterlimitedModel.store" Width="1.5" PointX="0.75" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="betterlimitedModel.supplier" Width="1.5" PointX="3.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="betterlimitedModel.useraccount" Width="1.5" PointX="3" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="betterlimitedModel.salesorder_item" Width="1.5" PointX="8.25" PointY="4.375" IsExpanded="true" />
+        <AssociationConnector Association="betterlimitedModel.FKDeliveryNo488459" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKInstallati141946" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKSalesOrder557619" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKSalesRecei494615" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKDeliveryNo330361" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKGoodReturn385517" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKGoodReturn395895" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKGoodReturn63513" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKGoodReturn748003" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKGoodsRecei36177" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKGoodsRecei913086" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKInstallati300044" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKItem506810" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKPurchaseOr100230" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKReorderReq782151" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKSalesOrder804327" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKPurchaseOr444232" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKPurchaseOr510102" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKReorderReq254158" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKReorderReq909591" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKSalesOrder426975" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKSalesOrder841473" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKSalesOrder929714" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKSalesRecei652713" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKStore384954" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.FKUserAccoun919948" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
