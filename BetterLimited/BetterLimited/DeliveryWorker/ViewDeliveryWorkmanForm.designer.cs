@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView_DeliveryTable = new System.Windows.Forms.DataGridView();
@@ -113,7 +113,7 @@
             this.dataGridView_DeliveryTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView_DeliveryTable.RowTemplate.Height = 27;
             this.dataGridView_DeliveryTable.ShowEditingIcon = false;
-            this.dataGridView_DeliveryTable.Size = new System.Drawing.Size(561, 492);
+            this.dataGridView_DeliveryTable.Size = new System.Drawing.Size(561, 449);
             this.dataGridView_DeliveryTable.TabIndex = 57;
             this.dataGridView_DeliveryTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_DeliveryTable_CellClick);
             // 
@@ -155,13 +155,13 @@
             // 
             // dataGridViewButtonColumn2
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("PMingLiU-ExtB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewButtonColumn2.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("PMingLiU-ExtB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewButtonColumn2.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewButtonColumn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dataGridViewButtonColumn2.HeaderText = "";
             this.dataGridViewButtonColumn2.MinimumWidth = 6;
@@ -213,7 +213,7 @@
             // label_DeliveryTime
             // 
             this.label_DeliveryTime.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_DeliveryTime.Location = new System.Drawing.Point(585, 393);
+            this.label_DeliveryTime.Location = new System.Drawing.Point(585, 369);
             this.label_DeliveryTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_DeliveryTime.Name = "label_DeliveryTime";
             this.label_DeliveryTime.Size = new System.Drawing.Size(121, 20);
@@ -223,7 +223,7 @@
             // label_DeliveryDate
             // 
             this.label_DeliveryDate.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_DeliveryDate.Location = new System.Drawing.Point(585, 314);
+            this.label_DeliveryDate.Location = new System.Drawing.Point(585, 298);
             this.label_DeliveryDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_DeliveryDate.Name = "label_DeliveryDate";
             this.label_DeliveryDate.Size = new System.Drawing.Size(121, 20);
@@ -233,7 +233,7 @@
             // label_deliveryStatus
             // 
             this.label_deliveryStatus.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_deliveryStatus.Location = new System.Drawing.Point(585, 472);
+            this.label_deliveryStatus.Location = new System.Drawing.Point(585, 440);
             this.label_deliveryStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_deliveryStatus.Name = "label_deliveryStatus";
             this.label_deliveryStatus.Size = new System.Drawing.Size(121, 20);
@@ -243,7 +243,7 @@
             // label_SalesOrderID
             // 
             this.label_SalesOrderID.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_SalesOrderID.Location = new System.Drawing.Point(583, 235);
+            this.label_SalesOrderID.Location = new System.Drawing.Point(583, 227);
             this.label_SalesOrderID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_SalesOrderID.Name = "label_SalesOrderID";
             this.label_SalesOrderID.Size = new System.Drawing.Size(121, 20);
@@ -272,7 +272,7 @@
             // textBox_SalesOrderID
             // 
             this.textBox_SalesOrderID.Enabled = false;
-            this.textBox_SalesOrderID.Location = new System.Drawing.Point(721, 236);
+            this.textBox_SalesOrderID.Location = new System.Drawing.Point(721, 228);
             this.textBox_SalesOrderID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SalesOrderID.Name = "textBox_SalesOrderID";
             this.textBox_SalesOrderID.Size = new System.Drawing.Size(140, 22);
@@ -282,7 +282,7 @@
             // 
             this.button_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button_Update.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Update.Location = new System.Drawing.Point(739, 626);
+            this.button_Update.Location = new System.Drawing.Point(739, 582);
             this.button_Update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_Update.Name = "button_Update";
             this.button_Update.Size = new System.Drawing.Size(124, 30);
@@ -294,7 +294,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(585, 551);
+            this.label1.Location = new System.Drawing.Point(585, 511);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 20);
@@ -303,7 +303,7 @@
             // 
             // textBox_WorkmanID
             // 
-            this.textBox_WorkmanID.Location = new System.Drawing.Point(723, 552);
+            this.textBox_WorkmanID.Location = new System.Drawing.Point(723, 512);
             this.textBox_WorkmanID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_WorkmanID.Name = "textBox_WorkmanID";
             this.textBox_WorkmanID.Size = new System.Drawing.Size(140, 22);
@@ -314,7 +314,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button1.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(589, 626);
+            this.button1.Location = new System.Drawing.Point(589, 582);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 30);
@@ -326,7 +326,7 @@
             // textBox_DeliveryTime
             // 
             this.textBox_DeliveryTime.Enabled = false;
-            this.textBox_DeliveryTime.Location = new System.Drawing.Point(723, 394);
+            this.textBox_DeliveryTime.Location = new System.Drawing.Point(723, 370);
             this.textBox_DeliveryTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_DeliveryTime.Name = "textBox_DeliveryTime";
             this.textBox_DeliveryTime.Size = new System.Drawing.Size(140, 22);
@@ -335,7 +335,7 @@
             // textBox_DeliveryDate
             // 
             this.textBox_DeliveryDate.Enabled = false;
-            this.textBox_DeliveryDate.Location = new System.Drawing.Point(723, 315);
+            this.textBox_DeliveryDate.Location = new System.Drawing.Point(723, 299);
             this.textBox_DeliveryDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_DeliveryDate.Name = "textBox_DeliveryDate";
             this.textBox_DeliveryDate.Size = new System.Drawing.Size(140, 22);
@@ -344,7 +344,7 @@
             // textBox_DeliveryStatus
             // 
             this.textBox_DeliveryStatus.Enabled = false;
-            this.textBox_DeliveryStatus.Location = new System.Drawing.Point(723, 473);
+            this.textBox_DeliveryStatus.Location = new System.Drawing.Point(723, 441);
             this.textBox_DeliveryStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_DeliveryStatus.Name = "textBox_DeliveryStatus";
             this.textBox_DeliveryStatus.Size = new System.Drawing.Size(140, 22);

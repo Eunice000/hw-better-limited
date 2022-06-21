@@ -71,7 +71,7 @@ namespace BetterLimited
             // button_clear
             // 
             this.button_clear.Location = new System.Drawing.Point(470, 190);
-            this.button_clear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_clear.Margin = new System.Windows.Forms.Padding(2);
             this.button_clear.Name = "button_clear";
             this.button_clear.Size = new System.Drawing.Size(80, 20);
             this.button_clear.TabIndex = 10;
@@ -82,7 +82,7 @@ namespace BetterLimited
             // button_Search
             // 
             this.button_Search.Location = new System.Drawing.Point(777, 190);
-            this.button_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_Search.Margin = new System.Windows.Forms.Padding(2);
             this.button_Search.Name = "button_Search";
             this.button_Search.Size = new System.Drawing.Size(80, 20);
             this.button_Search.TabIndex = 9;
@@ -93,7 +93,7 @@ namespace BetterLimited
             // textBox_Search
             // 
             this.textBox_Search.Location = new System.Drawing.Point(625, 190);
-            this.textBox_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_Search.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Search.Name = "textBox_Search";
             this.textBox_Search.Size = new System.Drawing.Size(148, 22);
             this.textBox_Search.TabIndex = 8;
@@ -119,7 +119,7 @@ namespace BetterLimited
             this.DelectButton});
             this.dataGridView_DeliveryNote_Table.GridColor = System.Drawing.Color.White;
             this.dataGridView_DeliveryNote_Table.Location = new System.Drawing.Point(40, 228);
-            this.dataGridView_DeliveryNote_Table.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView_DeliveryNote_Table.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DeliveryNote_Table.Name = "dataGridView_DeliveryNote_Table";
             this.dataGridView_DeliveryNote_Table.ReadOnly = true;
             this.dataGridView_DeliveryNote_Table.RowHeadersVisible = false;
@@ -264,7 +264,7 @@ namespace BetterLimited
             this.Column12});
             this.dataGridView_DeliveryNote_item_Table.GridColor = System.Drawing.Color.White;
             this.dataGridView_DeliveryNote_item_Table.Location = new System.Drawing.Point(40, 448);
-            this.dataGridView_DeliveryNote_item_Table.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView_DeliveryNote_item_Table.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DeliveryNote_item_Table.Name = "dataGridView_DeliveryNote_item_Table";
             this.dataGridView_DeliveryNote_item_Table.ReadOnly = true;
             this.dataGridView_DeliveryNote_item_Table.RowHeadersVisible = false;
@@ -325,8 +325,7 @@ namespace BetterLimited
             // 
             // DeliveryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(884, 661);
             this.Controls.Add(this.dataGridView_DeliveryNote_item_Table);
             this.Controls.Add(this.label2);
@@ -336,7 +335,7 @@ namespace BetterLimited
             this.Controls.Add(this.button_Search);
             this.Controls.Add(this.textBox_Search);
             this.Controls.Add(this.dataGridView_DeliveryNote_Table);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DeliveryForm";
             this.Text = "DeliveryForm";
             this.Load += new System.EventHandler(this.DeliveryForm_Load);
