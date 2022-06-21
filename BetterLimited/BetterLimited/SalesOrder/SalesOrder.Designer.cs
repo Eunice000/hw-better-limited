@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView_SalesOrderTable = new System.Windows.Forms.DataGridView();
             this.SalesOrderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StoreID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,8 +77,8 @@
             this.EditButton,
             this.DelectButton});
             this.dataGridView_SalesOrderTable.GridColor = System.Drawing.Color.White;
-            this.dataGridView_SalesOrderTable.Location = new System.Drawing.Point(97, 245);
-            this.dataGridView_SalesOrderTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView_SalesOrderTable.Location = new System.Drawing.Point(73, 196);
+            this.dataGridView_SalesOrderTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_SalesOrderTable.Name = "dataGridView_SalesOrderTable";
             this.dataGridView_SalesOrderTable.ReadOnly = true;
             this.dataGridView_SalesOrderTable.RowHeadersVisible = false;
@@ -86,7 +86,7 @@
             this.dataGridView_SalesOrderTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView_SalesOrderTable.RowTemplate.Height = 27;
             this.dataGridView_SalesOrderTable.ShowEditingIcon = false;
-            this.dataGridView_SalesOrderTable.Size = new System.Drawing.Size(1141, 441);
+            this.dataGridView_SalesOrderTable.Size = new System.Drawing.Size(694, 376);
             this.dataGridView_SalesOrderTable.TabIndex = 0;
             this.dataGridView_SalesOrderTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_SalesOrderTable_CellClick);
             this.dataGridView_SalesOrderTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_SalesOrderTable_CellContentClick);
@@ -165,13 +165,13 @@
             // 
             // EditButton
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("PMingLiU-ExtB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.EditButton.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("PMingLiU-ExtB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.EditButton.DefaultCellStyle = dataGridViewCellStyle3;
             this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditButton.HeaderText = "";
             this.EditButton.MinimumWidth = 6;
@@ -182,13 +182,13 @@
             // 
             // DelectButton
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("PMingLiU-ExtB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.DelectButton.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("PMingLiU-ExtB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.DelectButton.DefaultCellStyle = dataGridViewCellStyle4;
             this.DelectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DelectButton.HeaderText = "";
             this.DelectButton.MinimumWidth = 6;
@@ -200,20 +200,20 @@
             // textBox_Search
             // 
             this.textBox_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_Search.Location = new System.Drawing.Point(931, 214);
-            this.textBox_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Search.Location = new System.Drawing.Point(536, 171);
+            this.textBox_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_Search.Name = "textBox_Search";
-            this.textBox_Search.Size = new System.Drawing.Size(196, 25);
+            this.textBox_Search.Size = new System.Drawing.Size(148, 22);
             this.textBox_Search.TabIndex = 1;
             this.textBox_Search.TextChanged += new System.EventHandler(this.textBox_Search_TextChanged);
             // 
             // button_Search
             // 
             this.button_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_Search.Location = new System.Drawing.Point(1132, 214);
-            this.button_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_Search.Location = new System.Drawing.Point(687, 171);
+            this.button_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_Search.Name = "button_Search";
-            this.button_Search.Size = new System.Drawing.Size(107, 25);
+            this.button_Search.Size = new System.Drawing.Size(80, 20);
             this.button_Search.TabIndex = 2;
             this.button_Search.Text = "Search";
             this.button_Search.UseVisualStyleBackColor = true;
@@ -224,8 +224,9 @@
             this.label1.BackColor = System.Drawing.Color.DarkTurquoise;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1395, 108);
+            this.label1.Size = new System.Drawing.Size(884, 86);
             this.label1.TabIndex = 3;
             // 
             // label2
@@ -234,19 +235,20 @@
             this.label2.BackColor = System.Drawing.Color.DarkTurquoise;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(89, 32);
+            this.label2.Location = new System.Drawing.Point(67, 26);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(212, 43);
+            this.label2.Size = new System.Drawing.Size(171, 35);
             this.label2.TabIndex = 4;
             this.label2.Text = "Sales Order ";
             // 
             // button_clear
             // 
             this.button_clear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_clear.Location = new System.Drawing.Point(723, 214);
-            this.button_clear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_clear.Location = new System.Drawing.Point(380, 171);
+            this.button_clear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_clear.Name = "button_clear";
-            this.button_clear.Size = new System.Drawing.Size(107, 25);
+            this.button_clear.Size = new System.Drawing.Size(80, 20);
             this.button_clear.TabIndex = 5;
             this.button_clear.Text = "Clear";
             this.button_clear.UseVisualStyleBackColor = true;
@@ -256,18 +258,18 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(836, 218);
+            this.label3.Location = new System.Drawing.Point(465, 174);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 15);
+            this.label3.Size = new System.Drawing.Size(70, 12);
             this.label3.TabIndex = 6;
             this.label3.Text = "SalesOrderID:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // SalesOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1395, 798);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(884, 661);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button_clear);
             this.Controls.Add(this.label2);
@@ -275,7 +277,7 @@
             this.Controls.Add(this.button_Search);
             this.Controls.Add(this.textBox_Search);
             this.Controls.Add(this.dataGridView_SalesOrderTable);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SalesOrder";
             this.Text = "SalesOrder";
             this.Load += new System.EventHandler(this.SalesOrder_Load);

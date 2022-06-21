@@ -72,17 +72,17 @@ namespace BetterLimited
             this.flpCrdItems.AutoScroll = true;
             this.flpCrdItems.AutoScrollMinSize = new System.Drawing.Size(5, 5);
             this.flpCrdItems.BackColor = System.Drawing.Color.Transparent;
-            this.flpCrdItems.Location = new System.Drawing.Point(0, 88);
+            this.flpCrdItems.Location = new System.Drawing.Point(0, 81);
             this.flpCrdItems.Margin = new System.Windows.Forms.Padding(0);
             this.flpCrdItems.Name = "flpCrdItems";
-            this.flpCrdItems.Size = new System.Drawing.Size(450, 549);
+            this.flpCrdItems.Size = new System.Drawing.Size(450, 507);
             this.flpCrdItems.TabIndex = 0;
             // 
             // txtSearch
             // 
             this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(8, 5);
+            this.txtSearch.Location = new System.Drawing.Point(8, 4);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(352, 29);
@@ -92,9 +92,9 @@ namespace BetterLimited
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(363, 4);
+            this.btnSearch.Location = new System.Drawing.Point(363, 3);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(84, 32);
+            this.btnSearch.Size = new System.Drawing.Size(84, 30);
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -103,10 +103,10 @@ namespace BetterLimited
             // flpOdrLst
             // 
             this.flpOdrLst.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.flpOdrLst.Location = new System.Drawing.Point(0, 80);
+            this.flpOdrLst.Location = new System.Drawing.Point(0, 74);
             this.flpOdrLst.Margin = new System.Windows.Forms.Padding(0);
             this.flpOdrLst.Name = "flpOdrLst";
-            this.flpOdrLst.Size = new System.Drawing.Size(400, 351);
+            this.flpOdrLst.Size = new System.Drawing.Size(400, 324);
             this.flpOdrLst.TabIndex = 7;
             // 
             // tableLayoutPanel1
@@ -122,12 +122,12 @@ namespace BetterLimited
             this.tableLayoutPanel1.Controls.Add(this.label3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 48);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 44);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(400, 32);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(400, 30);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -136,7 +136,7 @@ namespace BetterLimited
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(20, 7);
+            this.label1.Location = new System.Drawing.Point(20, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(20, 17);
             this.label1.TabIndex = 0;
@@ -148,7 +148,7 @@ namespace BetterLimited
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(234, 7);
+            this.label3.Location = new System.Drawing.Point(234, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 17);
             this.label3.TabIndex = 2;
@@ -160,7 +160,7 @@ namespace BetterLimited
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(312, 7);
+            this.label4.Location = new System.Drawing.Point(312, 6);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 17);
             this.label4.TabIndex = 3;
@@ -172,7 +172,7 @@ namespace BetterLimited
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(63, 7);
+            this.label2.Location = new System.Drawing.Point(63, 6);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 17);
             this.label2.TabIndex = 1;
@@ -185,10 +185,10 @@ namespace BetterLimited
             this.btnClearOdrLst.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.btnClearOdrLst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearOdrLst.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearOdrLst.Location = new System.Drawing.Point(0, 432);
+            this.btnClearOdrLst.Location = new System.Drawing.Point(0, 399);
             this.btnClearOdrLst.Margin = new System.Windows.Forms.Padding(0);
             this.btnClearOdrLst.Name = "btnClearOdrLst";
-            this.btnClearOdrLst.Size = new System.Drawing.Size(400, 40);
+            this.btnClearOdrLst.Size = new System.Drawing.Size(400, 37);
             this.btnClearOdrLst.TabIndex = 12;
             this.btnClearOdrLst.Text = "Cancel";
             this.btnClearOdrLst.UseVisualStyleBackColor = false;
@@ -202,12 +202,12 @@ namespace BetterLimited
             this.tlpSearchBar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpSearchBar.Controls.Add(this.btnSearch, 1, 0);
             this.tlpSearchBar.Controls.Add(this.txtSearch, 0, 0);
-            this.tlpSearchBar.Location = new System.Drawing.Point(0, 48);
+            this.tlpSearchBar.Location = new System.Drawing.Point(0, 44);
             this.tlpSearchBar.Margin = new System.Windows.Forms.Padding(0);
             this.tlpSearchBar.Name = "tlpSearchBar";
             this.tlpSearchBar.RowCount = 1;
             this.tlpSearchBar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpSearchBar.Size = new System.Drawing.Size(450, 40);
+            this.tlpSearchBar.Size = new System.Drawing.Size(450, 37);
             this.tlpSearchBar.TabIndex = 13;
             // 
             // panel1
@@ -216,9 +216,9 @@ namespace BetterLimited
             this.panel1.Controls.Add(this.tlpBtnCat);
             this.panel1.Controls.Add(this.tlpSearchBar);
             this.panel1.Controls.Add(this.flpCrdItems);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(12, 11);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(450, 637);
+            this.panel1.Size = new System.Drawing.Size(450, 588);
             this.panel1.TabIndex = 14;
             // 
             // tlpBtnCat
@@ -239,7 +239,7 @@ namespace BetterLimited
             this.tlpBtnCat.Name = "tlpBtnCat";
             this.tlpBtnCat.RowCount = 1;
             this.tlpBtnCat.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpBtnCat.Size = new System.Drawing.Size(450, 48);
+            this.tlpBtnCat.Size = new System.Drawing.Size(450, 44);
             this.tlpBtnCat.TabIndex = 14;
             // 
             // checkBox1
@@ -254,7 +254,7 @@ namespace BetterLimited
             this.checkBox1.Location = new System.Drawing.Point(0, 0);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(90, 48);
+            this.checkBox1.Size = new System.Drawing.Size(90, 44);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Catagory";
             this.checkBox1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -272,7 +272,7 @@ namespace BetterLimited
             this.checkBox2.Location = new System.Drawing.Point(90, 0);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(90, 48);
+            this.checkBox2.Size = new System.Drawing.Size(90, 44);
             this.checkBox2.TabIndex = 1;
             this.checkBox2.Text = "Catagory";
             this.checkBox2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -290,7 +290,7 @@ namespace BetterLimited
             this.checkBox3.Location = new System.Drawing.Point(180, 0);
             this.checkBox3.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(90, 48);
+            this.checkBox3.Size = new System.Drawing.Size(90, 44);
             this.checkBox3.TabIndex = 2;
             this.checkBox3.Text = "Catagory";
             this.checkBox3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -308,7 +308,7 @@ namespace BetterLimited
             this.checkBox4.Location = new System.Drawing.Point(270, 0);
             this.checkBox4.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(90, 48);
+            this.checkBox4.Size = new System.Drawing.Size(90, 44);
             this.checkBox4.TabIndex = 3;
             this.checkBox4.Text = "Catagory";
             this.checkBox4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -326,7 +326,7 @@ namespace BetterLimited
             this.checkBox5.Location = new System.Drawing.Point(360, 0);
             this.checkBox5.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(90, 48);
+            this.checkBox5.Size = new System.Drawing.Size(90, 44);
             this.checkBox5.TabIndex = 4;
             this.checkBox5.Text = "Catagory";
             this.checkBox5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -340,10 +340,10 @@ namespace BetterLimited
             this.panel2.Controls.Add(this.tableLayoutPanel2);
             this.panel2.Controls.Add(this.flpOdrLst);
             this.panel2.Controls.Add(this.btnClearOdrLst);
-            this.panel2.Location = new System.Drawing.Point(475, 12);
+            this.panel2.Location = new System.Drawing.Point(475, 11);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(400, 637);
+            this.panel2.Size = new System.Drawing.Size(400, 588);
             this.panel2.TabIndex = 15;
             // 
             // btnCheckout
@@ -354,10 +354,10 @@ namespace BetterLimited
             this.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheckout.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckout.ForeColor = System.Drawing.Color.White;
-            this.btnCheckout.Location = new System.Drawing.Point(0, 597);
+            this.btnCheckout.Location = new System.Drawing.Point(0, 551);
             this.btnCheckout.Margin = new System.Windows.Forms.Padding(0);
             this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(400, 40);
+            this.btnCheckout.Size = new System.Drawing.Size(400, 37);
             this.btnCheckout.TabIndex = 15;
             this.btnCheckout.Text = "Checkout";
             this.btnCheckout.UseVisualStyleBackColor = false;
@@ -374,7 +374,7 @@ namespace BetterLimited
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(400, 47);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(400, 43);
             this.tableLayoutPanel2.TabIndex = 13;
             // 
             // label5
@@ -384,7 +384,7 @@ namespace BetterLimited
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(158, 13);
+            this.label5.Location = new System.Drawing.Point(158, 11);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 21);
@@ -403,14 +403,14 @@ namespace BetterLimited
             this.tableLayoutPanel3.Controls.Add(this.lblDisTotal, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.lblDisChange, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.txtCash, 1, 1);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(475, 497);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(475, 459);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(400, 112);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(400, 103);
             this.tableLayoutPanel3.TabIndex = 14;
             // 
             // lblTotal
@@ -419,7 +419,7 @@ namespace BetterLimited
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblTotal.Location = new System.Drawing.Point(3, 9);
+            this.lblTotal.Location = new System.Drawing.Point(3, 8);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
             this.lblTotal.Size = new System.Drawing.Size(194, 25);
@@ -434,7 +434,7 @@ namespace BetterLimited
             this.lblCash.AutoSize = true;
             this.lblCash.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCash.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCash.Location = new System.Drawing.Point(3, 44);
+            this.lblCash.Location = new System.Drawing.Point(3, 41);
             this.lblCash.Name = "lblCash";
             this.lblCash.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
             this.lblCash.Size = new System.Drawing.Size(194, 17);
@@ -449,7 +449,7 @@ namespace BetterLimited
             this.lblChange.AutoSize = true;
             this.lblChange.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblChange.Location = new System.Drawing.Point(3, 77);
+            this.lblChange.Location = new System.Drawing.Point(3, 71);
             this.lblChange.Name = "lblChange";
             this.lblChange.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
             this.lblChange.Size = new System.Drawing.Size(194, 17);
@@ -463,7 +463,7 @@ namespace BetterLimited
             this.lblDisTotal.AutoSize = true;
             this.lblDisTotal.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDisTotal.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblDisTotal.Location = new System.Drawing.Point(203, 9);
+            this.lblDisTotal.Location = new System.Drawing.Point(203, 8);
             this.lblDisTotal.Name = "lblDisTotal";
             this.lblDisTotal.Padding = new System.Windows.Forms.Padding(0, 0, 22, 0);
             this.lblDisTotal.Size = new System.Drawing.Size(194, 25);
@@ -478,7 +478,7 @@ namespace BetterLimited
             this.lblDisChange.AutoSize = true;
             this.lblDisChange.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDisChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblDisChange.Location = new System.Drawing.Point(203, 77);
+            this.lblDisChange.Location = new System.Drawing.Point(203, 71);
             this.lblDisChange.Name = "lblDisChange";
             this.lblDisChange.Padding = new System.Windows.Forms.Padding(0, 0, 24, 0);
             this.lblDisChange.Size = new System.Drawing.Size(194, 17);
@@ -493,7 +493,7 @@ namespace BetterLimited
             this.txtCash.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCash.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCash.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCash.Location = new System.Drawing.Point(313, 44);
+            this.txtCash.Location = new System.Drawing.Point(313, 41);
             this.txtCash.Margin = new System.Windows.Forms.Padding(0, 0, 30, 0);
             this.txtCash.Name = "txtCash";
             this.txtCash.Size = new System.Drawing.Size(57, 25);
@@ -505,10 +505,9 @@ namespace BetterLimited
             // 
             // frmPOS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(884, 661);
+            this.ClientSize = new System.Drawing.Size(900, 700);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

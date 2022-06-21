@@ -44,8 +44,6 @@ namespace BetterLimited
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_Search = new System.Windows.Forms.TextBox();
             this.dataGridView_InstallationOrder_Table = new System.Windows.Forms.DataGridView();
-            this.button_clear = new System.Windows.Forms.Button();
-            this.button_Search = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +52,8 @@ namespace BetterLimited
             this.Column13 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.EditButton = new System.Windows.Forms.DataGridViewButtonColumn();
             this.DelectButton = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.button_clear = new System.Windows.Forms.Button();
+            this.button_Search = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_InstallationOrder_item_Table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_InstallationOrder_Table)).BeginInit();
             this.SuspendLayout();
@@ -78,8 +78,8 @@ namespace BetterLimited
             this.Column11,
             this.Column12});
             this.dataGridView_InstallationOrder_item_Table.GridColor = System.Drawing.Color.White;
-            this.dataGridView_InstallationOrder_item_Table.Location = new System.Drawing.Point(3, 480);
-            this.dataGridView_InstallationOrder_item_Table.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView_InstallationOrder_item_Table.Location = new System.Drawing.Point(2, 384);
+            this.dataGridView_InstallationOrder_item_Table.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_InstallationOrder_item_Table.Name = "dataGridView_InstallationOrder_item_Table";
             this.dataGridView_InstallationOrder_item_Table.ReadOnly = true;
             this.dataGridView_InstallationOrder_item_Table.RowHeadersVisible = false;
@@ -87,7 +87,7 @@ namespace BetterLimited
             this.dataGridView_InstallationOrder_item_Table.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView_InstallationOrder_item_Table.RowTemplate.Height = 27;
             this.dataGridView_InstallationOrder_item_Table.ShowEditingIcon = false;
-            this.dataGridView_InstallationOrder_item_Table.Size = new System.Drawing.Size(1080, 204);
+            this.dataGridView_InstallationOrder_item_Table.Size = new System.Drawing.Size(838, 254);
             this.dataGridView_InstallationOrder_item_Table.TabIndex = 22;
             // 
             // Column7
@@ -144,9 +144,10 @@ namespace BetterLimited
             this.label2.BackColor = System.Drawing.Color.DarkTurquoise;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(93, 38);
+            this.label2.Location = new System.Drawing.Point(70, 30);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(412, 43);
+            this.label2.Size = new System.Drawing.Size(338, 35);
             this.label2.TabIndex = 21;
             this.label2.Text = "Installaition  Managment";
             // 
@@ -155,25 +156,27 @@ namespace BetterLimited
             this.label1.BackColor = System.Drawing.Color.DarkTurquoise;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1141, 108);
+            this.label1.Size = new System.Drawing.Size(884, 86);
             this.label1.TabIndex = 20;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(689, 205);
+            this.label3.Location = new System.Drawing.Point(517, 164);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 15);
+            this.label3.Size = new System.Drawing.Size(74, 12);
             this.label3.TabIndex = 19;
             this.label3.Text = "InstallationID :";
             // 
             // textBox_Search
             // 
-            this.textBox_Search.Location = new System.Drawing.Point(788, 200);
-            this.textBox_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Search.Location = new System.Drawing.Point(591, 160);
+            this.textBox_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_Search.Name = "textBox_Search";
-            this.textBox_Search.Size = new System.Drawing.Size(169, 25);
+            this.textBox_Search.Size = new System.Drawing.Size(128, 22);
             this.textBox_Search.TabIndex = 16;
             this.textBox_Search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Search_KeyPress);
             // 
@@ -199,8 +202,8 @@ namespace BetterLimited
             this.EditButton,
             this.DelectButton});
             this.dataGridView_InstallationOrder_Table.GridColor = System.Drawing.Color.White;
-            this.dataGridView_InstallationOrder_Table.Location = new System.Drawing.Point(3, 231);
-            this.dataGridView_InstallationOrder_Table.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView_InstallationOrder_Table.Location = new System.Drawing.Point(2, 185);
+            this.dataGridView_InstallationOrder_Table.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_InstallationOrder_Table.Name = "dataGridView_InstallationOrder_Table";
             this.dataGridView_InstallationOrder_Table.ReadOnly = true;
             this.dataGridView_InstallationOrder_Table.RowHeadersVisible = false;
@@ -208,31 +211,9 @@ namespace BetterLimited
             this.dataGridView_InstallationOrder_Table.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView_InstallationOrder_Table.RowTemplate.Height = 27;
             this.dataGridView_InstallationOrder_Table.ShowEditingIcon = false;
-            this.dataGridView_InstallationOrder_Table.Size = new System.Drawing.Size(1080, 181);
+            this.dataGridView_InstallationOrder_Table.Size = new System.Drawing.Size(838, 236);
             this.dataGridView_InstallationOrder_Table.TabIndex = 15;
             this.dataGridView_InstallationOrder_Table.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_InstallationOrder_Table_CellClick);
-            // 
-            // button_clear
-            // 
-            this.button_clear.Location = new System.Drawing.Point(565, 200);
-            this.button_clear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_clear.Name = "button_clear";
-            this.button_clear.Size = new System.Drawing.Size(107, 25);
-            this.button_clear.TabIndex = 24;
-            this.button_clear.Text = "Clear";
-            this.button_clear.UseVisualStyleBackColor = true;
-            this.button_clear.Click += new System.EventHandler(this.button_clear_Click);
-            // 
-            // button_Search
-            // 
-            this.button_Search.Location = new System.Drawing.Point(975, 200);
-            this.button_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_Search.Name = "button_Search";
-            this.button_Search.Size = new System.Drawing.Size(107, 25);
-            this.button_Search.TabIndex = 23;
-            this.button_Search.Text = "Search";
-            this.button_Search.UseVisualStyleBackColor = true;
-            this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
             // 
             // Column1
             // 
@@ -326,11 +307,32 @@ namespace BetterLimited
             this.DelectButton.Text = "Delect";
             this.DelectButton.UseColumnTextForButtonValue = true;
             // 
+            // button_clear
+            // 
+            this.button_clear.Location = new System.Drawing.Point(424, 160);
+            this.button_clear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_clear.Name = "button_clear";
+            this.button_clear.Size = new System.Drawing.Size(80, 20);
+            this.button_clear.TabIndex = 24;
+            this.button_clear.Text = "Clear";
+            this.button_clear.UseVisualStyleBackColor = true;
+            this.button_clear.Click += new System.EventHandler(this.button_clear_Click);
+            // 
+            // button_Search
+            // 
+            this.button_Search.Location = new System.Drawing.Point(731, 160);
+            this.button_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_Search.Name = "button_Search";
+            this.button_Search.Size = new System.Drawing.Size(80, 20);
+            this.button_Search.TabIndex = 23;
+            this.button_Search.Text = "Search";
+            this.button_Search.UseVisualStyleBackColor = true;
+            this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
+            // 
             // InstallationForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1141, 712);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(884, 661);
             this.Controls.Add(this.button_clear);
             this.Controls.Add(this.button_Search);
             this.Controls.Add(this.dataGridView_InstallationOrder_item_Table);
@@ -339,7 +341,7 @@ namespace BetterLimited
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox_Search);
             this.Controls.Add(this.dataGridView_InstallationOrder_Table);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "InstallationForm";
             this.Text = "InstallationForm";
             this.Load += new System.EventHandler(this.InstallationForm_Load);

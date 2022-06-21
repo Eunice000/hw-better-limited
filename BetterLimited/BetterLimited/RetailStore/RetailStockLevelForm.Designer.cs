@@ -68,8 +68,8 @@ namespace BetterLimited
             this.UpdateLowLevel,
             this.Restock});
             this.dgvRetailStockLevel.GridColor = System.Drawing.Color.White;
-            this.dgvRetailStockLevel.Location = new System.Drawing.Point(44, 281);
-            this.dgvRetailStockLevel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvRetailStockLevel.Location = new System.Drawing.Point(33, 225);
+            this.dgvRetailStockLevel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvRetailStockLevel.Name = "dgvRetailStockLevel";
             this.dgvRetailStockLevel.ReadOnly = true;
             this.dgvRetailStockLevel.RowHeadersVisible = false;
@@ -77,7 +77,7 @@ namespace BetterLimited
             this.dgvRetailStockLevel.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvRetailStockLevel.RowTemplate.Height = 27;
             this.dgvRetailStockLevel.ShowEditingIcon = false;
-            this.dgvRetailStockLevel.Size = new System.Drawing.Size(1089, 502);
+            this.dgvRetailStockLevel.Size = new System.Drawing.Size(817, 402);
             this.dgvRetailStockLevel.TabIndex = 29;
             this.dgvRetailStockLevel.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRetailStockLevel_CellClick);
             this.dgvRetailStockLevel.SelectionChanged += new System.EventHandler(this.dgvRetailStockLevel_SelectionChanged);
@@ -145,10 +145,9 @@ namespace BetterLimited
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.Location = new System.Drawing.Point(871, 226);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Location = new System.Drawing.Point(653, 181);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(261, 25);
+            this.txtSearch.Size = new System.Drawing.Size(197, 22);
             this.txtSearch.TabIndex = 27;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
@@ -159,9 +158,10 @@ namespace BetterLimited
             this.label2.BackColor = System.Drawing.Color.DarkTurquoise;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(59, 35);
+            this.label2.Location = new System.Drawing.Point(44, 28);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(296, 43);
+            this.label2.Size = new System.Drawing.Size(240, 35);
             this.label2.TabIndex = 26;
             this.label2.Text = "Retail Stock Level";
             // 
@@ -170,8 +170,9 @@ namespace BetterLimited
             this.label1.BackColor = System.Drawing.Color.DarkTurquoise;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1179, 108);
+            this.label1.Size = new System.Drawing.Size(884, 86);
             this.label1.TabIndex = 25;
             // 
             // cbxItemSearch
@@ -180,30 +181,27 @@ namespace BetterLimited
             this.cbxItemSearch.Items.AddRange(new object[] {
             "Item ID",
             "Item Name"});
-            this.cbxItemSearch.Location = new System.Drawing.Point(664, 226);
-            this.cbxItemSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxItemSearch.Location = new System.Drawing.Point(498, 181);
             this.cbxItemSearch.Name = "cbxItemSearch";
-            this.cbxItemSearch.Size = new System.Drawing.Size(160, 23);
+            this.cbxItemSearch.Size = new System.Drawing.Size(121, 20);
             this.cbxItemSearch.TabIndex = 30;
             this.cbxItemSearch.SelectedIndexChanged += new System.EventHandler(this.cbxItemSearch_SelectedIndexChanged);
             // 
             // picSearch
             // 
             this.picSearch.Image = global::BetterLimited.Properties.Resources.search;
-            this.picSearch.Location = new System.Drawing.Point(833, 226);
-            this.picSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picSearch.Location = new System.Drawing.Point(625, 181);
             this.picSearch.Name = "picSearch";
-            this.picSearch.Size = new System.Drawing.Size(29, 28);
+            this.picSearch.Size = new System.Drawing.Size(22, 22);
             this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSearch.TabIndex = 28;
             this.picSearch.TabStop = false;
             // 
             // btnTW
             // 
-            this.btnTW.Location = new System.Drawing.Point(44, 149);
-            this.btnTW.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTW.Location = new System.Drawing.Point(33, 119);
             this.btnTW.Name = "btnTW";
-            this.btnTW.Size = new System.Drawing.Size(143, 29);
+            this.btnTW.Size = new System.Drawing.Size(107, 23);
             this.btnTW.TabIndex = 31;
             this.btnTW.Text = "Tsuen Wan";
             this.btnTW.UseVisualStyleBackColor = true;
@@ -211,10 +209,9 @@ namespace BetterLimited
             // 
             // btnKB
             // 
-            this.btnKB.Location = new System.Drawing.Point(211, 149);
-            this.btnKB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKB.Location = new System.Drawing.Point(158, 119);
             this.btnKB.Name = "btnKB";
-            this.btnKB.Size = new System.Drawing.Size(143, 29);
+            this.btnKB.Size = new System.Drawing.Size(107, 23);
             this.btnKB.TabIndex = 32;
             this.btnKB.Text = "Kowloon Bay";
             this.btnKB.UseVisualStyleBackColor = true;
@@ -223,18 +220,16 @@ namespace BetterLimited
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(44, 235);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(33, 188);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 15);
+            this.label3.Size = new System.Drawing.Size(143, 12);
             this.label3.TabIndex = 33;
             this.label3.Text = "Tsuen Wan Store Stock Level";
             // 
             // RetailStockLevelForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1179, 826);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(884, 661);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnKB);
             this.Controls.Add(this.btnTW);
@@ -244,7 +239,6 @@ namespace BetterLimited
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxItemSearch);
             this.Controls.Add(this.picSearch);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "RetailStockLevelForm";
             this.Text = "RetailStockLevelForm";
             this.Load += new System.EventHandler(this.RetailStockLevelForm_Load);

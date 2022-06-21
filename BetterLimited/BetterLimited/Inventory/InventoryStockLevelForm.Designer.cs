@@ -51,9 +51,10 @@ namespace BetterLimited
             this.label2.BackColor = System.Drawing.Color.DarkTurquoise;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(93, 38);
+            this.label2.Location = new System.Drawing.Point(70, 30);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(356, 43);
+            this.label2.Size = new System.Drawing.Size(290, 35);
             this.label2.TabIndex = 15;
             this.label2.Text = "Inventory Stock Level";
             // 
@@ -62,8 +63,9 @@ namespace BetterLimited
             this.label1.BackColor = System.Drawing.Color.DarkTurquoise;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1179, 108);
+            this.label1.Size = new System.Drawing.Size(884, 86);
             this.label1.TabIndex = 14;
             // 
             // txtSearch
@@ -71,10 +73,9 @@ namespace BetterLimited
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.Location = new System.Drawing.Point(871, 184);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Location = new System.Drawing.Point(653, 147);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(261, 25);
+            this.txtSearch.Size = new System.Drawing.Size(197, 22);
             this.txtSearch.TabIndex = 16;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
@@ -99,8 +100,8 @@ namespace BetterLimited
             this.UpdateLowLevel,
             this.ReOrder});
             this.dgvInventoryStockLevel.GridColor = System.Drawing.Color.White;
-            this.dgvInventoryStockLevel.Location = new System.Drawing.Point(44, 239);
-            this.dgvInventoryStockLevel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvInventoryStockLevel.Location = new System.Drawing.Point(33, 191);
+            this.dgvInventoryStockLevel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvInventoryStockLevel.Name = "dgvInventoryStockLevel";
             this.dgvInventoryStockLevel.ReadOnly = true;
             this.dgvInventoryStockLevel.RowHeadersVisible = false;
@@ -108,7 +109,7 @@ namespace BetterLimited
             this.dgvInventoryStockLevel.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvInventoryStockLevel.RowTemplate.Height = 27;
             this.dgvInventoryStockLevel.ShowEditingIcon = false;
-            this.dgvInventoryStockLevel.Size = new System.Drawing.Size(1089, 502);
+            this.dgvInventoryStockLevel.Size = new System.Drawing.Size(817, 402);
             this.dgvInventoryStockLevel.TabIndex = 18;
             this.dgvInventoryStockLevel.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventoryStockLevel_CellClick);
             this.dgvInventoryStockLevel.SelectionChanged += new System.EventHandler(this.dgvInventoryStockLevel_SelectionChanged);
@@ -174,10 +175,9 @@ namespace BetterLimited
             // picSearch
             // 
             this.picSearch.Image = global::BetterLimited.Properties.Resources.search;
-            this.picSearch.Location = new System.Drawing.Point(833, 184);
-            this.picSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picSearch.Location = new System.Drawing.Point(625, 147);
             this.picSearch.Name = "picSearch";
-            this.picSearch.Size = new System.Drawing.Size(29, 28);
+            this.picSearch.Size = new System.Drawing.Size(22, 22);
             this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSearch.TabIndex = 17;
             this.picSearch.TabStop = false;
@@ -188,25 +188,22 @@ namespace BetterLimited
             this.cbxItemSearch.Items.AddRange(new object[] {
             "Item ID",
             "Item Name"});
-            this.cbxItemSearch.Location = new System.Drawing.Point(664, 184);
-            this.cbxItemSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxItemSearch.Location = new System.Drawing.Point(498, 147);
             this.cbxItemSearch.Name = "cbxItemSearch";
-            this.cbxItemSearch.Size = new System.Drawing.Size(160, 23);
+            this.cbxItemSearch.Size = new System.Drawing.Size(121, 20);
             this.cbxItemSearch.TabIndex = 24;
             this.cbxItemSearch.SelectedIndexChanged += new System.EventHandler(this.cbxItemSearch_SelectedIndexChanged);
             // 
             // InventoryStockLevelForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1179, 826);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(884, 661);
             this.Controls.Add(this.cbxItemSearch);
             this.Controls.Add(this.dgvInventoryStockLevel);
             this.Controls.Add(this.picSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "InventoryStockLevelForm";
             this.Text = "InventoryStockLevelForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

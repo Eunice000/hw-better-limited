@@ -62,9 +62,10 @@ namespace BetterLimited
             this.label2.BackColor = System.Drawing.Color.DarkTurquoise;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(93, 38);
+            this.label2.Location = new System.Drawing.Point(70, 30);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(299, 43);
+            this.label2.Size = new System.Drawing.Size(242, 35);
             this.label2.TabIndex = 15;
             this.label2.Text = "Re-order Request";
             // 
@@ -73,8 +74,9 @@ namespace BetterLimited
             this.label1.BackColor = System.Drawing.Color.DarkTurquoise;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1179, 108);
+            this.label1.Size = new System.Drawing.Size(884, 86);
             this.label1.TabIndex = 14;
             // 
             // dgvReOrderRequest
@@ -96,8 +98,8 @@ namespace BetterLimited
             this.Column3,
             this.add});
             this.dgvReOrderRequest.GridColor = System.Drawing.Color.White;
-            this.dgvReOrderRequest.Location = new System.Drawing.Point(44, 498);
-            this.dgvReOrderRequest.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvReOrderRequest.Location = new System.Drawing.Point(33, 398);
+            this.dgvReOrderRequest.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvReOrderRequest.Name = "dgvReOrderRequest";
             this.dgvReOrderRequest.ReadOnly = true;
             this.dgvReOrderRequest.RowHeadersVisible = false;
@@ -105,7 +107,7 @@ namespace BetterLimited
             this.dgvReOrderRequest.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvReOrderRequest.RowTemplate.Height = 27;
             this.dgvReOrderRequest.ShowEditingIcon = false;
-            this.dgvReOrderRequest.Size = new System.Drawing.Size(1089, 242);
+            this.dgvReOrderRequest.Size = new System.Drawing.Size(817, 194);
             this.dgvReOrderRequest.TabIndex = 18;
             this.dgvReOrderRequest.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReOrderRequest_CellClick);
             this.dgvReOrderRequest.SelectionChanged += new System.EventHandler(this.dgvInventoryStockLevel_SelectionChanged);
@@ -160,20 +162,18 @@ namespace BetterLimited
             this.cbxItemSearch.Items.AddRange(new object[] {
             "Item ID",
             "Item Name"});
-            this.cbxItemSearch.Location = new System.Drawing.Point(664, 141);
-            this.cbxItemSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxItemSearch.Location = new System.Drawing.Point(498, 113);
             this.cbxItemSearch.Name = "cbxItemSearch";
-            this.cbxItemSearch.Size = new System.Drawing.Size(160, 23);
+            this.cbxItemSearch.Size = new System.Drawing.Size(121, 20);
             this.cbxItemSearch.TabIndex = 23;
             this.cbxItemSearch.SelectedIndexChanged += new System.EventHandler(this.cbxItemSearch_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BetterLimited.Properties.Resources.search;
-            this.pictureBox1.Location = new System.Drawing.Point(833, 141);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(625, 113);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 28);
+            this.pictureBox1.Size = new System.Drawing.Size(22, 22);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
@@ -183,10 +183,9 @@ namespace BetterLimited
             this.txtItemSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtItemSearch.Location = new System.Drawing.Point(871, 141);
-            this.txtItemSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtItemSearch.Location = new System.Drawing.Point(653, 113);
             this.txtItemSearch.Name = "txtItemSearch";
-            this.txtItemSearch.Size = new System.Drawing.Size(261, 25);
+            this.txtItemSearch.Size = new System.Drawing.Size(197, 22);
             this.txtItemSearch.TabIndex = 20;
             this.txtItemSearch.TextChanged += new System.EventHandler(this.txtItemSearch_TextChanged);
             this.txtItemSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemSearch_KeyPress);
@@ -196,10 +195,9 @@ namespace BetterLimited
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(41, 141);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(31, 113);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(229, 27);
+            this.label3.Size = new System.Drawing.Size(183, 21);
             this.label3.TabIndex = 24;
             this.label3.Text = "Select item to re-order";
             // 
@@ -208,10 +206,9 @@ namespace BetterLimited
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(41, 454);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(31, 363);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(247, 27);
+            this.label4.Size = new System.Drawing.Size(198, 21);
             this.label4.TabIndex = 25;
             this.label4.Text = "Create Re-order Request";
             // 
@@ -222,10 +219,9 @@ namespace BetterLimited
             this.btnSendRequest.BackColor = System.Drawing.SystemColors.Control;
             this.btnSendRequest.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.btnSendRequest.ForeColor = System.Drawing.Color.Black;
-            this.btnSendRequest.Location = new System.Drawing.Point(972, 765);
-            this.btnSendRequest.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSendRequest.Location = new System.Drawing.Point(729, 612);
             this.btnSendRequest.Name = "btnSendRequest";
-            this.btnSendRequest.Size = new System.Drawing.Size(161, 46);
+            this.btnSendRequest.Size = new System.Drawing.Size(121, 37);
             this.btnSendRequest.TabIndex = 26;
             this.btnSendRequest.Text = "Send Request";
             this.btnSendRequest.UseVisualStyleBackColor = false;
@@ -238,10 +234,9 @@ namespace BetterLimited
             this.btnClear.BackColor = System.Drawing.SystemColors.Control;
             this.btnClear.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.btnClear.ForeColor = System.Drawing.Color.Black;
-            this.btnClear.Location = new System.Drawing.Point(855, 765);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClear.Location = new System.Drawing.Point(641, 612);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(93, 46);
+            this.btnClear.Size = new System.Drawing.Size(70, 37);
             this.btnClear.TabIndex = 27;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -265,8 +260,8 @@ namespace BetterLimited
             this.dataGridViewTextBoxColumn4,
             this.ReOrder});
             this.dgvSelectItem.GridColor = System.Drawing.Color.White;
-            this.dgvSelectItem.Location = new System.Drawing.Point(48, 190);
-            this.dgvSelectItem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvSelectItem.Location = new System.Drawing.Point(36, 152);
+            this.dgvSelectItem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvSelectItem.MultiSelect = false;
             this.dgvSelectItem.Name = "dgvSelectItem";
             this.dgvSelectItem.ReadOnly = true;
@@ -275,7 +270,7 @@ namespace BetterLimited
             this.dgvSelectItem.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvSelectItem.RowTemplate.Height = 27;
             this.dgvSelectItem.ShowEditingIcon = false;
-            this.dgvSelectItem.Size = new System.Drawing.Size(1089, 241);
+            this.dgvSelectItem.Size = new System.Drawing.Size(817, 193);
             this.dgvSelectItem.TabIndex = 28;
             this.dgvSelectItem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSelectItem_CellClick);
             this.dgvSelectItem.SelectionChanged += new System.EventHandler(this.dgvSelectItem_SelectionChanged);
@@ -341,10 +336,9 @@ namespace BetterLimited
             this.btnReOrderRecor.BackColor = System.Drawing.SystemColors.Control;
             this.btnReOrderRecor.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.btnReOrderRecor.ForeColor = System.Drawing.Color.Black;
-            this.btnReOrderRecor.Location = new System.Drawing.Point(44, 765);
-            this.btnReOrderRecor.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReOrderRecor.Location = new System.Drawing.Point(33, 612);
             this.btnReOrderRecor.Name = "btnReOrderRecor";
-            this.btnReOrderRecor.Size = new System.Drawing.Size(220, 46);
+            this.btnReOrderRecor.Size = new System.Drawing.Size(165, 37);
             this.btnReOrderRecor.TabIndex = 29;
             this.btnReOrderRecor.Text = "View Request Record";
             this.btnReOrderRecor.UseVisualStyleBackColor = false;
@@ -352,9 +346,8 @@ namespace BetterLimited
             // 
             // ReOrderRequestForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1179, 826);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(884, 661);
             this.Controls.Add(this.btnReOrderRecor);
             this.Controls.Add(this.dgvSelectItem);
             this.Controls.Add(this.btnClear);
@@ -367,7 +360,6 @@ namespace BetterLimited
             this.Controls.Add(this.dgvReOrderRequest);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReOrderRequestForm";
             this.Text = "InventoryStockLevelForm";
             this.Load += new System.EventHandler(this.ReOrderRequestForm_Load);

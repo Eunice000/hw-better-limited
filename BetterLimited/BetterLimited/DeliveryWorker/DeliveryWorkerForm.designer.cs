@@ -29,9 +29,9 @@ namespace BetterLimited
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView_WorkerTable = new System.Windows.Forms.DataGridView();
@@ -73,9 +73,9 @@ namespace BetterLimited
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1200, 109);
+            this.panel1.Size = new System.Drawing.Size(900, 87);
             this.panel1.TabIndex = 0;
             // 
             // label2
@@ -84,9 +84,10 @@ namespace BetterLimited
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(39, 32);
+            this.label2.Location = new System.Drawing.Point(29, 26);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(532, 43);
+            this.label2.Size = new System.Drawing.Size(432, 35);
             this.label2.TabIndex = 14;
             this.label2.Text = "Delivery Workman Management";
             // 
@@ -107,8 +108,8 @@ namespace BetterLimited
             this.Column5,
             this.EditButton});
             this.dataGridView_WorkerTable.GridColor = System.Drawing.Color.White;
-            this.dataGridView_WorkerTable.Location = new System.Drawing.Point(27, 178);
-            this.dataGridView_WorkerTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView_WorkerTable.Location = new System.Drawing.Point(20, 142);
+            this.dataGridView_WorkerTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_WorkerTable.Name = "dataGridView_WorkerTable";
             this.dataGridView_WorkerTable.ReadOnly = true;
             this.dataGridView_WorkerTable.RowHeadersVisible = false;
@@ -116,7 +117,7 @@ namespace BetterLimited
             this.dataGridView_WorkerTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView_WorkerTable.RowTemplate.Height = 27;
             this.dataGridView_WorkerTable.ShowEditingIcon = false;
-            this.dataGridView_WorkerTable.Size = new System.Drawing.Size(1140, 184);
+            this.dataGridView_WorkerTable.Size = new System.Drawing.Size(855, 147);
             this.dataGridView_WorkerTable.TabIndex = 15;
             this.dataGridView_WorkerTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_WorkerTable_CellClick);
             // 
@@ -162,13 +163,13 @@ namespace BetterLimited
             // 
             // EditButton
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("PMingLiU-ExtB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.EditButton.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("PMingLiU-ExtB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.EditButton.DefaultCellStyle = dataGridViewCellStyle4;
             this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditButton.HeaderText = "";
             this.EditButton.MinimumWidth = 6;
@@ -180,18 +181,19 @@ namespace BetterLimited
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(785, 135);
+            this.label7.Location = new System.Drawing.Point(589, 108);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 15);
+            this.label7.Size = new System.Drawing.Size(45, 12);
             this.label7.TabIndex = 22;
             this.label7.Text = "StaffID :";
             // 
             // button_clear_Worker
             // 
-            this.button_clear_Worker.Location = new System.Drawing.Point(673, 130);
-            this.button_clear_Worker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_clear_Worker.Location = new System.Drawing.Point(505, 104);
+            this.button_clear_Worker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_clear_Worker.Name = "button_clear_Worker";
-            this.button_clear_Worker.Size = new System.Drawing.Size(107, 25);
+            this.button_clear_Worker.Size = new System.Drawing.Size(80, 20);
             this.button_clear_Worker.TabIndex = 21;
             this.button_clear_Worker.Text = "Clear";
             this.button_clear_Worker.UseVisualStyleBackColor = true;
@@ -199,10 +201,10 @@ namespace BetterLimited
             // 
             // button_Search_Worker
             // 
-            this.button_Search_Worker.Location = new System.Drawing.Point(1060, 130);
-            this.button_Search_Worker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_Search_Worker.Location = new System.Drawing.Point(795, 104);
+            this.button_Search_Worker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_Search_Worker.Name = "button_Search_Worker";
-            this.button_Search_Worker.Size = new System.Drawing.Size(107, 25);
+            this.button_Search_Worker.Size = new System.Drawing.Size(80, 20);
             this.button_Search_Worker.TabIndex = 20;
             this.button_Search_Worker.Text = "Search";
             this.button_Search_Worker.UseVisualStyleBackColor = true;
@@ -210,10 +212,10 @@ namespace BetterLimited
             // 
             // textBox_Search_Worker
             // 
-            this.textBox_Search_Worker.Location = new System.Drawing.Point(857, 130);
-            this.textBox_Search_Worker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Search_Worker.Location = new System.Drawing.Point(643, 104);
+            this.textBox_Search_Worker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_Search_Worker.Name = "textBox_Search_Worker";
-            this.textBox_Search_Worker.Size = new System.Drawing.Size(196, 25);
+            this.textBox_Search_Worker.Size = new System.Drawing.Size(148, 22);
             this.textBox_Search_Worker.TabIndex = 19;
             this.textBox_Search_Worker.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Search_Worker_KeyPress);
             // 
@@ -230,8 +232,8 @@ namespace BetterLimited
             this.Column6,
             this.dataGridViewButtonColumn1});
             this.dataGridView_arrengeTable.GridColor = System.Drawing.Color.White;
-            this.dataGridView_arrengeTable.Location = new System.Drawing.Point(876, 426);
-            this.dataGridView_arrengeTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView_arrengeTable.Location = new System.Drawing.Point(657, 341);
+            this.dataGridView_arrengeTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_arrengeTable.Name = "dataGridView_arrengeTable";
             this.dataGridView_arrengeTable.ReadOnly = true;
             this.dataGridView_arrengeTable.RowHeadersVisible = false;
@@ -239,7 +241,7 @@ namespace BetterLimited
             this.dataGridView_arrengeTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView_arrengeTable.RowTemplate.Height = 27;
             this.dataGridView_arrengeTable.ShowEditingIcon = false;
-            this.dataGridView_arrengeTable.Size = new System.Drawing.Size(291, 286);
+            this.dataGridView_arrengeTable.Size = new System.Drawing.Size(218, 229);
             this.dataGridView_arrengeTable.TabIndex = 23;
             this.dataGridView_arrengeTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_arrengeTable_CellClick);
             // 
@@ -251,13 +253,13 @@ namespace BetterLimited
             // 
             // dataGridViewButtonColumn1
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("PMingLiU-ExtB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("PMingLiU-ExtB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewButtonColumn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dataGridViewButtonColumn1.HeaderText = "";
             this.dataGridViewButtonColumn1.MinimumWidth = 6;
@@ -269,19 +271,20 @@ namespace BetterLimited
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(873, 398);
+            this.label1.Location = new System.Drawing.Point(655, 318);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 15);
+            this.label1.Size = new System.Drawing.Size(59, 12);
             this.label1.TabIndex = 24;
             this.label1.Text = "WorkerID :";
             // 
             // textBox_WorkID
             // 
-            this.textBox_WorkID.Location = new System.Drawing.Point(952, 394);
-            this.textBox_WorkID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_WorkID.Location = new System.Drawing.Point(714, 315);
+            this.textBox_WorkID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_WorkID.Name = "textBox_WorkID";
             this.textBox_WorkID.ReadOnly = true;
-            this.textBox_WorkID.Size = new System.Drawing.Size(119, 25);
+            this.textBox_WorkID.Size = new System.Drawing.Size(90, 22);
             this.textBox_WorkID.TabIndex = 25;
             // 
             // dataGridView_DeliveryTable
@@ -302,8 +305,8 @@ namespace BetterLimited
             this.Column10,
             this.dataGridViewButtonColumn2});
             this.dataGridView_DeliveryTable.GridColor = System.Drawing.Color.White;
-            this.dataGridView_DeliveryTable.Location = new System.Drawing.Point(27, 394);
-            this.dataGridView_DeliveryTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView_DeliveryTable.Location = new System.Drawing.Point(20, 315);
+            this.dataGridView_DeliveryTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_DeliveryTable.MultiSelect = false;
             this.dataGridView_DeliveryTable.Name = "dataGridView_DeliveryTable";
             this.dataGridView_DeliveryTable.RowHeadersVisible = false;
@@ -311,7 +314,7 @@ namespace BetterLimited
             this.dataGridView_DeliveryTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView_DeliveryTable.RowTemplate.Height = 27;
             this.dataGridView_DeliveryTable.ShowEditingIcon = false;
-            this.dataGridView_DeliveryTable.Size = new System.Drawing.Size(819, 319);
+            this.dataGridView_DeliveryTable.Size = new System.Drawing.Size(614, 255);
             this.dataGridView_DeliveryTable.TabIndex = 26;
             this.dataGridView_DeliveryTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_DeliveryTable_CellClick);
             // 
@@ -347,13 +350,13 @@ namespace BetterLimited
             // 
             // dataGridViewButtonColumn2
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("PMingLiU-ExtB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewButtonColumn2.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("PMingLiU-ExtB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewButtonColumn2.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewButtonColumn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dataGridViewButtonColumn2.HeaderText = "";
             this.dataGridViewButtonColumn2.MinimumWidth = 6;
@@ -365,10 +368,10 @@ namespace BetterLimited
             // 
             this.button_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button_Update.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Update.Location = new System.Drawing.Point(981, 738);
-            this.button_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_Update.Location = new System.Drawing.Point(736, 610);
+            this.button_Update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_Update.Name = "button_Update";
-            this.button_Update.Size = new System.Drawing.Size(185, 38);
+            this.button_Update.Size = new System.Drawing.Size(139, 30);
             this.button_Update.TabIndex = 43;
             this.button_Update.Text = "Update";
             this.button_Update.UseVisualStyleBackColor = false;
@@ -378,10 +381,10 @@ namespace BetterLimited
             // 
             this.button_clearAll_arrangeList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button_clearAll_arrangeList.Font = new System.Drawing.Font("Microsoft JhengHei", 9F);
-            this.button_clearAll_arrangeList.Location = new System.Drawing.Point(1077, 394);
-            this.button_clearAll_arrangeList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_clearAll_arrangeList.Location = new System.Drawing.Point(808, 315);
+            this.button_clearAll_arrangeList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_clearAll_arrangeList.Name = "button_clearAll_arrangeList";
-            this.button_clearAll_arrangeList.Size = new System.Drawing.Size(89, 26);
+            this.button_clearAll_arrangeList.Size = new System.Drawing.Size(67, 21);
             this.button_clearAll_arrangeList.TabIndex = 45;
             this.button_clearAll_arrangeList.Text = "clear all";
             this.button_clearAll_arrangeList.UseVisualStyleBackColor = false;
@@ -391,10 +394,10 @@ namespace BetterLimited
             // 
             this.button_ViewEditManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button_ViewEditManagement.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_ViewEditManagement.Location = new System.Drawing.Point(27, 738);
-            this.button_ViewEditManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_ViewEditManagement.Location = new System.Drawing.Point(20, 610);
+            this.button_ViewEditManagement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_ViewEditManagement.Name = "button_ViewEditManagement";
-            this.button_ViewEditManagement.Size = new System.Drawing.Size(185, 38);
+            this.button_ViewEditManagement.Size = new System.Drawing.Size(139, 30);
             this.button_ViewEditManagement.TabIndex = 59;
             this.button_ViewEditManagement.Text = "View and Edit";
             this.button_ViewEditManagement.UseVisualStyleBackColor = false;
@@ -403,10 +406,10 @@ namespace BetterLimited
             // 
             this.button_refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button_refresh.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_refresh.Location = new System.Drawing.Point(237, 738);
-            this.button_refresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_refresh.Location = new System.Drawing.Point(178, 610);
+            this.button_refresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_refresh.Name = "button_refresh";
-            this.button_refresh.Size = new System.Drawing.Size(165, 38);
+            this.button_refresh.Size = new System.Drawing.Size(124, 30);
             this.button_refresh.TabIndex = 104;
             this.button_refresh.Text = "Refresh";
             this.button_refresh.UseVisualStyleBackColor = false;
@@ -414,9 +417,8 @@ namespace BetterLimited
             // 
             // DeliveryWorkerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(900, 700);
             this.Controls.Add(this.button_refresh);
             this.Controls.Add(this.button_ViewEditManagement);
             this.Controls.Add(this.button_clearAll_arrangeList);
@@ -432,7 +434,7 @@ namespace BetterLimited
             this.Controls.Add(this.dataGridView_WorkerTable);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DeliveryWorkerForm";
             this.Text = "DeliveryWorkerForm";
             this.Load += new System.EventHandler(this.DeliveryWorkerForm_Load);

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_InstallationStatus = new System.Windows.Forms.TextBox();
@@ -67,9 +67,9 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1200, 109);
+            this.panel1.Size = new System.Drawing.Size(900, 87);
             this.panel1.TabIndex = 47;
             // 
             // label2
@@ -78,47 +78,48 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(39, 32);
+            this.label2.Location = new System.Drawing.Point(29, 26);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(420, 43);
+            this.label2.Size = new System.Drawing.Size(344, 35);
             this.label2.TabIndex = 14;
             this.label2.Text = "Workman Installation List";
             // 
             // textBox_InstallationStatus
             // 
             this.textBox_InstallationStatus.Enabled = false;
-            this.textBox_InstallationStatus.Location = new System.Drawing.Point(999, 547);
-            this.textBox_InstallationStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_InstallationStatus.Location = new System.Drawing.Point(748, 464);
+            this.textBox_InstallationStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_InstallationStatus.Name = "textBox_InstallationStatus";
-            this.textBox_InstallationStatus.Size = new System.Drawing.Size(185, 25);
+            this.textBox_InstallationStatus.Size = new System.Drawing.Size(140, 22);
             this.textBox_InstallationStatus.TabIndex = 100;
             // 
             // textBox_InstallationDate
             // 
             this.textBox_InstallationDate.Enabled = false;
-            this.textBox_InstallationDate.Location = new System.Drawing.Point(999, 371);
-            this.textBox_InstallationDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_InstallationDate.Location = new System.Drawing.Point(748, 310);
+            this.textBox_InstallationDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_InstallationDate.Name = "textBox_InstallationDate";
-            this.textBox_InstallationDate.Size = new System.Drawing.Size(185, 25);
+            this.textBox_InstallationDate.Size = new System.Drawing.Size(140, 22);
             this.textBox_InstallationDate.TabIndex = 99;
             // 
             // textBox_InstallationTime
             // 
             this.textBox_InstallationTime.Enabled = false;
-            this.textBox_InstallationTime.Location = new System.Drawing.Point(999, 459);
-            this.textBox_InstallationTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_InstallationTime.Location = new System.Drawing.Point(748, 387);
+            this.textBox_InstallationTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_InstallationTime.Name = "textBox_InstallationTime";
-            this.textBox_InstallationTime.Size = new System.Drawing.Size(185, 25);
+            this.textBox_InstallationTime.Size = new System.Drawing.Size(140, 22);
             this.textBox_InstallationTime.TabIndex = 98;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button1.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(828, 740);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(629, 634);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(165, 38);
+            this.button1.Size = new System.Drawing.Size(124, 30);
             this.button1.TabIndex = 97;
             this.button1.Text = "Clear";
             this.button1.UseVisualStyleBackColor = false;
@@ -127,18 +128,19 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(832, 635);
+            this.label1.Location = new System.Drawing.Point(623, 541);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 25);
+            this.label1.Size = new System.Drawing.Size(121, 22);
             this.label1.TabIndex = 96;
             this.label1.Text = "WorkmanID :";
             // 
             // textBox_WorkmanID
             // 
-            this.textBox_WorkmanID.Location = new System.Drawing.Point(999, 635);
-            this.textBox_WorkmanID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_WorkmanID.Location = new System.Drawing.Point(748, 541);
+            this.textBox_WorkmanID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_WorkmanID.Name = "textBox_WorkmanID";
-            this.textBox_WorkmanID.Size = new System.Drawing.Size(185, 25);
+            this.textBox_WorkmanID.Size = new System.Drawing.Size(140, 22);
             this.textBox_WorkmanID.TabIndex = 95;
             this.textBox_WorkmanID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_WorkmanID_KeyPress);
             // 
@@ -146,10 +148,10 @@
             // 
             this.button_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button_Update.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Update.Location = new System.Drawing.Point(1019, 740);
-            this.button_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_Update.Location = new System.Drawing.Point(765, 634);
+            this.button_Update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_Update.Name = "button_Update";
-            this.button_Update.Size = new System.Drawing.Size(165, 38);
+            this.button_Update.Size = new System.Drawing.Size(124, 30);
             this.button_Update.TabIndex = 93;
             this.button_Update.Text = "Update";
             this.button_Update.UseVisualStyleBackColor = false;
@@ -158,81 +160,87 @@
             // label_InstallationTime
             // 
             this.label_InstallationTime.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_InstallationTime.Location = new System.Drawing.Point(832, 459);
+            this.label_InstallationTime.Location = new System.Drawing.Point(623, 387);
+            this.label_InstallationTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_InstallationTime.Name = "label_InstallationTime";
-            this.label_InstallationTime.Size = new System.Drawing.Size(161, 25);
+            this.label_InstallationTime.Size = new System.Drawing.Size(121, 22);
             this.label_InstallationTime.TabIndex = 92;
             this.label_InstallationTime.Text = "InstallationTime :";
             // 
             // label_InstallationDate
             // 
             this.label_InstallationDate.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_InstallationDate.Location = new System.Drawing.Point(832, 371);
+            this.label_InstallationDate.Location = new System.Drawing.Point(623, 310);
+            this.label_InstallationDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_InstallationDate.Name = "label_InstallationDate";
-            this.label_InstallationDate.Size = new System.Drawing.Size(161, 25);
+            this.label_InstallationDate.Size = new System.Drawing.Size(121, 22);
             this.label_InstallationDate.TabIndex = 91;
             this.label_InstallationDate.Text = "InstallationDate :";
             // 
             // label_InstallationStatus
             // 
             this.label_InstallationStatus.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_InstallationStatus.Location = new System.Drawing.Point(832, 547);
+            this.label_InstallationStatus.Location = new System.Drawing.Point(623, 464);
+            this.label_InstallationStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_InstallationStatus.Name = "label_InstallationStatus";
-            this.label_InstallationStatus.Size = new System.Drawing.Size(161, 25);
+            this.label_InstallationStatus.Size = new System.Drawing.Size(121, 22);
             this.label_InstallationStatus.TabIndex = 90;
             this.label_InstallationStatus.Text = "DeliveryStatus :";
             // 
             // label_SalesOrderID
             // 
             this.label_SalesOrderID.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_SalesOrderID.Location = new System.Drawing.Point(832, 283);
+            this.label_SalesOrderID.Location = new System.Drawing.Point(624, 233);
+            this.label_SalesOrderID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_SalesOrderID.Name = "label_SalesOrderID";
-            this.label_SalesOrderID.Size = new System.Drawing.Size(161, 25);
+            this.label_SalesOrderID.Size = new System.Drawing.Size(121, 22);
             this.label_SalesOrderID.TabIndex = 89;
             this.label_SalesOrderID.Text = "SalesOrderID :";
             // 
             // label_InstallationID
             // 
             this.label_InstallationID.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_InstallationID.Location = new System.Drawing.Point(838, 195);
+            this.label_InstallationID.Location = new System.Drawing.Point(628, 156);
+            this.label_InstallationID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_InstallationID.Name = "label_InstallationID";
-            this.label_InstallationID.Size = new System.Drawing.Size(161, 25);
+            this.label_InstallationID.Size = new System.Drawing.Size(121, 22);
             this.label_InstallationID.TabIndex = 88;
             this.label_InstallationID.Text = "InstallationID :";
             // 
             // textBox_InstallationID
             // 
             this.textBox_InstallationID.Enabled = false;
-            this.textBox_InstallationID.Location = new System.Drawing.Point(999, 195);
-            this.textBox_InstallationID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_InstallationID.Location = new System.Drawing.Point(749, 156);
+            this.textBox_InstallationID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_InstallationID.Name = "textBox_InstallationID";
-            this.textBox_InstallationID.Size = new System.Drawing.Size(185, 25);
+            this.textBox_InstallationID.Size = new System.Drawing.Size(140, 22);
             this.textBox_InstallationID.TabIndex = 87;
             // 
             // textBox_SalesOrderID
             // 
             this.textBox_SalesOrderID.Enabled = false;
-            this.textBox_SalesOrderID.Location = new System.Drawing.Point(999, 283);
-            this.textBox_SalesOrderID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_SalesOrderID.Location = new System.Drawing.Point(749, 233);
+            this.textBox_SalesOrderID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SalesOrderID.Name = "textBox_SalesOrderID";
-            this.textBox_SalesOrderID.Size = new System.Drawing.Size(185, 25);
+            this.textBox_SalesOrderID.Size = new System.Drawing.Size(140, 22);
             this.textBox_SalesOrderID.TabIndex = 86;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(373, 151);
+            this.label7.Location = new System.Drawing.Point(313, 115);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 15);
+            this.label7.Size = new System.Drawing.Size(63, 12);
             this.label7.TabIndex = 85;
             this.label7.Text = "DeliveryID :";
             // 
             // button_clear
             // 
-            this.button_clear.Location = new System.Drawing.Point(260, 146);
-            this.button_clear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_clear.Location = new System.Drawing.Point(228, 111);
+            this.button_clear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_clear.Name = "button_clear";
-            this.button_clear.Size = new System.Drawing.Size(107, 25);
+            this.button_clear.Size = new System.Drawing.Size(80, 20);
             this.button_clear.TabIndex = 84;
             this.button_clear.Text = "Clear";
             this.button_clear.UseVisualStyleBackColor = true;
@@ -240,10 +248,10 @@
             // 
             // button_Search
             // 
-            this.button_Search.Location = new System.Drawing.Point(675, 146);
-            this.button_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_Search.Location = new System.Drawing.Point(539, 111);
+            this.button_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_Search.Name = "button_Search";
-            this.button_Search.Size = new System.Drawing.Size(107, 25);
+            this.button_Search.Size = new System.Drawing.Size(80, 20);
             this.button_Search.TabIndex = 83;
             this.button_Search.Text = "Search";
             this.button_Search.UseVisualStyleBackColor = true;
@@ -251,10 +259,10 @@
             // 
             // textBox_Search
             // 
-            this.textBox_Search.Location = new System.Drawing.Point(472, 146);
-            this.textBox_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Search.Location = new System.Drawing.Point(387, 111);
+            this.textBox_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_Search.Name = "textBox_Search";
-            this.textBox_Search.Size = new System.Drawing.Size(196, 25);
+            this.textBox_Search.Size = new System.Drawing.Size(148, 22);
             this.textBox_Search.TabIndex = 82;
             this.textBox_Search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Search_KeyPress);
             // 
@@ -277,8 +285,8 @@
             this.Column11,
             this.dataGridViewButtonColumn2});
             this.dataGridView_InstallationTable.GridColor = System.Drawing.Color.White;
-            this.dataGridView_InstallationTable.Location = new System.Drawing.Point(12, 182);
-            this.dataGridView_InstallationTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView_InstallationTable.Location = new System.Drawing.Point(9, 146);
+            this.dataGridView_InstallationTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_InstallationTable.MultiSelect = false;
             this.dataGridView_InstallationTable.Name = "dataGridView_InstallationTable";
             this.dataGridView_InstallationTable.RowHeadersVisible = false;
@@ -286,7 +294,7 @@
             this.dataGridView_InstallationTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView_InstallationTable.RowTemplate.Height = 27;
             this.dataGridView_InstallationTable.ShowEditingIcon = false;
-            this.dataGridView_InstallationTable.Size = new System.Drawing.Size(814, 553);
+            this.dataGridView_InstallationTable.Size = new System.Drawing.Size(610, 518);
             this.dataGridView_InstallationTable.TabIndex = 81;
             this.dataGridView_InstallationTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_InstallationTable_CellClick);
             // 
@@ -328,13 +336,13 @@
             // 
             // dataGridViewButtonColumn2
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("PMingLiU-ExtB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewButtonColumn2.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("PMingLiU-ExtB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewButtonColumn2.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewButtonColumn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dataGridViewButtonColumn2.HeaderText = "";
             this.dataGridViewButtonColumn2.MinimumWidth = 6;
@@ -344,9 +352,9 @@
             // 
             // ViewInstallationWorkmanForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.ClientSize = new System.Drawing.Size(900, 700);
             this.Controls.Add(this.textBox_InstallationStatus);
             this.Controls.Add(this.textBox_InstallationDate);
             this.Controls.Add(this.textBox_InstallationTime);
@@ -368,7 +376,7 @@
             this.Controls.Add(this.dataGridView_InstallationTable);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ViewInstallationWorkmanForm";
             this.Text = "ViewEditInstallationWorkmanForm";
             this.Load += new System.EventHandler(this.ViewEditInstallationWorkmanForm_Load);
