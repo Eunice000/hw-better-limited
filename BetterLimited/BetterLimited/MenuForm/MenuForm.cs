@@ -100,36 +100,9 @@ namespace BetterLimited
             }
         }
 
-        public bool selectQuery(string sql)
-        {
-            command = conn.CreateCommand();
-            command.CommandText = sql;
-            try
-            {
-                openConnection();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            MySqlDataReader reader = command.ExecuteReader();
-            if (reader.Read())
-            {
-                closeConnection();
-                return true;
-            }
-            else
-            {
-                closeConnection();
-                return false;
-            }
-        }
-
         public MenuForm()
         {
             InitializeComponent();
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
         }
 
         public void loadform(object Form)

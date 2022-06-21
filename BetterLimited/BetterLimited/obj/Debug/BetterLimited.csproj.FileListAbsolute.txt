@@ -1543,3 +1543,11 @@ C:\Users\PC\Desktop\fixfixfix\01-currentVersion\BetterLimited\obj\Debug\BetterLi
 C:\Users\PC\Desktop\fixfixfix\01-currentVersion\BetterLimited\obj\Debug\BetterLimited.csproj.CopyComplete
 C:\Users\PC\Desktop\fixfixfix\01-currentVersion\BetterLimited\obj\Debug\BetterLimited.exe
 C:\Users\PC\Desktop\fixfixfix\01-currentVersion\BetterLimited\obj\Debug\BetterLimited.pdb
+C:\Users\Marvin\Desktop\BetterLimited\BetterLimited\obj\Debug\BetterLimited.CreateStaffForm.resources
+C:\Users\Marvin\Desktop\BetterLimited\BetterLimited\obj\Debug\BetterLimited.ContrGdsRtnItem.resources
+C:\Users\Marvin\Desktop\BetterLimited\BetterLimited\obj\Debug\BetterLimited.frmGdsRtnNote.resources
+C:\Users\Marvin\Desktop\BetterLimited\BetterLimited\obj\Debug\BetterLimited.CreateReturnNoteForm.resources
+C:\Users\Marvin\Desktop\BetterLimited\BetterLimited\obj\Debug\BetterLimited.dailyInstallationForm.resources
+C:\Users\Marvin\Desktop\BetterLimited\BetterLimited\obj\Debug\BetterLimited.EditStaffForm.resources
+C:\Users\Marvin\Desktop\BetterLimited\BetterLimited\obj\Debug\BetterLimited.ReturnNoteForm.resources
+C:\Users\Marvin\Desktop\BetterLimited\BetterLimited\obj\Debug\BetterLimited.ViewStaffForm.resources

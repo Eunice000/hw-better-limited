@@ -16,7 +16,7 @@ namespace BetterLimited
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ReturnNoteForm());
+            Application.Run(new MenuForm());
         }
     }
 }
