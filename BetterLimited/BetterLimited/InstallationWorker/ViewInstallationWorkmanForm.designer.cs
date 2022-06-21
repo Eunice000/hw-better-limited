@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_InstallationStatus = new System.Windows.Forms.TextBox();
@@ -88,7 +88,7 @@
             // textBox_InstallationStatus
             // 
             this.textBox_InstallationStatus.Enabled = false;
-            this.textBox_InstallationStatus.Location = new System.Drawing.Point(748, 464);
+            this.textBox_InstallationStatus.Location = new System.Drawing.Point(748, 428);
             this.textBox_InstallationStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_InstallationStatus.Name = "textBox_InstallationStatus";
             this.textBox_InstallationStatus.Size = new System.Drawing.Size(140, 22);
@@ -97,7 +97,7 @@
             // textBox_InstallationDate
             // 
             this.textBox_InstallationDate.Enabled = false;
-            this.textBox_InstallationDate.Location = new System.Drawing.Point(748, 310);
+            this.textBox_InstallationDate.Location = new System.Drawing.Point(748, 292);
             this.textBox_InstallationDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_InstallationDate.Name = "textBox_InstallationDate";
             this.textBox_InstallationDate.Size = new System.Drawing.Size(140, 22);
@@ -106,7 +106,7 @@
             // textBox_InstallationTime
             // 
             this.textBox_InstallationTime.Enabled = false;
-            this.textBox_InstallationTime.Location = new System.Drawing.Point(748, 387);
+            this.textBox_InstallationTime.Location = new System.Drawing.Point(748, 360);
             this.textBox_InstallationTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_InstallationTime.Name = "textBox_InstallationTime";
             this.textBox_InstallationTime.Size = new System.Drawing.Size(140, 22);
@@ -116,7 +116,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button1.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(629, 634);
+            this.button1.Location = new System.Drawing.Point(625, 564);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 30);
@@ -128,7 +128,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(623, 541);
+            this.label1.Location = new System.Drawing.Point(623, 496);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 22);
@@ -137,7 +137,7 @@
             // 
             // textBox_WorkmanID
             // 
-            this.textBox_WorkmanID.Location = new System.Drawing.Point(748, 541);
+            this.textBox_WorkmanID.Location = new System.Drawing.Point(749, 497);
             this.textBox_WorkmanID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_WorkmanID.Name = "textBox_WorkmanID";
             this.textBox_WorkmanID.Size = new System.Drawing.Size(140, 22);
@@ -148,7 +148,7 @@
             // 
             this.button_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button_Update.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Update.Location = new System.Drawing.Point(765, 634);
+            this.button_Update.Location = new System.Drawing.Point(764, 564);
             this.button_Update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_Update.Name = "button_Update";
             this.button_Update.Size = new System.Drawing.Size(124, 30);
@@ -160,7 +160,7 @@
             // label_InstallationTime
             // 
             this.label_InstallationTime.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_InstallationTime.Location = new System.Drawing.Point(623, 387);
+            this.label_InstallationTime.Location = new System.Drawing.Point(623, 360);
             this.label_InstallationTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_InstallationTime.Name = "label_InstallationTime";
             this.label_InstallationTime.Size = new System.Drawing.Size(121, 22);
@@ -170,7 +170,7 @@
             // label_InstallationDate
             // 
             this.label_InstallationDate.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_InstallationDate.Location = new System.Drawing.Point(623, 310);
+            this.label_InstallationDate.Location = new System.Drawing.Point(623, 292);
             this.label_InstallationDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_InstallationDate.Name = "label_InstallationDate";
             this.label_InstallationDate.Size = new System.Drawing.Size(121, 22);
@@ -180,7 +180,7 @@
             // label_InstallationStatus
             // 
             this.label_InstallationStatus.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_InstallationStatus.Location = new System.Drawing.Point(623, 464);
+            this.label_InstallationStatus.Location = new System.Drawing.Point(623, 428);
             this.label_InstallationStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_InstallationStatus.Name = "label_InstallationStatus";
             this.label_InstallationStatus.Size = new System.Drawing.Size(121, 22);
@@ -190,7 +190,7 @@
             // label_SalesOrderID
             // 
             this.label_SalesOrderID.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_SalesOrderID.Location = new System.Drawing.Point(624, 233);
+            this.label_SalesOrderID.Location = new System.Drawing.Point(624, 224);
             this.label_SalesOrderID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_SalesOrderID.Name = "label_SalesOrderID";
             this.label_SalesOrderID.Size = new System.Drawing.Size(121, 22);
@@ -219,7 +219,7 @@
             // textBox_SalesOrderID
             // 
             this.textBox_SalesOrderID.Enabled = false;
-            this.textBox_SalesOrderID.Location = new System.Drawing.Point(749, 233);
+            this.textBox_SalesOrderID.Location = new System.Drawing.Point(749, 224);
             this.textBox_SalesOrderID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SalesOrderID.Name = "textBox_SalesOrderID";
             this.textBox_SalesOrderID.Size = new System.Drawing.Size(140, 22);
@@ -294,7 +294,7 @@
             this.dataGridView_InstallationTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView_InstallationTable.RowTemplate.Height = 27;
             this.dataGridView_InstallationTable.ShowEditingIcon = false;
-            this.dataGridView_InstallationTable.Size = new System.Drawing.Size(610, 518);
+            this.dataGridView_InstallationTable.Size = new System.Drawing.Size(610, 446);
             this.dataGridView_InstallationTable.TabIndex = 81;
             this.dataGridView_InstallationTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_InstallationTable_CellClick);
             // 
@@ -336,13 +336,13 @@
             // 
             // dataGridViewButtonColumn2
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("PMingLiU-ExtB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewButtonColumn2.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("PMingLiU-ExtB", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewButtonColumn2.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewButtonColumn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dataGridViewButtonColumn2.HeaderText = "";
             this.dataGridViewButtonColumn2.MinimumWidth = 6;

@@ -77,8 +77,9 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1179, 81);
+            this.label1.Size = new System.Drawing.Size(884, 65);
             this.label1.TabIndex = 0;
             // 
             // label2
@@ -86,71 +87,69 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label2.Location = new System.Drawing.Point(67, 19);
+            this.label2.Location = new System.Drawing.Point(50, 15);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(346, 39);
+            this.label2.Size = new System.Drawing.Size(279, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "RestockRequestForm";
             // 
             // textbox_StaffID
             // 
             this.textbox_StaffID.Enabled = false;
-            this.textbox_StaffID.Location = new System.Drawing.Point(117, 108);
-            this.textbox_StaffID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textbox_StaffID.Location = new System.Drawing.Point(88, 86);
+            this.textbox_StaffID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textbox_StaffID.Name = "textbox_StaffID";
-            this.textbox_StaffID.Size = new System.Drawing.Size(201, 25);
+            this.textbox_StaffID.Size = new System.Drawing.Size(152, 22);
             this.textbox_StaffID.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 108);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(10, 86);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 25);
+            this.label3.Size = new System.Drawing.Size(69, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "Staff ID:";
             // 
             // textBox_Nowdate
             // 
             this.textBox_Nowdate.Enabled = false;
-            this.textBox_Nowdate.Location = new System.Drawing.Point(429, 108);
-            this.textBox_Nowdate.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.textBox_Nowdate.Location = new System.Drawing.Point(322, 86);
+            this.textBox_Nowdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_Nowdate.Name = "textBox_Nowdate";
             this.textBox_Nowdate.ReadOnly = true;
-            this.textBox_Nowdate.Size = new System.Drawing.Size(132, 25);
+            this.textBox_Nowdate.Size = new System.Drawing.Size(100, 22);
             this.textBox_Nowdate.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(353, 108);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(265, 86);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 25);
+            this.label4.Size = new System.Drawing.Size(48, 20);
             this.label4.TabIndex = 9;
             this.label4.Text = "Date:";
             // 
             // textBox_NowTime
             // 
             this.textBox_NowTime.Enabled = false;
-            this.textBox_NowTime.Location = new System.Drawing.Point(680, 108);
-            this.textBox_NowTime.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.textBox_NowTime.Location = new System.Drawing.Point(510, 86);
+            this.textBox_NowTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_NowTime.Name = "textBox_NowTime";
             this.textBox_NowTime.ReadOnly = true;
-            this.textBox_NowTime.Size = new System.Drawing.Size(132, 25);
+            this.textBox_NowTime.Size = new System.Drawing.Size(100, 22);
             this.textBox_NowTime.TabIndex = 12;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(604, 108);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(453, 86);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 25);
+            this.label5.Size = new System.Drawing.Size(51, 20);
             this.label5.TabIndex = 11;
             this.label5.Text = "Time :";
             // 
@@ -158,10 +157,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(195, 240);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(146, 192);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 25);
+            this.label6.Size = new System.Drawing.Size(0, 20);
             this.label6.TabIndex = 13;
             // 
             // dataGridView_itemTable
@@ -188,8 +186,8 @@
             this.Column5,
             this.EditButton});
             this.dataGridView_itemTable.GridColor = System.Drawing.Color.White;
-            this.dataGridView_itemTable.Location = new System.Drawing.Point(12, 195);
-            this.dataGridView_itemTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView_itemTable.Location = new System.Drawing.Point(9, 156);
+            this.dataGridView_itemTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_itemTable.Name = "dataGridView_itemTable";
             this.dataGridView_itemTable.ReadOnly = true;
             this.dataGridView_itemTable.RowHeadersVisible = false;
@@ -197,7 +195,7 @@
             this.dataGridView_itemTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView_itemTable.RowTemplate.Height = 27;
             this.dataGridView_itemTable.ShowEditingIcon = false;
-            this.dataGridView_itemTable.Size = new System.Drawing.Size(1068, 208);
+            this.dataGridView_itemTable.Size = new System.Drawing.Size(801, 166);
             this.dataGridView_itemTable.TabIndex = 14;
             this.dataGridView_itemTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_itemTable_CellClick);
             // 
@@ -290,18 +288,19 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(700, 170);
+            this.label7.Location = new System.Drawing.Point(525, 136);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 15);
+            this.label7.Size = new System.Drawing.Size(44, 12);
             this.label7.TabIndex = 18;
             this.label7.Text = "ItemID :";
             // 
             // button_clear
             // 
-            this.button_clear.Location = new System.Drawing.Point(588, 165);
-            this.button_clear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_clear.Location = new System.Drawing.Point(441, 132);
+            this.button_clear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_clear.Name = "button_clear";
-            this.button_clear.Size = new System.Drawing.Size(107, 25);
+            this.button_clear.Size = new System.Drawing.Size(80, 20);
             this.button_clear.TabIndex = 17;
             this.button_clear.Text = "Clear";
             this.button_clear.UseVisualStyleBackColor = true;
@@ -309,10 +308,10 @@
             // 
             // button_Search
             // 
-            this.button_Search.Location = new System.Drawing.Point(975, 165);
-            this.button_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_Search.Location = new System.Drawing.Point(731, 132);
+            this.button_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_Search.Name = "button_Search";
-            this.button_Search.Size = new System.Drawing.Size(107, 25);
+            this.button_Search.Size = new System.Drawing.Size(80, 20);
             this.button_Search.TabIndex = 16;
             this.button_Search.Text = "Search";
             this.button_Search.UseVisualStyleBackColor = true;
@@ -320,20 +319,20 @@
             // 
             // textBox_Search
             // 
-            this.textBox_Search.Location = new System.Drawing.Point(772, 165);
-            this.textBox_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Search.Location = new System.Drawing.Point(579, 132);
+            this.textBox_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_Search.Name = "textBox_Search";
-            this.textBox_Search.Size = new System.Drawing.Size(196, 25);
+            this.textBox_Search.Size = new System.Drawing.Size(148, 22);
             this.textBox_Search.TabIndex = 15;
             this.textBox_Search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Search_KeyPress);
             // 
             // button_submit
             // 
             this.button_submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_submit.Location = new System.Drawing.Point(841, 728);
-            this.button_submit.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.button_submit.Location = new System.Drawing.Point(631, 582);
+            this.button_submit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_submit.Name = "button_submit";
-            this.button_submit.Size = new System.Drawing.Size(239, 35);
+            this.button_submit.Size = new System.Drawing.Size(179, 28);
             this.button_submit.TabIndex = 22;
             this.button_submit.Text = "Submit";
             this.button_submit.UseVisualStyleBackColor = true;
@@ -365,8 +364,8 @@
             this.AddQTY,
             this.dataGridViewButtonColumn1});
             this.dataGridView_RestockList.GridColor = System.Drawing.Color.White;
-            this.dataGridView_RestockList.Location = new System.Drawing.Point(12, 498);
-            this.dataGridView_RestockList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView_RestockList.Location = new System.Drawing.Point(9, 398);
+            this.dataGridView_RestockList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_RestockList.MultiSelect = false;
             this.dataGridView_RestockList.Name = "dataGridView_RestockList";
             this.dataGridView_RestockList.RowHeadersVisible = false;
@@ -374,7 +373,7 @@
             this.dataGridView_RestockList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView_RestockList.RowTemplate.Height = 27;
             this.dataGridView_RestockList.ShowEditingIcon = false;
-            this.dataGridView_RestockList.Size = new System.Drawing.Size(1069, 204);
+            this.dataGridView_RestockList.Size = new System.Drawing.Size(802, 163);
             this.dataGridView_RestockList.TabIndex = 25;
             this.dataGridView_RestockList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_RestockList_CellClick);
             this.dataGridView_RestockList.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView_RestockList_EditingControlShowing);
@@ -459,9 +458,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label8.Location = new System.Drawing.Point(5, 448);
+            this.label8.Location = new System.Drawing.Point(4, 358);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(253, 29);
+            this.label8.Size = new System.Drawing.Size(194, 25);
             this.label8.TabIndex = 19;
             this.label8.Text = "Restock Request List";
             // 
@@ -472,18 +472,16 @@
             this.cbxStore.Items.AddRange(new object[] {
             "Tsuen Wan",
             "Kowloon Bay"});
-            this.cbxStore.Location = new System.Drawing.Point(648, 738);
-            this.cbxStore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxStore.Location = new System.Drawing.Point(486, 590);
             this.cbxStore.Name = "cbxStore";
-            this.cbxStore.Size = new System.Drawing.Size(160, 23);
+            this.cbxStore.Size = new System.Drawing.Size(121, 20);
             this.cbxStore.TabIndex = 26;
             this.cbxStore.SelectedIndexChanged += new System.EventHandler(this.cbxStore_SelectedIndexChanged);
             // 
             // CreateRestockRequestForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1179, 826);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(884, 661);
             this.Controls.Add(this.cbxStore);
             this.Controls.Add(this.dataGridView_RestockList);
             this.Controls.Add(this.button_submit);
@@ -502,7 +500,7 @@
             this.Controls.Add(this.textbox_StaffID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CreateRestockRequestForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RestockRequestForm";
