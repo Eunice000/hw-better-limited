@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BetterLimited.PurchaseOrder;
+using System.Reflection;
+using System.Drawing.Printing;
 
 namespace BetterLimited.PurchaseForm
 {
@@ -21,7 +23,7 @@ namespace BetterLimited.PurchaseForm
         MySqlDataAdapter adpt;
         DataTable dt;
         string sql = "SELECT ReorderRequestID, StaffID, RequestDate, RequestTime FROM reorderrequest WHERE RequestStatus ='Pending';";
-        string itemID, staffID, department, position, supplierID, reorderRequestID;
+        string staffID, department, position, supplierID, reorderRequestID, OrderID;
         int itemSearch;
 
         public void openConnection()
@@ -75,6 +77,22 @@ namespace BetterLimited.PurchaseForm
             set
             {
                 position = value;
+            }
+        }
+
+        public string getOrderID
+        {
+            get
+            {
+                return OrderID;
+            }
+        }
+
+        public string setOrderID
+        {
+            set
+            {
+                OrderID = value;
             }
         }
         public void showData(string sql)
@@ -148,10 +166,12 @@ namespace BetterLimited.PurchaseForm
             showData(sql);
         }
 
+
+
         private void dgvSelectItem_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //Add
-            if (e.ColumnIndex == 0)
+            if (e.ColumnIndex == 0 && e.RowIndex != -1)
             {
                 reorderRequestID = dgvSelectItem.Rows[e.RowIndex].Cells[1].Value.ToString();
                 sql = "SELECT ReorderRequestID, StaffID, RequestDate, RequestTime FROM reorderrequest WHERE RequestStatus ='Pending' AND ReorderRequestID !=" + reorderRequestID;
@@ -246,7 +266,6 @@ namespace BetterLimited.PurchaseForm
             return selectQueryValue(sql, "PurchaseOrderID");
         }
 
-
         private void btnSendRequest_Click(object sender, EventArgs e)
         {
             Dictionary<string, List<PurchaseItem>> supplierMap = new Dictionary<string, List<PurchaseItem>>();
@@ -284,7 +303,7 @@ namespace BetterLimited.PurchaseForm
                 try
                 {
                     openConnection();
-                    sql = "INSERT INTO purchaseorder (PurchaseOrderID, StaffID, SupplierID, OrderDate, OrderTime) VALUES (@PurchaseOrderID, @StaffID, @SupplierID, @OrderDate, @OderTime);";
+                    sql = "INSERT INTO purchaseorder (PurchaseOrderID, StaffID, SupplierID, OrderDate, OrderTime, OrderStatus) VALUES (@PurchaseOrderID, @StaffID, @SupplierID, @OrderDate, @OderTime, 'Pending');";
                     cmd = new MySqlCommand(sql, conn);
                     cmd.Parameters.AddWithValue("@PurchaseOrderID", null);
                     cmd.Parameters.AddWithValue("@StaffID", "10008");
@@ -294,30 +313,35 @@ namespace BetterLimited.PurchaseForm
                     cmd.ExecuteNonQuery();
                     cmd.Parameters.Clear();
                     string purchaseOrderID = getPurchaseOrderID();
+                    OrderID = purchaseOrderID;
+
                     closeConnection();
                     for (int j = 0; j < data.Count; j++)
                     {
                         try
                         {
                             openConnection();
-                            sql = "INSERT INTO purchaseorder_item (PurchaseOrderID, ItemID,  Qty) VALUES (@PurchaseOrderID, @ItemID, @Qty);";
+                            sql = "INSERT INTO purchaseorder_item (PurchaseOrderID, ReorderRequestID, ItemID, Qty) VALUES (@PurchaseOrderID, @ReorderRequestID, @ItemID, @Qty);";
                             cmd = new MySqlCommand(sql, conn);
                             cmd.Parameters.AddWithValue("@PurchaseOrderID", purchaseOrderID);
+                            cmd.Parameters.AddWithValue("@ReorderRequestID", RRID.Text);
                             cmd.Parameters.AddWithValue("@ItemID", data[j].itemID);
                             cmd.Parameters.AddWithValue("@Qty", data[j].qty);
                             cmd.ExecuteNonQuery();
                             cmd.Parameters.Clear();
-
+                             
                             closeConnection();
                         }
                         catch (Exception ex)
                         {
-                            
+
                             closeConnection();
 
                         }
                     }
-                    
+                    PurchaseOrderPrint POP = new PurchaseOrderPrint();
+                    POP.setOrderID = getOrderID;
+                    POP.Print();
                 }
                 catch (Exception ex)
                 {
@@ -325,10 +349,13 @@ namespace BetterLimited.PurchaseForm
                     closeConnection();
 
                 }
-                dgvPurchaseOrder.Rows.Clear();
+                
             }
+            dgvPurchaseOrder.Rows.Clear();
             MessageBox.Show("Purchase Order successfully.", "Purchase Order", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
+
     }
 }
 

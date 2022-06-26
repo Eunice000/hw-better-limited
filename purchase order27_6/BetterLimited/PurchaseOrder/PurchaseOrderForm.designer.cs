@@ -44,13 +44,13 @@ namespace BetterLimited.PurchaseForm
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtItemSearch = new System.Windows.Forms.TextBox();
             this.dgvPurchaseOrder = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.llb1 = new System.Windows.Forms.Label();
-            this.RRID = new System.Windows.Forms.Label();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.llb1 = new System.Windows.Forms.Label();
+            this.RRID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSelectItem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPurchaseOrder)).BeginInit();
@@ -268,36 +268,6 @@ namespace BetterLimited.PurchaseForm
             this.dgvPurchaseOrder.Size = new System.Drawing.Size(817, 210);
             this.dgvPurchaseOrder.TabIndex = 32;
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F);
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(884, 94);
-            this.label1.TabIndex = 43;
-            this.label1.Text = "Purchase Order";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // llb1
-            // 
-            this.llb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llb1.Location = new System.Drawing.Point(554, 365);
-            this.llb1.Name = "llb1";
-            this.llb1.Size = new System.Drawing.Size(172, 20);
-            this.llb1.TabIndex = 44;
-            this.llb1.Text = "Reorder Request ID:";
-            // 
-            // RRID
-            // 
-            this.RRID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RRID.Location = new System.Drawing.Point(725, 364);
-            this.RRID.Name = "RRID";
-            this.RRID.Size = new System.Drawing.Size(159, 20);
-            this.RRID.TabIndex = 45;
-            // 
             // Column4
             // 
             this.Column4.DataPropertyName = "SupplierID";
@@ -329,6 +299,36 @@ namespace BetterLimited.PurchaseForm
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F);
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(884, 94);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "Purchase Order";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // llb1
+            // 
+            this.llb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llb1.Location = new System.Drawing.Point(554, 365);
+            this.llb1.Name = "llb1";
+            this.llb1.Size = new System.Drawing.Size(172, 20);
+            this.llb1.TabIndex = 44;
+            this.llb1.Text = "Reorder Request ID:";
+            // 
+            // RRID
+            // 
+            this.RRID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RRID.Location = new System.Drawing.Point(725, 364);
+            this.RRID.Name = "RRID";
+            this.RRID.Size = new System.Drawing.Size(159, 20);
+            this.RRID.TabIndex = 45;
             // 
             // PurchaseOrderForm
             // 
